@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaPhoneAlt, FaBars, FaTimes, FaWrench, FaChevronDown, FaTools, FaSnowflake, FaPlug, FaTv, FaCoffee, FaWind, FaMicrochip, FaBurn, FaWater, FaTshirt, FaFan } from 'react-icons/fa';
+import { FaPhoneAlt, FaBars, FaTimes, FaChevronDown, FaTools, FaSnowflake, FaPlug, FaTv, FaCoffee, FaWind, FaMicrochip, FaBurn, FaWater, FaTshirt, FaFan, FaWrench } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { useBooking } from '../context/BookingContext';
 
@@ -17,7 +17,16 @@ const Header = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    document.body.style.overflow = 'unset';
   }, [location]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
 
   const isHomePage = location.pathname === '/';
 
@@ -46,41 +55,43 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed w-full z-[100] transition-all duration-500 ${
         scrolled || !isHomePage
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' 
+          ? 'bg-white shadow-xl py-3' 
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative">
         <div className="flex justify-between items-center">
           
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group z-[110]">
             <img 
               src="/logo/logo.png" 
               alt="Appliance Vista Logo" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-10 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Navigation with Background Capsule */}
+          <nav className={`hidden lg:flex items-center gap-1 px-4 py-1.5 rounded-full transition-all duration-500 ${
+            scrolled || !isHomePage ? 'bg-gray-100/50' : 'bg-white/10 backdrop-blur-md border border-white/10'
+          }`}>
             {navLinks.map((link) => (
-              <Link key={link.name} to={link.path} className={`px-4 py-2 text-[11px] font-black uppercase tracking-[2px] transition-all relative group ${
-                scrolled || !isHomePage ? 'text-gray-700 hover:text-secondary' : 'text-white/90 hover:text-white'
+              <Link key={link.name} to={link.path} className={`px-4 py-2 text-[10px] font-black uppercase tracking-[2px] transition-all relative group ${
+                scrolled || !isHomePage ? 'text-gray-900 hover:text-secondary' : 'text-white/90 hover:text-white'
               }`}>
                 {link.name}
-                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
             ))}
 
             <div className="relative group h-full">
-              <button className={`flex items-center gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-[2px] transition-all cursor-pointer ${
-                scrolled || !isHomePage ? 'text-gray-700 hover:text-secondary' : 'text-white/90 hover:text-white'
+              <button className={`flex items-center gap-2 px-4 py-2 text-[10px] font-black uppercase tracking-[2px] transition-all cursor-pointer ${
+                scrolled || !isHomePage ? 'text-gray-900 hover:text-secondary' : 'text-white/90 hover:text-white'
               }`}>
                 Services <FaChevronDown size={8} />
               </button>
               
-              <div className="absolute top-[calc(100%+10px)] left-1/2 -translate-x-1/2 w-[750px] bg-white rounded-3xl shadow-2xl border border-gray-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 z-50 overflow-hidden">
+              <div className="absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2 w-[750px] bg-white rounded-3xl shadow-2xl border border-gray-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 z-50 overflow-hidden">
                 <div className="grid grid-cols-3 p-6 gap-3">
                   {servicesList.map((service, idx) => (
                     <Link key={idx} to={service.path} className="flex flex-col p-4 rounded-2xl hover:bg-gray-50 transition-all group/item border border-transparent hover:border-gray-100">
@@ -97,10 +108,10 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center gap-6">
-            <div className={`flex items-center gap-3 ${scrolled || !isHomePage ? 'text-gray-700' : 'text-white'}`}>
+            <div className={`flex items-center gap-3 ${scrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>
               <div className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center text-secondary border border-secondary/20"><FaPhoneAlt size={14} /></div>
               <div>
-                <p className="text-[8px] font-black uppercase tracking-widest opacity-60">Call Now</p>
+                <p className={`text-[8px] font-black uppercase tracking-widest ${scrolled || !isHomePage ? 'opacity-40' : 'opacity-60'}`}>Call Now</p>
                 <p className="text-sm font-black">+1 (234) 567-890</p>
               </div>
             </div>
@@ -112,27 +123,70 @@ const Header = () => {
             >Free Quote</button>
           </div>
 
-          <button className={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center ${scrolled || !isHomePage ? 'bg-gray-100 text-gray-900' : 'bg-white/10 text-white'}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* Toggle Button - Force High Z-Index */}
+          <button 
+            className={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center relative z-[120] ${
+              scrolled || !isHomePage ? 'bg-gray-100 text-gray-900' : 'bg-white/10 text-white'
+            }`} 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
       </div>
 
-      <div className={`lg:hidden fixed inset-0 z-[-1] bg-gray-900/95 backdrop-blur-xl transition-all duration-500 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <div className="flex flex-col h-full pt-32 pb-10 px-6 overflow-y-auto">
-          {navLinks.map((link) => (
-            <Link key={link.name} to={link.path} className="block text-2xl font-black text-white uppercase mb-4">{link.name}</Link>
-          ))}
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`lg:hidden fixed inset-0 z-[100] bg-gray-900 transition-all duration-500 ease-in-out ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col h-full pt-28 pb-10 px-6 overflow-y-auto">
+          <div className="flex flex-col gap-6 mb-8">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                to={link.path} 
+                className="text-3xl font-black text-white uppercase tracking-tighter hover:text-secondary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          
           <div className="pt-8 border-t border-white/10">
-             <p className="text-secondary font-black uppercase tracking-[3px] text-xs mb-4">Our Services</p>
-             <div className="grid grid-cols-1 gap-2">
+             <p className="text-secondary font-black uppercase tracking-[3px] text-[10px] mb-6">Our Services</p>
+             <div className="grid grid-cols-1 gap-4">
                 {servicesList.map((s, i) => (
-                  <Link key={i} to={s.path} className="text-white/70 hover:text-white py-1 uppercase font-bold text-xs tracking-widest">{s.name}</Link>
+                  <Link 
+                    key={i} 
+                    to={s.path} 
+                    className="text-white/70 hover:text-white py-1 uppercase font-bold text-xs tracking-widest flex items-center gap-3"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                    {s.name}
+                  </Link>
                 ))}
              </div>
           </div>
+          
           <div className="mt-auto pt-10">
-            <button onClick={() => openBookingModal()} className="w-full bg-secondary text-white py-4 rounded-xl text-center font-bold uppercase tracking-widest text-sm shadow-xl block">
+            <a 
+              href="tel:+1234567890" 
+              className="flex items-center justify-center gap-3 text-white mb-8 bg-white/5 py-4 rounded-xl border border-white/10"
+            >
+              <FaPhoneAlt className="text-secondary" />
+              <span className="font-bold">+1 (234) 567-890</span>
+            </a>
+            <button 
+              onClick={() => {
+                openBookingModal();
+                setIsMenuOpen(false);
+              }} 
+              className="w-full bg-secondary text-white py-5 rounded-xl text-center font-black uppercase tracking-widest text-sm shadow-2xl"
+            >
               Book Appointment
             </button>
           </div>

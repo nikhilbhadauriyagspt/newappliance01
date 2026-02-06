@@ -15,7 +15,7 @@ const Services = () => {
           <p className="text-gray-500">We specialize in a wide range of appliance repairs, ensuring your home runs smoothly with minimal downtime.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => {
             const IconComponent = Icons[service.iconName] || Icons.FaTools;
             return (

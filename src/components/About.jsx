@@ -10,7 +10,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0" data-aos="fade-right">
             <div className="relative">
-              <img src="/banner/about.jpg" className="rounded-2xl shadow-2xl w-full object-cover h-[500px]" alt="About Our Team" />
+              <img src="/banner/about.jpg" className="rounded-2xl shadow-2xl w-full object-cover h-[350px] md:h-[500px]" alt="About Our Team" />
               <div className="bg-secondary p-8 rounded-xl absolute -bottom-6 -right-6 md:right-6 md:bottom-6 shadow-xl text-white hidden sm:block" style={{ maxWidth: '220px' }}>
                 <h2 className="font-heading font-extrabold text-3xl mb-1">Service</h2>
                 <p className="font-bold text-sm uppercase tracking-wider opacity-90">Professional Appliance Care</p>

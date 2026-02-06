@@ -32,7 +32,7 @@ function App() {
   return (
     <BookingProvider>
       <Router>
-        <div className="App">
+        <div className="App overflow-x-hidden">
           <Header />
           <BookingModal />
           <Routes>

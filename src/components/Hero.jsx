@@ -73,49 +73,49 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-transparent to-transparent"></div>
               </div>
 
-              <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+              <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
                   
                   <div className="w-full lg:w-3/5 text-center lg:text-left">
-                    <div className="hero-element inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-8">
+                    <div className="hero-element inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-6 lg:mb-8">
                       <span className="flex h-2 w-2 relative">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
                       </span>
-                      <span className="text-white/70 text-[10px] md:text-[11px] font-bold uppercase tracking-[2px]">{slide.subtitle}</span>
+                      <span className="text-white/70 text-[9px] md:text-[11px] font-bold uppercase tracking-[2px]">{slide.subtitle}</span>
                     </div>
 
-                    <h1 className="hero-element text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-[1.1] tracking-tight">
+                    <h1 className="hero-element text-2xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 lg:mb-6 leading-[1.3] lg:leading-[1.1] tracking-tight">
                       {slide.title}
                     </h1>
 
-                    <p className="hero-element text-base md:text-xl text-gray-400 font-light mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <p className="hero-element text-xs md:text-xl text-gray-400 font-light mb-6 lg:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                       {slide.description}
                     </p>
 
-                    <div className="hero-element flex flex-wrap gap-4 justify-center lg:justify-start mb-12">
-                      <button onClick={() => openBookingModal()} className="px-8 py-4 bg-secondary text-white font-bold uppercase tracking-wider text-sm rounded-xl hover:bg-orange-600 transition-all flex items-center gap-2 shadow-xl">
+                    <div className="hero-element flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8 lg:mb-12">
+                      <button onClick={() => openBookingModal()} className="w-full sm:w-auto px-6 py-3 bg-secondary text-white font-bold uppercase tracking-wider text-[11px] lg:text-sm rounded-xl hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-xl">
                          <FaWrench /> Request Service
                       </button>
-                      <a href="#services" className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold uppercase tracking-wider text-sm rounded-xl hover:bg-white/10 transition-all">
+                      <a href="#services" className="w-full sm:w-auto px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold uppercase tracking-wider text-[11px] lg:text-sm rounded-xl hover:bg-white/10 transition-all flex items-center justify-center">
                         View Solutions
                       </a>
                     </div>
 
-                    <div className="hero-element flex flex-wrap justify-center lg:justify-start items-center gap-8 text-gray-500">
+                    <div className="hero-element flex flex-wrap justify-center lg:justify-start items-center gap-6 lg:gap-8 text-gray-500">
                       <div className="flex items-center gap-3">
-                        <FaShieldAlt className="text-secondary text-xl" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Service Warranty Coverage</span>
+                        <FaShieldAlt className="text-secondary text-lg lg:text-xl" />
+                        <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-white/50">Service Warranty Coverage</span>
                       </div>
                       <div className="hidden sm:block w-px h-4 bg-white/10"></div>
                       <div className="flex items-center gap-3">
-                        <FaClock className="text-secondary text-xl" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Support Availability</span>
+                        <FaClock className="text-secondary text-lg lg:text-xl" />
+                        <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-white/50">Support Availability</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-full lg:w-2/5 relative flex justify-center items-center">
+                  <div className="hidden lg:flex w-full lg:w-2/5 relative justify-center items-center">
                     <div className="hero-element-visual relative w-72 h-72 md:w-96 md:h-96">
                       <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-full blur-[60px] animate-spin-slow"></div>
                       <div className="absolute inset-0 flex items-center justify-center">

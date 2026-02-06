@@ -21,16 +21,16 @@ const BookingModal = () => {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
       {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity" 
+      <div
+        className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity"
         onClick={closeBookingModal}
       ></div>
 
       {/* Modal Content */}
       <div className="relative w-full max-w-lg bg-white rounded-[2.5rem] shadow-2xl overflow-hidden transform transition-all animate-in fade-in zoom-in duration-300">
-        
+
         {/* Close Button */}
-        <button 
+        <button
           onClick={closeBookingModal}
           className="absolute top-6 right-6 text-gray-400 hover:text-secondary transition-colors z-10"
         >
@@ -76,7 +76,7 @@ const BookingModal = () => {
 
               <div className="space-y-1">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Select Service</label>
-                <select 
+                <select
                   className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 focus:outline-none focus:border-secondary transition-all text-gray-600 appearance-none"
                   defaultValue={selectedService}
                 >
@@ -95,17 +95,14 @@ const BookingModal = () => {
                 <textarea required rows="2" className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 focus:outline-none focus:border-secondary transition-all resize-none" placeholder="Service location..."></textarea>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full bg-secondary hover:bg-orange-600 text-white font-black uppercase tracking-widest py-4 rounded-xl shadow-xl shadow-secondary/20 hover:-translate-y-1 transition-all mt-4"
               >
                 Confirm Booking Now
               </button>
 
-              <div className="flex items-center justify-center gap-2 text-gray-400 mt-6">
-                <FaPhoneAlt size={12} />
-                <span className="text-[10px] font-bold uppercase tracking-widest">Call us directly: +1 (234) 567-890</span>
-              </div>
+
             </form>
           </div>
         )}
