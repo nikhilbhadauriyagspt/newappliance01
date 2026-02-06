@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home - Appliance Vista</title>
-        <meta name="description" content="Welcome to Appliance Vista. We offer expert repair services for all your home appliances. 24/7 support and affordable pricing." />
+        <title>Appliance Vista - Trusted Appliance Repair Experts | Same Day Service</title>
+        <meta name="description" content="Looking for reliable appliance repair? Appliance Vista offers expert repair services for washing machines, fridges, ACs & more. Fast, affordable & certified technicians. Book your service today!" />
         <link rel="canonical" href="https://www.appliancevista.shop/" />
       </Helmet>
       <Hero />

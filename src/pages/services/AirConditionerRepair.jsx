@@ -13,8 +13,8 @@ const AirConditionerRepair = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Air Conditioner Repair - Appliance Vista Services</title>
-        <meta name="description" content="Stay cool with our expert AC servicing and gas refilling solutions." />
+        <title>Professional AC Repair & Service | Air Conditioner Maintenance</title>
+        <meta name="description" content="Expert AC repair and service for split and window units. We offer gas filling, installation, and advanced troubleshooting. Beat the heat with Appliance Vista!" />
       </Helmet>
       
       <div className="container mx-auto px-4">
@@ -36,16 +36,34 @@ const AirConditionerRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">Our Specialization</h6>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-gray-900 mb-8 leading-tight">Air Conditioner Repair</h1>
-            <p className="text-xl text-primary font-medium mb-6 leading-relaxed">Stay cool with our expert AC servicing and gas refilling solutions.</p>
+            <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">Cooling Experts</h6>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-8 leading-tight">Air Conditioner Repair & Service</h1>
+            <p className="text-xl text-primary font-medium mb-6 leading-relaxed">
+              Stay comfortable all year round with our premium AC maintenance, installation, and repair services.
+            </p>
+            
             <div className="prose prose-lg text-gray-500 mb-10 max-w-none">
-              <p>Regular maintenance and timely repairs are key to an efficient AC. We handle cooling issues, gas leaks, and circuit board repairs for all split and window AC models. Our technicians ensure your system runs optimally to save energy.</p>
+              <p>
+                Is your AC not cooling effectively or making loud noises? Don't sweat it! <strong>Appliance Vista</strong> offers comprehensive air conditioner services for homes and offices. Our certified technicians are experts in handling <strong>Split ACs, Window ACs, and Central Cooling Systems</strong>.
+              </p>
+              <p>
+                Regular servicing not only improves cooling efficiency but also reduces electricity bills and extends the lifespan of your unit. We use high-quality refrigerants and genuine spare parts for all repairs.
+              </p>
+              
+              <h3 className="text-gray-900 font-bold text-xl mt-6 mb-3">Common AC Issues We Resolve:</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Low Cooling:</strong> Filters clogged or gas leakage reducing performance.</li>
+                <li><strong>Gas Leakage:</strong> Identifying and fixing leaks followed by gas refilling.</li>
+                <li><strong>Water Leakage:</strong> Water dripping from the indoor unit.</li>
+                <li><strong>Compressor Failure:</strong> AC fan running but the compressor is off.</li>
+                <li><strong>Electrical Issues:</strong> PCB repair and fixing wiring faults.</li>
+              </ul>
             </div>
+
             <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 mb-10">
-              <h5 className="font-bold text-xl text-gray-900 mb-6 flex items-center gap-3"><FaTools className="text-secondary" /> Key Features:</h5>
+              <h5 className="font-bold text-xl text-gray-900 mb-6 flex items-center gap-3"><FaTools className="text-secondary" /> Why Hire Us?</h5>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {["Gas refilling", "PCB repair", "Filter cleaning", "Compressor check"].map((feature, index) => (
+                {["AC Installation & Uninstallation", "Gas Refilling (R22, R32, R410A)", "Deep Jet Cleaning", "PCB Circuit Repair", "Copper Pipe Fixing", "Annual Maintenance Contracts (AMC)"].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3 text-gray-700 font-medium">
                     <FaCheckCircle className="text-secondary flex-shrink-0" />
                     <span>{feature}</span>
@@ -53,9 +71,10 @@ const AirConditionerRepair = () => {
                 ))}
               </div>
             </div>
+            
             <div className="flex flex-col sm:flex-row items-center gap-6">
               <button onClick={() => openBookingModal('Air Conditioner')} className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest shadow-xl hover:-translate-y-1 transition-all text-center">Book Service Now</button>
-              <div className="flex items-center gap-3 text-gray-500 font-bold"><FaRegClock className="text-secondary" /><span>Fast Response</span></div>
+              <div className="flex items-center gap-3 text-gray-500 font-bold"><FaRegClock className="text-secondary" /><span>Service within 2 Hours</span></div>
             </div>
           </div>
         </div>
