@@ -5,7 +5,6 @@ import 'aos/dist/aos.css';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
-import Projects from '../components/Projects';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
@@ -37,7 +36,6 @@ const Home = () => {
       <About />
       <Services />
       <Process />
-      <Projects />
       <FAQ />
       <Blog />
       <Contact />
