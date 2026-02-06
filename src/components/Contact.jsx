@@ -136,7 +136,7 @@ const Contact = () => {
            style={{border:0}} 
            loading="lazy" 
            allowFullScreen 
-           src="https://maps.google.com/maps?q=New+York&t=&z=13&ie=UTF8&iwloc=&output=embed">
+           src="https://maps.google.com/maps?q=Grandview%20Glendale,%20CA%2091201,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed">
         </iframe>
       </div>
     </section>
