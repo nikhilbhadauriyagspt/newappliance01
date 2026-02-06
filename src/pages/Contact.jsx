@@ -81,7 +81,7 @@ const Contact = () => {
                  <div>
                     <h4 className="font-bold text-xl text-gray-900 mb-2">Operational Base</h4>
                     <p className="text-gray-500 leading-relaxed max-w-xs">
-                       123 Technical Way, Service District, <br /> CA 90210, United States
+                       Grandview Glendale, <br />CA 91201, USA
                     </p>
                  </div>
                </div>

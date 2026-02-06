@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ServiceDetails from './pages/ServiceDetails';
 import BlogDetails from './pages/BlogDetails';
+import ProjectDetails from './pages/ProjectDetails';
 import WashingMachineRepair from './pages/services/WashingMachineRepair';
 import RefrigeratorRepair from './pages/services/RefrigeratorRepair';
 import DishwasherRepair from './pages/services/DishwasherRepair';
@@ -58,6 +59,7 @@ function App() {
             <Route path="/service/kitchen-chimney" element={<KitchenChimneyRepair />} />
             <Route path="/service/:id" element={<ServiceDetails />} />
             <Route path="/blog/:id" element={<BlogDetails />} />
+            <Route path="/project/:id" element={<ProjectDetails />} />
           </Routes>
           <Footer />
         </div>

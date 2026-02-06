@@ -36,7 +36,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="font-bold mb-1">Our Location</h5>
-                    <p className="text-white/70 text-sm">123 Service Road, Tech City, <br />TC 45678, USA</p>
+                    <p className="text-white/70 text-sm">Grandview Glendale, <br />CA 91201, USA</p>
                   </div>
                 </div>
                 
@@ -47,7 +47,6 @@ const Contact = () => {
                   <div>
                     <h5 className="font-bold mb-1">Phone Number</h5>
                     <p className="text-white/70 text-sm">+1 (234) 567 890</p>
-                    <p className="text-white/70 text-sm">+1 (987) 654 321</p>
                   </div>
                 </div>
                 
@@ -57,7 +56,6 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="font-bold mb-1">Email Address</h5>
-                    <p className="text-white/70 text-sm">support@appliancevista.shop</p>
                     <p className="text-white/70 text-sm">info@appliancevista.shop</p>
                   </div>
                 </div>

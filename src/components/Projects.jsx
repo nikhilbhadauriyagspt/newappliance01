@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
-
-const projectsData = [
-  { id: 1, title: 'Commercial Fridge Repair', category: 'Commercial', image: '/projects/Commercial Fridge Repair.jpg' },
-  { id: 2, title: 'Luxury Oven Maintenance', category: 'Residential', image: '/projects/Luxury Oven Maintenance.jpg' },
-  { id: 3, title: 'Washing Machine Overhaul', category: 'Residential', image: '/projects/Washing Machine Overhaul.jpg' },
-  { id: 4, title: 'HVAC System Fix', category: 'Industrial', image: '/projects/HVAC System Fix.jpg' },
-  { id: 5, title: 'Smart TV Screen Replacement', category: 'Electronics', image: '/projects/Smart TV Screen Replacement.jpg' },
-  { id: 6, title: 'Coffee Machine Restoration', category: 'Small Appliance', image: '/projects/Coffee Machine Restoration.jpg' },
-];
+import { Link } from 'react-router-dom';
+import { projectsData } from '../data/projects';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
@@ -44,14 +37,15 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <div 
+            <Link 
               key={project.id} 
-              className="group relative overflow-hidden rounded-2xl shadow-md aspect-[4/3]"
+              to={`/project/${project.id}`}
+              className="group relative overflow-hidden rounded-2xl shadow-md aspect-[4/3] block cursor-pointer"
               data-aos="zoom-in" 
               data-aos-delay={index * 100}
             >
               <img 
-                src={project.image} 
+                src={project.img} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 alt={project.title}
               />
@@ -71,7 +65,7 @@ const Projects = () => {
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary shadow-sm group-hover:opacity-0 transition-opacity">
                 {project.category}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

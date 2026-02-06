@@ -1,8 +1,16 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    setSubscribed(true);
+    setTimeout(() => setSubscribed(false), 5000);
+  };
+
   return (
     <footer className="bg-primary-dark text-white">
       <div className="container mx-auto px-4 pt-20 pb-12">
@@ -57,7 +65,7 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
                   <FaMapMarkerAlt className="text-secondary group-hover:text-white transition-colors" />
                 </div>
-                <span className="text-gray-400 text-sm leading-relaxed mt-1">123 Street Name, Tech District, City Name, USA</span>
+                <span className="text-gray-400 text-sm leading-relaxed mt-1">Grandview Glendale, CA 91201, USA</span>
               </li>
               <li className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
@@ -65,7 +73,6 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-1 mt-1">
                   <span className="text-gray-400 text-sm">+1 234 567 890</span>
-                  <span className="text-gray-400 text-sm">+1 987 654 321</span>
                 </div>
               </li>
               <li className="flex items-start gap-4 group">
@@ -86,22 +93,30 @@ const Footer = () => {
             <p className="text-gray-400 mb-6 leading-relaxed">
               Stay updated with our latest offers and repair tips. Subscribe to our newsletter today!
             </p>
-            <form className="space-y-3">
-              <div className="relative group">
-                <input 
-                  type="email" 
-                  placeholder="Your Email Address" 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:ring-4 focus:ring-secondary/10 transition-all text-sm"
-                />
-                <button 
-                  type="submit" 
-                  className="absolute right-2 top-2 bottom-2 bg-secondary hover:bg-orange-600 text-white w-12 rounded-xl flex items-center justify-center transition-all hover:scale-105"
-                >
-                  <FaPaperPlane size={14} />
-                </button>
+            {subscribed ? (
+              <div className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-secondary/30 text-secondary animate-in zoom-in duration-300">
+                <FaCheckCircle size={20} />
+                <span className="font-bold text-sm">Successfully Subscribed!</span>
               </div>
-              <p className="text-[10px] text-gray-500 ml-2">We respect your privacy. No spam ever.</p>
-            </form>
+            ) : (
+              <form onSubmit={handleSubscribe} className="space-y-3">
+                <div className="relative group">
+                  <input 
+                    required
+                    type="email" 
+                    placeholder="Your Email Address" 
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:ring-4 focus:ring-secondary/10 transition-all text-sm"
+                  />
+                  <button 
+                    type="submit" 
+                    className="absolute right-2 top-2 bottom-2 bg-secondary hover:bg-orange-600 text-white w-12 rounded-xl flex items-center justify-center transition-all hover:scale-105"
+                  >
+                    <FaPaperPlane size={14} />
+                  </button>
+                </div>
+                <p className="text-[10px] text-gray-500 ml-2">We respect your privacy. No spam ever.</p>
+              </form>
+            )}
           </div>
         </div>
       </div>
