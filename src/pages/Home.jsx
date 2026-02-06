@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -20,9 +20,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home - Felona Appliance Repair</title>
-        <meta name="description" content="Welcome to Felona Repair. We offer expert repair services for all your home appliances. 24/7 support and affordable pricing." />
-        <link rel="canonical" href="https://www.felonarepair.com/" />
+        <title>Home - Appliance Vista</title>
+        <meta name="description" content="Welcome to Appliance Vista. We offer expert repair services for all your home appliances. 24/7 support and affordable pricing." />
+        <link rel="canonical" href="https://www.appliancevista.shop/" />
       </Helmet>
       <Hero />
       <About />
@@ -35,3 +35,4 @@ const Home = () => {
 };
 
 export default Home;
+

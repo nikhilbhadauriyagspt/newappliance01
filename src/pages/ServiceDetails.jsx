@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/services';
@@ -18,7 +18,7 @@ const ServiceDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-           <title>Service Not Found - Felona Repair</title>
+           <title>Service Not Found - Appliance Vista</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Service Not Found</h2>
@@ -33,7 +33,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{service.title} - Felona Repair Services</title>
+        <title>{service.title} - Appliance Vista Services</title>
         <meta name="description" content={service.shortDesc} />
         <meta property="og:title" content={`${service.title} - Professional Repair`} />
         <meta property="og:description" content={service.longDesc} />

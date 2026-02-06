@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaCheckCircle, FaArrowLeft, FaShieldAlt, FaTools, FaRegClock } from 'react-icons/fa';
@@ -13,7 +13,7 @@ const WashingMachineRepair = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Washing Machine Repair - Felona Repair Services</title>
+        <title>Washing Machine Repair - Appliance Vista Services</title>
         <meta name="description" content="Expert repair services for all washing machine brands and models." />
       </Helmet>
       

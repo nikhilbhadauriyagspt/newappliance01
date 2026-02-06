@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const RefundPolicy = () => {
@@ -9,8 +9,8 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Refund Policy - Felona Repair</title>
-        <meta name="description" content="Refund Policy for Felona Appliance Repair." />
+        <title>Refund Policy - Appliance Vista</title>
+        <meta name="description" content="Refund Policy for Appliance Vista." />
       </Helmet>
       
       <div className="container mx-auto px-4 max-w-4xl">
@@ -32,7 +32,7 @@ const RefundPolicy = () => {
           <p>You may cancel your appointment up to 24 hours before the scheduled time without penalty. Late cancellations may incur a fee.</p>
           
           <h3>5. Contact Us</h3>
-          <p>To request a refund or discuss a billing issue, please contact our billing department at info@felonarepair.com.</p>
+          <p>To request a refund or discuss a billing issue, please contact our billing department at info@appliancevista.shop.</p>
         </div>
       </div>
     </div>
@@ -40,3 +40,4 @@ const RefundPolicy = () => {
 };
 
 export default RefundPolicy;
+

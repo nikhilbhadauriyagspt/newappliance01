@@ -1,3 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-Sitemap: https://www.felonarepair.com/sitemap.xml
+Sitemap: https://www.appliancevista.shop/sitemap.xml
+

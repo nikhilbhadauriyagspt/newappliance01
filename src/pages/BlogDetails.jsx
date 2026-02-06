@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogsData } from '../data/blogs';
@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-light">
         <Helmet>
-           <title>Blog Not Found - Felona Repair</title>
+           <title>Blog Not Found - Appliance Vista</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Blog Post Not Found</h2>
@@ -31,7 +31,7 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>{blog.title} - Felona Blog</title>
+        <title>{blog.title} - Appliance Vista Blog</title>
         <meta name="description" content={blog.shortDesc} />
       </Helmet>
       
@@ -100,3 +100,4 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
+

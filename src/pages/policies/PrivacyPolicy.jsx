@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Privacy Policy - Felona Repair</title>
-        <meta name="description" content="Privacy Policy for Felona Appliance Repair." />
+        <title>Privacy Policy - Appliance Vista</title>
+        <meta name="description" content="Privacy Policy for Appliance Vista." />
       </Helmet>
       
       <div className="container mx-auto px-4 max-w-4xl">
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
           <p>We implement security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
           
           <h3>5. Contact Us</h3>
-          <p>If you have questions about this Privacy Policy, please contact us at info@felonarepair.com.</p>
+          <p>If you have questions about this Privacy Policy, please contact us at info@appliancevista.shop.</p>
         </div>
       </div>
     </div>
@@ -40,3 +40,4 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+

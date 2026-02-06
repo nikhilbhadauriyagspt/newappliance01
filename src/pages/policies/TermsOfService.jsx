@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const TermsOfService = () => {
@@ -9,8 +9,8 @@ const TermsOfService = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Terms of Service - Felona Repair</title>
-        <meta name="description" content="Terms of Service for Felona Appliance Repair." />
+        <title>Terms of Service - Appliance Vista</title>
+        <meta name="description" content="Terms of Service for Appliance Vista." />
       </Helmet>
       
       <div className="container mx-auto px-4 max-w-4xl">
@@ -32,7 +32,7 @@ const TermsOfService = () => {
           <p>We provide a warranty on parts and labor for a specific period as stated on your invoice. This warranty covers the specific repair performed.</p>
           
           <h3>5. Limitation of Liability</h3>
-          <p>Felona Repair shall not be liable for any indirect, incidental, special, consequential or punitive damages.</p>
+          <p>Appliance Vista shall not be liable for any indirect, incidental, special, consequential or punitive damages.</p>
         </div>
       </div>
     </div>
@@ -40,3 +40,4 @@ const TermsOfService = () => {
 };
 
 export default TermsOfService;
+

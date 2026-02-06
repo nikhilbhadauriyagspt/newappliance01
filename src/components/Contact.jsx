@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { FaPaperPlane, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
@@ -57,8 +57,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5 className="font-bold mb-1">Email Address</h5>
-                    <p className="text-white/70 text-sm">support@felonarepair.com</p>
-                    <p className="text-white/70 text-sm">info@felonarepair.com</p>
+                    <p className="text-white/70 text-sm">support@appliancevista.shop</p>
+                    <p className="text-white/70 text-sm">info@appliancevista.shop</p>
                   </div>
                 </div>
               </div>
@@ -146,3 +146,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Company Bio */}
           <div className="space-y-6">
             <div className="font-logo font-extrabold text-3xl tracking-tighter leading-none">
-              <span className="text-white">Felona</span>
-              <span className="text-secondary">Repair</span>
+              <span className="text-white">Appliance</span>
+              <span className="text-secondary"> Vista</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               We provide appliance repair and maintenance services for various household brands. Our goal is to provide technical support and component repair solutions to maintain your equipment's functionality.
@@ -73,7 +73,7 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
                   <FaEnvelope className="text-secondary group-hover:text-white transition-colors" />
                 </div>
-                <span className="text-gray-400 text-sm mt-2">info@felonarepair.com</span>
+                <span className="text-gray-400 text-sm mt-2">info@appliancevista.shop</span>
               </li>
             </ul>
           </div>
@@ -110,7 +110,7 @@ const Footer = () => {
       {/* Copyright Bar */}
       <div className="bg-black/20 border-t border-white/5 py-8">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Felona Repair. All Rights Reserved.</p>
+          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Appliance Vista. All Rights Reserved.</p>
           <div className="flex gap-6 text-sm">
             <Link to="/privacy-policy" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-500 hover:text-white transition-colors">Terms of Service</Link>

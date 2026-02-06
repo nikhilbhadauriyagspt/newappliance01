@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaUserTie, FaAward, FaHistory, FaCheckCircle } from 'react-icons/fa';
 
@@ -8,14 +8,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>About Us - Felona Appliance Repair</title>
-        <meta name="description" content="Learn about Felona Repair, our professional approach to appliance maintenance and repair services." />
+        <title>About Us - Appliance Vista</title>
+        <meta name="description" content="Learn about Appliance Vista, our professional approach to appliance maintenance and repair services." />
       </Helmet>
 
       <div className="relative bg-primary py-32 overflow-hidden">
          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
          <div className="container mx-auto px-4 relative z-10 text-center">
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">About Felona Repair</h1>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">About Appliance Vista</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light">Dedicated to providing professional appliance maintenance and repair solutions.</p>
          </div>
       </div>
@@ -37,7 +37,7 @@ const About = () => {
              <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">Our Approach</h6>
              <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-6 leading-tight">Focusing on Professionalism and Reliability</h2>
              <p className="text-gray-500 text-lg mb-8 leading-relaxed">
-               At Felona Repair, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.
+               At Appliance Vista, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.
              </p>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                {['Qualified Technicians', 'Component Diagnostics', 'Transparent Pricing', 'Scheduled Support'].map((item, idx) => (

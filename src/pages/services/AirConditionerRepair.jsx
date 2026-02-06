@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaCheckCircle, FaArrowLeft, FaShieldAlt, FaTools, FaRegClock } from 'react-icons/fa';
@@ -13,7 +13,7 @@ const AirConditionerRepair = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Air Conditioner Repair - Felona Repair Services</title>
+        <title>Air Conditioner Repair - Appliance Vista Services</title>
         <meta name="description" content="Stay cool with our expert AC servicing and gas refilling solutions." />
       </Helmet>
       

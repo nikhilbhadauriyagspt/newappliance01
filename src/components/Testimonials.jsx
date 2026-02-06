@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 
 const testimonials = [
@@ -22,7 +22,7 @@ const testimonials = [
     id: 3,
     name: 'Emily Davis',
     role: 'Apartment Manager',
-    quote: 'Reliable and affordable. I use Felona for all my rental properties. Their preventative maintenance plans are a game changer.',
+    quote: 'Reliable and affordable. I use Appliance Vista for all my rental properties. Their preventative maintenance plans are a game changer.',
     rating: 4,
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80'
   }
@@ -88,3 +88,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

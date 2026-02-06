@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const projects = [
@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Our Projects - Felona Appliance Repair</title>
+        <title>Our Projects - Appliance Vista</title>
         <meta name="description" content="View our portfolio of successful appliance repairs and maintenance projects." />
       </Helmet>
 
@@ -57,3 +57,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

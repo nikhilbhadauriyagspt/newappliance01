@@ -65,7 +65,7 @@ const Header = () => {
               <span className={`font-logo font-black text-2xl tracking-tighter leading-none transition-colors duration-300 ${
                 scrolled || !isHomePage ? 'text-gray-900' : 'text-white'
               }`}>
-                Felona<span className="text-secondary">Repair</span>
+                Appliance <span className="text-secondary">Vista</span>
               </span>
             </div>
           </Link>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 
@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Contact Us - Felona Appliance Repair</title>
+        <title>Contact Us - Appliance Vista</title>
         <meta name="description" content="Get in touch with us for professional appliance maintenance and repair services." />
       </Helmet>
 
@@ -69,7 +69,7 @@ const Contact = () => {
                  <div>
                     <h4 className="font-bold text-xl text-gray-900 mb-2">Email Correspondence</h4>
                     <p className="text-gray-500 mb-1">Standard Response Time: 2-4 Hours</p>
-                    <a href="mailto:info@felonarepair.com" className="text-lg font-bold text-primary hover:text-secondary transition-colors">info@felonarepair.com</a>
+                    <a href="mailto:info@appliancevista.shop" className="text-lg font-bold text-primary hover:text-secondary transition-colors">info@appliancevista.shop</a>
                  </div>
                </div>
 
