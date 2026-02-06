@@ -56,11 +56,11 @@ const Header = () => {
         <div className="flex justify-between items-center">
           
           <Link to="/" className="flex items-center gap-2 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-              scrolled || !isHomePage ? 'bg-primary text-white' : 'bg-white text-primary'
-            } shadow-lg group-hover:bg-secondary group-hover:text-white`}>
-              <FaWrench size={18} />
-            </div>
+            <img 
+              src="/logo/logo.png" 
+              alt="Appliance Vista Logo" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            />
             <div className="flex flex-col">
               <span className={`font-logo font-black text-2xl tracking-tighter leading-none transition-colors duration-300 ${
                 scrolled || !isHomePage ? 'text-gray-900' : 'text-white'
