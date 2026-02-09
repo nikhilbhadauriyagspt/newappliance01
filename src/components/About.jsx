@@ -1,51 +1,86 @@
 import React from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaUserCheck, FaShieldAlt, FaAward } from 'react-icons/fa';
 import { useBooking } from '../context/BookingContext';
 
 const About = () => {
   const { openBookingModal } = useBooking();
   return (
-    <section className="py-20 bg-light overflow-hidden" id="about">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center -mx-4">
-          <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0" data-aos="fade-right">
-            <div className="relative">
-              <img src="/banner/about.jpg" className="rounded-2xl shadow-2xl w-full object-cover h-[350px] md:h-[500px]" alt="About Our Team" />
-              <div className="bg-secondary p-8 rounded-xl absolute -bottom-6 -right-6 md:right-6 md:bottom-6 shadow-xl text-white hidden sm:block" style={{ maxWidth: '220px' }}>
-                <h2 className="font-heading font-extrabold text-3xl mb-1">Service</h2>
-                <p className="font-bold text-sm uppercase tracking-wider opacity-90">Professional Appliance Care</p>
+    <section className="py-24 bg-white relative overflow-hidden font-sans" id="about">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none opacity-50"></div>
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+          
+          <div className="w-full lg:w-1/2" data-aos="fade-up">
+            <div className="relative group">
+              <div className="absolute -inset-6 border-2 border-slate-50 rounded-[4rem] pointer-events-none group-hover:scale-105 transition-transform duration-700"></div>
+              <div className="relative rounded-[3rem] md:rounded-[80px] overflow-hidden shadow-soft">
+                <img src="/banner/about.jpg" className="w-full h-[500px] md:h-[700px] object-cover transition-transform duration-[2s]" alt="Professional Technical Division" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+                
+                <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-[40px] shadow-soft border border-white/20 text-center">
+                   <p className="text-4xl font-black text-secondary leading-none uppercase">Fix</p>
+                   <p className="text-[10px] font-bold text-slate-500 uppercase tracking-[2px] mt-2">Technical Standards</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 px-4 lg:pl-16" data-aos="fade-left">
-            <h6 className="text-primary font-bold uppercase tracking-widest text-sm mb-4 inline-block border-b-2 border-secondary pb-1">Our Organization</h6>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-6 leading-tight">Providing Professional Appliance Repair Solutions</h2>
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-              At <strong>Appliance Vista</strong>, we pride ourselves on being a leading provider of high-quality appliance repair and maintenance services. With years of hands-on experience in the industry, our mission is simple: to provide fast, reliable, and affordable technical solutions that keep your home running smoothly. 
-            </p>
-            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              We understand that appliances are the backbone of your daily routine. From keeping your food fresh to ensuring your clothes are clean, these machines are essential. That's why we focus on technical excellence, using advanced diagnostic tools and genuine parts to ensure every repair is performed to the highest standards. Our team of certified technicians is dedicated to extending the life of your appliances and providing you with peace of mind.
+
+          <div className="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
+            <div className="inline-flex items-center gap-3 bg-secondary/10 px-5 py-2 rounded-2xl mb-8">
+              <span className="w-2 h-2 rounded-full bg-secondary"></span>
+              <span className="text-secondary text-[10px] font-bold uppercase tracking-[3px]">Service Mission</span>
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-black text-primary mb-8 leading-[1.1] tracking-tighter uppercase">
+              Professional Solutions For <span className="text-secondary">Appliance Maintenance</span>
+            </h2>
+
+            <p className="text-slate-500 text-lg font-medium leading-relaxed mb-12 max-w-xl">
+              We provide systematic technical support for residential appliances. Our division focuses on delivering professional-grade maintenance and repair protocols for essential home equipment.
             </p>
             
-            <div className="space-y-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
               {[
-                { title: 'Trained Technicians', desc: 'Technicians with experience in appliance maintenance.' },
-                { title: 'Upfront Pricing', desc: 'Detailed cost estimates provided before work begins.' },
-                { title: 'Scheduled Support', desc: 'Service appointments based on availability.' }
+                { 
+                  title: 'Skilled Technicians', 
+                  desc: 'A technical team trained in modern appliance diagnostics and repair.',
+                  icon: <FaUserCheck />
+                },
+                { 
+                  title: 'Safety Standards', 
+                  desc: 'Adherence to electrical and mechanical safety compliance protocols.',
+                  icon: <FaShieldAlt />
+                }
               ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="flex-shrink-0 mt-1"><FaCheckCircle className="text-secondary text-2xl" /></div>
-                  <div className="ml-4">
-                    <h5 className="font-bold text-gray-900 text-lg mb-1">{item.title}</h5>
-                    <p className="text-gray-500 text-sm">{item.desc}</p>
+                <div key={index} className="flex flex-col items-start group">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-secondary mb-5 shadow-inner">
+                    {item.icon}
                   </div>
+                  <h5 className="font-black text-primary text-sm uppercase tracking-widest mb-3 leading-none">{item.title}</h5>
+                  <p className="text-slate-400 text-xs font-medium leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            <button onClick={() => openBookingModal()} className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide transition-all duration-300 shadow-lg">
-              Request a Consultation
-            </button>
+            <div className="flex flex-col sm:flex-row items-center gap-10 pt-10 border-t border-slate-50">
+              <button 
+                onClick={() => openBookingModal()} 
+                className="w-full sm:w-auto px-12 py-6 bg-primary text-white rounded-2xl font-black uppercase tracking-[4px] text-xs shadow-xl hover:bg-secondary transition-all active:scale-95"
+              >
+                Learn Our Process
+              </button>
+              
+              <div className="flex items-center gap-4">
+                 <div className="flex -space-x-3">
+                    {[1,2,3].map(i => <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm"></div>)}
+                 </div>
+                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">
+                    Professional <span className="text-primary font-black uppercase">Service Network</span>
+                 </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

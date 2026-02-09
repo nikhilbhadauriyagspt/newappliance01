@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaArrowRight, FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -12,124 +12,139 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary-dark text-white">
-      <div className="container mx-auto px-4 pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Company Bio */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <img src="/logo/logo.png" alt="Appliance Vista" className="h-12 w-auto object-contain bg-white rounded-lg p-1" />
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              Appliance Vista is your trusted partner for high-quality home appliance repair and maintenance. We provide technical support for washing machines, refrigerators, AC units, and various household brands with a focus on reliability and long-term functionality.
-            </p>
-          </div>
+    <footer className="bg-primary text-white pt-24 overflow-hidden relative font-sans">
+      {/* Background patterns */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
 
-          {/* Quick Links */}
-          <div className="lg:pl-8">
-            <h5 className="font-bold text-lg mb-8 relative inline-block">
-              Quick Links
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-secondary rounded-full"></span>
-            </h5>
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        
+        {/* Top Section: CTA and Logo */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 pb-20 border-b border-white/5">
+           <div className="text-center lg:text-left">
+              <Link to="/" className="inline-block mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center p-2 shadow-xl">
+                    <img src="/logo/logo.png" alt="Appliance Vista" className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-black tracking-tighter leading-none">APPLIANCE<span className="text-secondary">VISTA</span></h2>
+                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-[3px] mt-1">Certified Master Repair</p>
+                  </div>
+                </div>
+              </Link>
+              <p className="text-slate-400 max-w-sm text-sm font-medium leading-relaxed">
+                Elevating home appliance maintenance to a professional art form. Fast, reliable, and technically superior services.
+              </p>
+           </div>
+
+           <div className="flex-1 max-w-md w-full">
+              <h4 className="text-lg font-black mb-6 text-center lg:text-left">Subscribe to Our Updates</h4>
+              <form onSubmit={handleSubscribe} className="relative group">
+                <input
+                  required
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full bg-white/5 border border-white/10 rounded-[20px] py-5 pl-8 pr-32 outline-none focus:bg-white/10 focus:border-secondary transition-all font-medium text-sm"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-2 bottom-2 bg-secondary text-white px-6 rounded-2xl flex items-center justify-center gap-2 font-black uppercase tracking-widest text-[10px] hover:bg-white hover:text-secondary transition-all shadow-lg active:scale-95"
+                >
+                  Join <FaArrowRight size={10} />
+                </button>
+              </form>
+              {subscribed && <p className="text-secondary text-center lg:text-left mt-4 text-xs font-bold animate-pulse">Welcome to our community!</p>}
+           </div>
+        </div>
+
+        {/* Middle Section: Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 py-20">
+          
+          {/* Services */}
+          <div>
+            <h5 className="text-[10px] font-black uppercase tracking-[4px] text-slate-500 mb-8">Core Services</h5>
             <ul className="space-y-4">
-              {[
-                { name: 'Home', path: '/' },
-                { name: 'About Us', path: '/about' },
-                { name: 'Services', path: '/#services' },
-                { name: 'Contact', path: '/contact' }
-              ].map((item) => (
-                <li key={item.name}>
-                  {item.path.startsWith('#') ? (
-                    <a href={item.path} className="text-gray-400 hover:text-secondary hover:translate-x-2 transition-all inline-block">
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link to={item.path} className="text-gray-400 hover:text-secondary hover:translate-x-2 transition-all inline-block">
-                      {item.name}
-                    </Link>
-                  )}
+              {['Washing Machines', 'Refrigerators', 'Air Conditioners', 'Smart TVs', 'Oven & Stoves'].map((service) => (
+                <li key={service}>
+                  <Link to="/services" className="text-slate-400 hover:text-white transition-colors text-sm font-semibold flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-secondary transition-colors"></span>
+                    {service}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Company */}
           <div>
-            <h5 className="font-bold text-lg mb-8 relative inline-block">
-              Contact Info
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-secondary rounded-full"></span>
-            </h5>
+            <h5 className="text-[10px] font-black uppercase tracking-[4px] text-slate-500 mb-8">Company</h5>
+            <ul className="space-y-4">
+              {[
+                { name: 'About History', path: '/about' },
+                { name: 'Latest Blogs', path: '/blog' },
+                { name: 'Contact Us', path: '/contact' },
+                { name: 'Our Projects', path: '/projects' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-slate-400 hover:text-white transition-colors text-sm font-semibold">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h5 className="text-[10px] font-black uppercase tracking-[4px] text-slate-500 mb-8">Get In Touch</h5>
             <ul className="space-y-6">
-              <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                  <FaMapMarkerAlt className="text-secondary group-hover:text-white transition-colors" />
-                </div>
-                <span className="text-gray-400 text-sm leading-relaxed mt-1">Grandview Glendale, CA 91201, USA</span>
+              <li className="flex items-start gap-4">
+                <FaMapMarkerAlt className="text-secondary mt-1" />
+                <span className="text-slate-400 text-sm font-medium leading-relaxed">Grandview Glendale, <br />CA 91201, USA</span>
               </li>
-              <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                  <FaPhoneAlt className="text-secondary group-hover:text-white transition-colors" />
-                </div>
-                <div className="flex flex-col gap-1 mt-1">
-                  <span className="text-gray-400 text-sm">+1 (530) 554-4817</span>
-                </div>
+              <li className="flex items-center gap-4">
+                <FaPhoneAlt className="text-secondary" />
+                <span className="text-slate-400 text-sm font-black">+1 (530) 554-4817</span>
               </li>
-              <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                  <FaEnvelope className="text-secondary group-hover:text-white transition-colors" />
-                </div>
-                <span className="text-gray-400 text-sm mt-2">appliancevista@outlook.com</span>
+              <li className="flex items-center gap-4">
+                <FaEnvelope className="text-secondary" />
+                <span className="text-slate-400 text-sm font-medium">appliancevista@outlook.com</span>
               </li>
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Social Presence */}
           <div>
-            <h5 className="font-bold text-lg mb-8 relative inline-block">
-              Newsletter
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-secondary rounded-full"></span>
-            </h5>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Stay updated with our latest offers and repair tips. Subscribe to our newsletter today!
+            <h5 className="text-[10px] font-black uppercase tracking-[4px] text-slate-500 mb-8">Follow Us</h5>
+            <p className="text-slate-400 text-sm font-medium mb-8 leading-relaxed">
+              Join our professional community for repair tips and exclusive maintenance offers.
             </p>
-            {subscribed ? (
-              <div className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-secondary/30 text-secondary animate-in zoom-in duration-300">
-                <FaCheckCircle size={20} />
-                <span className="font-bold text-sm">Successfully Subscribed!</span>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <div className="relative group">
-                  <input
-                    required
-                    type="email"
-                    placeholder="Your Email Address"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:ring-4 focus:ring-secondary/10 transition-all text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-2 top-2 bottom-2 bg-secondary hover:bg-orange-600 text-white w-12 rounded-xl flex items-center justify-center transition-all hover:scale-105"
-                  >
-                    <FaPaperPlane size={14} />
-                  </button>
-                </div>
-                <p className="text-[10px] text-gray-500 ml-2">We respect your privacy. No spam ever.</p>
-              </form>
-            )}
+            <div className="flex gap-4">
+              {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn].map((Icon, i) => (
+                <a 
+                  key={i} 
+                  href="#" 
+                  className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-secondary hover:text-white transition-all duration-300 border border-white/5 hover:border-secondary shadow-lg active:scale-90"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* Copyright Bar */}
-      <div className="bg-black/20 border-t border-white/5 py-8">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Appliance Vista. All Rights Reserved.</p>
-          <div className="flex gap-6 text-sm flex-wrap">
-            <Link to="/privacy-policy" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-gray-500 hover:text-white transition-colors">Terms of Service</Link>
-            <Link to="/refund-policy" className="text-gray-500 hover:text-white transition-colors">Refund Policy</Link>
-            <Link to="/cookie-policy" className="text-gray-500 hover:text-white transition-colors">Cookie Policy</Link>
-          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="py-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+           <p className="text-slate-500 text-[11px] font-black uppercase tracking-widest">
+             &copy; {new Date().getFullYear()} Appliance Vista. Designed for technical excellence.
+           </p>
+           <div className="flex gap-8 text-[10px] font-black uppercase tracking-widest text-slate-500">
+             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>
+             <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms</Link>
+             <Link to="/refund-policy" className="hover:text-white transition-colors">Refund</Link>
+             <Link to="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+           </div>
         </div>
       </div>
     </footer>

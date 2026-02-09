@@ -1,8 +1,8 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogsData } from '../data/blogs';
-import { FaArrowLeft, FaUser, FaCalendarAlt, FaShareAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaUser, FaCalendarAlt, FaShareAlt, FaArrowRight } from 'react-icons/fa';
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -14,14 +14,15 @@ const BlogDetails = () => {
 
   if (!blog) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-light">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 font-sans">
         <Helmet>
-           <title>Blog Not Found - Appliance Vista</title>
+           <title>Article Not Found - Appliance Vista</title>
         </Helmet>
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-primary mb-6">Blog Post Not Found</h2>
-          <Link to="/" className="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary-dark transition-all shadow-lg">
-            Back to Home
+          <h2 className="text-6xl font-black text-primary mb-6 tracking-tighter uppercase">404</h2>
+          <p className="text-slate-500 mb-8 font-medium uppercase tracking-widest">Article Path Not Found</p>
+          <Link to="/blog" className="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-[3px] text-xs hover:bg-secondary transition-all shadow-xl">
+            Return to Journal
           </Link>
         </div>
       </div>
@@ -29,69 +30,76 @@ const BlogDetails = () => {
   }
 
   return (
-    <article className="bg-white min-h-screen pt-32 pb-24">
+    <article className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>{blog.title} - Appliance Vista Blog</title>
+        <title>{blog.title} - Appliance Vista Journal</title>
         <meta name="description" content={blog.shortDesc} />
         <link rel="canonical" href={`https://www.appliancevista.shop/blog/${blog.id}`} />
       </Helmet>
       
-      <div className="container mx-auto px-4 max-w-4xl">
-        <Link to="/#blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold mb-12 transition-colors group">
-          <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" /> Back to All Articles
-        </Link>
-
-        <header className="mb-12" data-aos="fade-up">
-          <div className="flex items-center gap-6 text-gray-400 text-xs font-bold uppercase tracking-[2px] mb-6">
+      {/* Dynamic Header */}
+      <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl text-center">
+           <Link to="/blog" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
+             <FaArrowLeft /> Journal Overview
+           </Link>
+           <div className="flex items-center justify-center gap-6 text-slate-400 text-[10px] font-black uppercase tracking-[3px] mb-8">
             <span className="flex items-center gap-2">
-              <FaUser className="text-secondary" /> {blog.author || 'Admin'}
+              <FaUser className="text-secondary" /> {blog.author || 'Master Tech'}
             </span>
+            <div className="w-1 h-1 rounded-full bg-white/20"></div>
             <span className="flex items-center gap-2">
               <FaCalendarAlt className="text-secondary" /> {blog.date}
             </span>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-heading font-extrabold text-gray-900 mb-8 leading-tight">
-            {blog.title}
-          </h1>
-          
-          <div className="h-2 w-24 bg-secondary rounded-full"></div>
-        </header>
+           <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+             {blog.title}
+           </h1>
+        </div>
+      </section>
 
-        <div className="relative mb-16" data-aos="zoom-in">
+      <div className="container mx-auto px-4 md:px-8 max-w-4xl py-32 relative -mt-16 bg-white rounded-t-[60px] z-20">
+        
+        <div className="relative mb-20 group">
+          <div className="absolute -inset-4 border-2 border-slate-50 rounded-[3rem] pointer-events-none"></div>
           <img 
             src={blog.image} 
-            className="rounded-[2.5rem] shadow-2xl w-full object-cover max-h-[600px]" 
+            className="rounded-[3rem] shadow-premium w-full object-cover max-h-[700px] transition-transform duration-1000" 
             alt={blog.title} 
           />
-          <div className="absolute -bottom-6 -right-6">
-            <button className="bg-white text-primary p-6 rounded-full shadow-2xl hover:bg-secondary hover:text-white transition-all group active:scale-95">
+          <div className="absolute -bottom-6 right-10">
+            <button className="bg-secondary text-white w-16 h-16 rounded-3xl shadow-2xl hover:bg-primary transition-all group active:scale-95 flex items-center justify-center">
               <FaShareAlt size={20} className="group-hover:rotate-12 transition-transform" />
             </button>
           </div>
         </div>
              
-        <div className="prose prose-xl prose-primary max-w-none mb-20" data-aos="fade-up">
-          <div className="blog-content text-gray-600 leading-[1.8] space-y-8 text-lg md:text-xl font-light" dangerouslySetInnerHTML={{ __html: blog.longDesc }} />
+        <div className="prose prose-2xl max-w-none mb-32">
+          <div className="blog-content text-slate-500 font-medium leading-[1.8] space-y-8 text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: blog.longDesc }} />
         </div>
              
-        <div className="border-t border-gray-100 pt-16 mt-16 text-center bg-gray-50 rounded-[3rem] p-12 shadow-sm border" data-aos="fade-up">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Facing Similar Issues?</h3>
-          <p className="text-gray-500 max-w-lg mx-auto mb-10 text-lg">
-            Our expert technicians are available 24/7 to help you with any appliance repair or maintenance needs.
+        {/* Interaction Footer */}
+        <div className="bg-slate-50 rounded-[60px] p-12 md:p-20 text-center border border-slate-100">
+          <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-8">
+            <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Next Actions</span>
+          </div>
+          <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Requiring Technical Support?</h3>
+          <p className="text-slate-400 max-w-lg mx-auto mb-12 font-medium text-lg leading-relaxed">
+            Our expert technicians are available 24/7 to help you implement these repair strategies or handle the maintenance for you.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link 
-              to="/#contact" 
-              className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest shadow-xl hover:-translate-y-1 transition-all"
+              to="/contact" 
+              className="bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all flex items-center justify-center gap-4"
             >
-              Contact Our Experts
+              Consult an Expert <FaArrowRight />
             </Link>
             <a 
               href="tel:+15305544817" 
-              className="bg-white border border-gray-200 text-gray-700 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all shadow-sm"
+              className="bg-white border border-slate-200 text-primary px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs hover:border-secondary hover:text-secondary transition-all shadow-sm flex items-center justify-center gap-4"
             >
-              Call Us Now
+              Instant Support
             </a>
           </div>
         </div>
@@ -101,4 +109,3 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
-

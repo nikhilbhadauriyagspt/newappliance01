@@ -1,8 +1,8 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogsData } from '../data/blogs';
-import { FaCalendarAlt, FaUser } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaArrowRight, FaTag } from 'react-icons/fa';
 
 const Blog = () => {
   useEffect(() => {
@@ -10,57 +10,83 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Our Blog - Appliance Vista</title>
+        <title>Our Blog - Appliance Vista | Professional Insights</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
         <link rel="canonical" href="https://www.appliancevista.shop/blog" />
       </Helmet>
 
-      <div className="relative bg-white py-32 overflow-hidden border-b border-gray-100">
-         <div className="container mx-auto px-4 relative z-10 text-center">
-            <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">News & Updates</h6>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-gray-900 mb-6">Latest from the Blog</h1>
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto font-light">
-              Expert advice to help you get the most out of your home appliances.
-            </p>
-         </div>
-      </div>
+      {/* Premium Page Header */}
+      <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
+            <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Intellectual Hub</span>
+          </div>
+          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+            Repair <br />& Maintenance <span className="text-secondary">Journal</span>
+          </h1>
+          <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            Professional perspectives on high-end appliance maintenance, technical diagnostics, and industry advancements.
+          </p>
+        </div>
+      </section>
 
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-4 md:px-8 py-32 bg-slate-50 relative -mt-16 rounded-t-[60px] z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {blogsData.map((blog) => (
-            <article key={blog.id} className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative h-64 overflow-hidden">
+          {blogsData.map((blog, index) => (
+            <article 
+              key={blog.id} 
+              className="group bg-white rounded-[48px] overflow-hidden border border-slate-100 hover:shadow-premium transition-all duration-700 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="relative h-80 overflow-hidden">
                 <img 
                   src={blog.image} 
                   alt={blog.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-900">
+                <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest text-primary shadow-lg">
                   {blog.date}
                 </div>
               </div>
               
-              <div className="p-8">
-                <div className="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
-                   <span className="flex items-center gap-2"><FaUser className="text-secondary" /> {blog.author}</span>
+              <div className="p-12 flex flex-col flex-grow">
+                <div className="flex items-center gap-4 text-[10px] font-black text-slate-400 uppercase tracking-[2px] mb-6">
+                   <span className="flex items-center gap-2 bg-slate-50 px-3 py-1 rounded-full"><FaUser className="text-secondary" /> {blog.author}</span>
+                   <span className="flex items-center gap-2 bg-slate-50 px-3 py-1 rounded-full"><FaTag className="text-secondary" /> Maintenance</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                
+                <h3 className="text-3xl font-black text-primary mb-6 group-hover:text-secondary transition-colors leading-tight tracking-tighter">
                   <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
                 </h3>
-                <p className="text-gray-500 mb-6 line-clamp-3 leading-relaxed">
+                
+                <p className="text-slate-500 font-medium mb-10 line-clamp-3 leading-relaxed">
                   {blog.shortDesc}
                 </p>
-                <Link 
-                  to={`/blog/${blog.id}`} 
-                  className="inline-block text-primary font-bold border-b-2 border-secondary hover:text-secondary transition-colors"
-                >
-                  Read Full Article
-                </Link>
+                
+                <div className="mt-auto pt-8 border-t border-slate-50">
+                  <Link 
+                    to={`/blog/${blog.id}`} 
+                    className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[3px] text-primary group-hover:gap-6 transition-all"
+                  >
+                    Examine Article <FaArrowRight className="text-secondary" />
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Blog Footer CTA */}
+        <div className="mt-24 text-center">
+           <div className="inline-block p-1 bg-white rounded-full border border-slate-100 shadow-sm">
+              <div className="px-10 py-5 bg-primary rounded-full text-white">
+                 <p className="text-xs font-black uppercase tracking-[4px]">End of Directory • Check back weekly for new updates</p>
+              </div>
+           </div>
         </div>
       </div>
     </div>
@@ -68,4 +94,3 @@ const Blog = () => {
 };
 
 export default Blog;
-

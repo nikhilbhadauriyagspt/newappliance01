@@ -28,12 +28,14 @@ import CookiePolicy from './pages/policies/CookiePolicy';
 import Disclaimer from './pages/policies/Disclaimer';
 import { BookingProvider } from './context/BookingContext';
 import BookingModal from './components/modals/BookingModal';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <BookingProvider>
       <Router>
+        <ScrollToTop />
         <div className="App overflow-x-hidden">
           <Header />
           <BookingModal />

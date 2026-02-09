@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaUserTie, FaAward, FaTools, FaCheckCircle, FaShieldAlt, FaCogs, FaHandshake, FaMicrochip } from 'react-icons/fa';
+import { FaUserTie, FaAward, FaTools, FaCheckCircle, FaShieldAlt, FaCogs, FaHandshake, FaMicrochip, FaQuoteLeft } from 'react-icons/fa';
 
 const About = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -9,148 +9,130 @@ const About = () => {
     {
       icon: <FaShieldAlt />,
       title: "Technical Integrity",
-      desc: "We adhere to manufacturer-recommended diagnostic and repair protocols to ensure the longevity of your equipment."
+      desc: "We adhere to manufacturer-mandated diagnostic protocols, focusing on equipment performance and technical accuracy."
     },
     {
       icon: <FaCogs />,
-      title: "Operational Excellence",
-      desc: "Our workflow is designed for efficiency, from the initial service request to the final quality inspection."
+      title: "Operational Precision",
+      desc: "Our workflow is engineered for efficiency, managing the process from initial scheduling to technical validation."
     },
     {
       icon: <FaHandshake />,
-      title: "Transparent Communication",
-      desc: "We provide clear, upfront technical assessments and cost estimates before any repair work commences."
+      title: "Service Transparency",
+      desc: "We provide comprehensive service assessments and cost estimates before any technical work is initiated."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans">
       <Helmet>
         <title>About Appliance Vista | Professional Repair Standards</title>
         <meta name="description" content="Discover Appliance Vista's commitment to professional appliance repair standards, technical expertise, and transparent service delivery." />
         <link rel="canonical" href="https://www.appliancevista.shop/about" />
       </Helmet>
 
-      {/* Hero Section */}
-      <div className="relative bg-primary py-32 lg:py-48 overflow-hidden">
-         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-         <div className="container mx-auto px-4 relative z-10 text-center">
-            <h6 className="text-secondary font-bold uppercase tracking-[4px] text-sm mb-6">Our Identity</h6>
-            <h1 className="text-4xl md:text-7xl font-heading font-bold text-white mb-8 leading-tight">About Appliance Vista</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-              Establishing higher standards in household appliance maintenance through technical precision and professional accountability.
-            </p>
-         </div>
-      </div>
-
-      {/* Corporate Philosophy */}
-      <div className="container mx-auto px-4 py-24 border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="w-full lg:w-1/2">
-             <div className="relative">
-                <img src="/banner/about.jpg" className="rounded-[3rem] shadow-2xl w-full h-[400px] lg:h-[600px] object-cover" alt="Technical Workshop" />
-                <div className="absolute -bottom-10 -right-1 lg:right-10 bg-white p-8 rounded-3xl shadow-2xl border border-gray-50 hidden md:block">
-                   <div className="flex items-center gap-6">
-                      <div className="text-secondary text-4xl font-black">STND</div>
-                      <div className="text-gray-400 text-xs font-bold uppercase tracking-widest leading-tight">Industry <br/> Standard <br/> Compliant</div>
-                   </div>
-                </div>
-             </div>
+      <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
+            <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Overview</span>
           </div>
-          <div className="w-full lg:w-1/2">
-             <h6 className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Our Objective</h6>
-             <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-8 leading-tight">A Professional Approach to Technical Challenges</h2>
-             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                <p>
-                  Appliance Vista was founded on the principle that household repairs should be handled with the same level of precision as industrial maintenance. We recognize that modern appliances are complex electronic systems that require specialized knowledge and calibrated tools for effective servicing.
-                </p>
-                <p>
-                  Our organization focuses on bridging the gap between appliance failure and long-term functional restoration. By employing experienced technical personnel and utilizing genuine replacement components, we aim to deliver results that meet or exceed original equipment manufacturer (OEM) specifications.
-                </p>
-             </div>
-             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
-               {['OEM Standard Parts', 'Advanced Diagnostics', 'Protocol-Driven Service', 'Technical Documentation'].map((item, idx) => (
-                 <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl">
-                   <FaCheckCircle className="text-secondary" />
-                   <span className="font-bold text-gray-700 text-sm">{item}</span>
-                 </div>
-               ))}
-             </div>
+          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+            Professional <br />Appliance <span className="text-secondary">Maintenance</span>
+          </h1>
+          <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            A dedicated technical division providing maintenance solutions for essential household equipment with a focus on reliability and professional standards.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-24">
+            <div className="w-full lg:w-1/2 relative">
+               <div className="absolute -inset-6 border-2 border-slate-50 rounded-[4rem] pointer-events-none"></div>
+               <div className="relative rounded-[3rem] overflow-hidden shadow-premium group">
+                  <img src="/banner/about.jpg" className="w-full h-[500px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110" alt="Technical Service Division" />
+                  <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-white shadow-2xl">
+                     <div className="flex items-center gap-6">
+                        <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-secondary text-2xl">
+                           <FaQuoteLeft />
+                        </div>
+                        <p className="text-primary font-black text-sm italic leading-relaxed">
+                          "Our objective is to maintain high technical standards across all service operations."
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div className="w-full lg:w-1/2">
+               <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
+                  <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Organization Standards</span>
+               </div>
+               <h2 className="text-4xl md:text-6xl font-black text-primary mb-10 leading-[1.1] tracking-tighter uppercase">
+                  Systematic Approach to <span className="text-secondary">Technical Care</span>
+               </h2>
+               <div className="space-y-8 text-slate-500 text-lg font-medium leading-relaxed mb-12">
+                  <p>
+                    Appliance Vista provides residential repair services focused on technical accuracy. We recognize that modern appliances are complex systems that benefit from specialized diagnostic knowledge.
+                  </p>
+                  <p>
+                    Our focus is on restoring equipment functionality using verified diagnostic procedures and manufacturer-grade components. We aim to identify and address technical issues with professional precision.
+                  </p>
+               </div>
+               
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Verified Service Parts',
+                    'Advanced Diagnostic Tools',
+                    'Digital Service Documentation',
+                    'Safety Compliance Protocols'
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-4 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white text-[10px]">
+                        <FaCheckCircle />
+                      </div>
+                      <span className="font-black text-primary text-[11px] uppercase tracking-wider">{item}</span>
+                    </div>
+                  ))}
+               </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Values Section */}
-      <div className="bg-gray-50 py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Competencies</h2>
-            <p className="text-gray-500">The pillars that define our service delivery and technical operations.</p>
+      <section className="py-32 bg-slate-50 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Operational Principles</h2>
+            <p className="text-slate-500 font-medium">The core standards that guide our technical service delivery.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((v, i) => (
-              <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group">
-                <div className="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+              <div key={i} className="bg-white p-12 rounded-[48px] border border-slate-100 shadow-sm flex flex-col items-center text-center">
+                <div className="w-20 h-20 bg-slate-50 text-primary rounded-[24px] flex items-center justify-center text-3xl mb-10 shadow-inner">
                   {v.icon}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4">{v.title}</h4>
-                <p className="text-gray-500 leading-relaxed text-sm">{v.desc}</p>
+                <h4 className="text-2xl font-black text-primary mb-6 uppercase tracking-tighter">{v.title}</h4>
+                <p className="text-slate-500 font-medium leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Service Standards */}
-      <div className="container mx-auto px-4 py-24">
-        <div className="bg-primary rounded-[3rem] p-10 md:p-20 text-white overflow-hidden relative">
-           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                 <h2 className="text-3xl md:text-5xl font-bold mb-8">Technical Proficiency</h2>
-                 <p className="text-white/70 text-lg mb-10 leading-relaxed">
-                   Our technical team undergoes continuous training to stay updated with the latest advancements in appliance technology. Whether it's the latest Smart TV display panels, high-efficiency inverter compressors in refrigerators, or complex PCB circuits in washing machines, we have the tools and expertise to perform detailed diagnostics.
-                 </p>
-                 <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                       <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center font-bold">01</div>
-                       <p className="font-bold">Comprehensive system health audits with every repair.</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                       <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center font-bold">02</div>
-                       <p className="font-bold">Strict adherence to safety and electrical compliance standards.</p>
-                    </div>
-                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-6">
-                 {[
-                   { icon: <FaUserTie />, label: "Experienced Staff" },
-                   { icon: <FaTools />, label: "Calibrated Tools" },
-                   { icon: <FaAward />, label: "Standardized Testing" },
-                   { icon: <FaMicrochip />, label: "Component Level Fix" }
-                 ].map((box, i) => (
-                   <div key={i} className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-3xl text-center hover:bg-white/20 transition-all">
-                      <div className="text-3xl text-secondary mb-4 flex justify-center">{box.icon}</div>
-                      <p className="font-bold text-sm uppercase tracking-wider leading-tight">{box.label}</p>
-                   </div>
-                 ))}
-              </div>
-           </div>
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl">
+          <h2 className="text-3xl font-black text-primary mb-8 tracking-tighter uppercase">Commitment to Service Integrity</h2>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-12">
+            We operate with a focus on clear communication. Our service includes detailed assessments of technical faults and a breakdown of parts and labor before work begins. We prioritize honesty and professional accountability in every client interaction.
+          </p>
+          <div className="inline-block px-12 py-1 border-t-2 border-b-2 border-secondary/20">
+             <p className="font-black text-primary tracking-[8px] text-xs uppercase py-4">Appliance Vista / Service Division</p>
+          </div>
         </div>
-      </div>
-
-      {/* Operational Transparency */}
-      <div className="container mx-auto px-4 pb-24">
-         <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Commitment to Transparency</h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-10">
-              We believe that trust is built through consistency and honest service. Appliance Vista ensures that every client receives a detailed explanation of the appliance fault, the proposed solution, and a breakdown of the parts and labor required. We do not engage in hidden fees or unverifiable service claims.
-            </p>
-            <div className="inline-block border-b-2 border-secondary pb-2">
-               <p className="font-heading font-black text-gray-900 tracking-tighter text-2xl">Appliance <span className="text-secondary">Vista</span></p>
-            </div>
-         </div>
-      </div>
+      </section>
     </div>
   );
 };

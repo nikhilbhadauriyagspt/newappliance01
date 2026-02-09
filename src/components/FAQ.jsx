@@ -1,86 +1,112 @@
 import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp, FaQuestionCircle } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaLightbulb } from 'react-icons/fa';
 
 const faqs = [
   {
     question: "What types of appliances do you repair?",
-    answer: "At Appliance Vista, we specialize in a wide range of home appliances including washing machines (top-load, front-load, semi-automatic), refrigerators (single door, double door, side-by-side), air conditioners (split and window), microwave ovens, dishwashers, televisions, and more. Our technicians are trained to handle almost all major household brands."
+    answer: "We specialize in premium home appliances including advanced washing machines, refrigerators, high-efficiency AC units, smart televisions, and luxury kitchen equipment. Our technicians are certified for all major global brands."
   },
   {
-    question: "Do you offer same-day repair services?",
-    answer: "Yes, we understand that a broken appliance can disrupt your daily routine. We offer same-day repair services for bookings made before 2 PM. Our technicians usually arrive within 2 hours of your service request to diagnose and fix the issue promptly."
+    question: "Do you offer same-day priority service?",
+    answer: "Yes, for requests made before 12 PM, we offer same-day priority diagnostics. Our technicians typically arrive with standard spare parts to ensure a first-visit resolution whenever possible."
   },
   {
-    question: "Are your technicians certified?",
-    answer: "Absolutely. All our technicians are background-checked, highly trained, and certified experts in their respective fields. They have years of experience dealing with complex electrical and mechanical issues in modern home appliances."
+    question: "Are your technicians manufacturer-certified?",
+    answer: "Every member of our technical team undergoes rigorous factory-grade training and background verification. We maintain high standards of technical excellence and professional conduct."
   },
   {
-    question: "Do you provide a warranty on your repairs?",
-    answer: "Yes, we stand behind our work. We provide a standard 30-day warranty on all our labor and up to 90 days warranty on the spare parts we replace, depending on the component and brand. Your satisfaction and peace of mind are our top priorities."
+    question: "What is your warranty policy on repairs?",
+    answer: "We provide an industry-leading 30-day labor guarantee and up to 90 days of warranty on all factory-original spare parts replaced by our team."
   },
   {
-    question: "What are your service charges?",
-    answer: "Our diagnostic and visiting charges are very affordable. Once our technician inspects your appliance, they will provide a complete upfront cost estimate for the repair. We only proceed with the work once you approve the quote. There are no hidden costs."
-  },
-  {
-    question: "Do you use genuine spare parts?",
-    answer: "Yes, we only use 100% genuine and original spare parts sourced directly from manufacturers or authorized distributors. Using high-quality parts ensures that your appliance runs efficiently for a longer period."
+    question: "Are there any hidden service charges?",
+    answer: "Transparency is our core value. We provide a comprehensive digital estimate after diagnosis. Work only begins after your explicit approval of the costs involved."
   }
 ];
 
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-24 bg-gray-50" id="faq">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-          <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-3">Common Questions</h6>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <p className="text-gray-500">Find quick answers to common queries about our appliance repair services, pricing, and warranties.</p>
-        </div>
+    <section className="py-24 bg-white relative overflow-hidden" id="faq">
+      <div className="container mx-auto px-4 md:px-8">
+        
+        <div className="flex flex-col lg:flex-row gap-20">
+          
+          {/* Left Side: Content */}
+          <div className="w-full lg:w-2/5">
+            <div className="sticky top-32">
+              <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Information Hub</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-primary mb-8 leading-[1.1] tracking-tighter">
+                Solutions to Your <span className="text-secondary">Questions</span>
+              </h2>
+              <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">
+                Transparent answers regarding our high-end appliance repair standards, coverage, and professional guarantees.
+              </p>
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
-            >
-              <button 
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
-              >
-                <div className="flex items-center gap-4">
-                  <FaQuestionCircle className="text-secondary flex-shrink-0" />
-                  <span className="font-bold text-gray-900 md:text-lg">{faq.question}</span>
-                </div>
-                {activeIndex === index ? <FaChevronUp className="text-primary" /> : <FaChevronDown className="text-gray-400" />}
-              </button>
-              
-              <div className={`transition-all duration-300 ease-in-out ${activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
-                <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-50">
-                  {faq.answer}
+              <div className="p-8 bg-slate-50 rounded-[32px] border border-slate-100 relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-full translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary mb-4">
+                    <FaLightbulb />
+                  </div>
+                  <h4 className="text-lg font-black text-primary mb-2">Need a custom quote?</h4>
+                  <p className="text-slate-400 text-sm font-medium mb-6">Our experts are ready to assist with complex technical inquiries.</p>
+                  <a href="tel:+15305544817" className="inline-flex items-center gap-2 text-secondary font-black uppercase tracking-widest text-[10px] hover:gap-4 transition-all">
+                    Connect With Us &rarr;
+                  </a>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Right Side: Accordion */}
+          <div className="w-full lg:w-3/5">
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div 
+                  key={index} 
+                  className={`group rounded-[32px] border transition-all duration-500 overflow-hidden ${
+                    activeIndex === index 
+                      ? 'bg-primary border-primary shadow-xl shadow-primary/20' 
+                      : 'bg-white border-slate-100 hover:border-secondary/30'
+                  }`}
+                >
+                  <button 
+                    onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                    className="w-full flex items-center justify-between p-8 text-left"
+                  >
+                    <span className={`text-lg font-black tracking-tight transition-colors duration-500 ${
+                      activeIndex === index ? 'text-white' : 'text-primary'
+                    }`}>
+                      {faq.question}
+                    </span>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                      activeIndex === index ? 'bg-secondary text-white' : 'bg-slate-50 text-slate-400 group-hover:bg-secondary/10 group-hover:text-secondary'
+                    }`}>
+                      {activeIndex === index ? <FaMinus size={10} /> : <FaPlus size={10} />}
+                    </div>
+                  </button>
+                  
+                  <div className={`transition-all duration-500 ease-in-out ${
+                    activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className={`p-8 pt-0 font-medium leading-relaxed transition-colors duration-500 ${
+                      activeIndex === index ? 'text-slate-300' : 'text-slate-500'
+                    }`}>
+                      <div className="h-px w-full bg-white/10 mb-6"></div>
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
 
-        <div className="mt-16 text-center bg-primary rounded-[2.5rem] p-12 text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
-           <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full translate-x-16 -translate-y-16"></div>
-           <h3 className="text-2xl md:text-3xl font-bold mb-4">Still have questions?</h3>
-           <p className="text-white/70 mb-8 max-w-lg mx-auto">Our customer support team is available 24/7 to assist you with any specific queries you might have about your appliance.</p>
-           <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+15305544817" className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest transition-all shadow-lg">Call Us Now</a>
-              <a href="#contact" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold uppercase tracking-widest transition-all">Contact Form</a>
-           </div>
-        </div>
       </div>
     </section>
   );

@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data/blogs';
-import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaArrowRight, FaTag } from 'react-icons/fa';
 
 const Blog = () => {
   return (
-    <section className="py-24 bg-light" id="blog">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
-          <div className="max-w-xl">
-            <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-3">Latest Blogs</h6>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 leading-tight">Expert Tips & Industry Insights</h2>
+    <section className="py-24 bg-slate-50 relative overflow-hidden" id="blog">
+      <div className="container mx-auto px-4 md:px-8">
+        
+        {/* Section Title */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
+              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Expert Insights</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-primary leading-[1.1] tracking-tight">
+              Maintenance Tips & <br /><span className="text-secondary">Industry News</span>
+            </h2>
           </div>
-          <Link to="/blog" className="hidden md:flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors mb-2 border-b-2 border-secondary/30 pb-1">
-            View All Posts <FaArrowRight size={14} />
+          <Link to="/blog" className="group flex items-center gap-3 bg-white px-8 py-4 rounded-2xl shadow-sm border border-slate-100 text-primary font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white transition-all">
+            Explore All Posts <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -21,52 +27,55 @@ const Blog = () => {
           {blogsData.map((blog, index) => (
             <article
               key={blog.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col"
+              className="group bg-white rounded-[40px] overflow-hidden border border-slate-100 hover:shadow-premium transition-all duration-500 flex flex-col"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="relative h-60 overflow-hidden">
+              {/* Image Container */}
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={blog.image}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1"
                   alt={blog.title}
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
-                    Repair Tips
-                  </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Floating Date Badge */}
+                <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg">
+                  <span className="text-[10px] font-black text-primary uppercase tracking-widest">{blog.date}</span>
                 </div>
               </div>
 
-              <div className="p-8 flex-grow flex flex-col">
-                <div className="flex items-center gap-3 text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">
-                  <FaCalendarAlt className="text-secondary" />
-                  <span>{blog.date}</span>
+              {/* Content Area */}
+              <div className="p-10 flex-grow flex flex-col">
+                <div className="flex items-center gap-2 text-secondary text-[10px] font-black uppercase tracking-[2px] mb-4">
+                  <FaTag size={10} />
+                  <span>Technical Guide</span>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-snug">
+                <h3 className="text-2xl font-black text-primary mb-4 group-hover:text-secondary transition-colors leading-tight tracking-tight">
                   {blog.title}
                 </h3>
 
-                <p className="text-gray-500 text-sm mb-8 leading-relaxed line-clamp-3 flex-grow">
+                <p className="text-slate-500 text-sm font-medium mb-8 leading-relaxed line-clamp-3">
                   {blog.shortDesc}
                 </p>
 
-                <Link
-                  to={`/blog/${blog.id}`}
-                  className="inline-flex items-center gap-2 font-bold text-xs uppercase tracking-widest text-primary group-hover:text-secondary transition-colors"
-                >
-                  Read Full Article <FaArrowRight className="transition-transform group-hover:translate-x-2" />
-                </Link>
+                <div className="mt-auto pt-8 border-t border-slate-50 flex justify-between items-center">
+                  <Link
+                    to={`/blog/${blog.id}`}
+                    className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[2px] text-primary group-hover:gap-5 transition-all"
+                  >
+                    Read More <FaArrowRight className="text-secondary" />
+                  </Link>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">New Update</span>
+                  </div>
+                </div>
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="mt-12 md:hidden text-center">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors border-b-2 border-secondary/30 pb-1">
-            View All Posts <FaArrowRight size={14} />
-          </Link>
         </div>
       </div>
     </section>

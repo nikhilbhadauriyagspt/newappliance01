@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
-import { FaWrench, FaShieldAlt, FaClock, FaCheckCircle, FaTools, FaSnowflake, FaPlug } from 'react-icons/fa';
+import { FaArrowRight, FaPhoneAlt, FaTools, FaSnowflake, FaMicrochip, FaCogs, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 import { useBooking } from '../context/BookingContext';
 
 // Import Swiper styles
@@ -12,133 +12,157 @@ import 'swiper/css/effect-fade';
 const slides = [
   {
     id: 1,
-    title: "Professional Appliance Repair Solutions",
-    subtitle: "Qualified Technicians • Scheduled Support",
-    description: "Assisting with appliance malfunctions to help maintain your household routine. Our technicians provide diagnostic and repair services for luxury and standard brands.",
+    title: "PROFESSIONAL HOME APPLIANCE REPAIR",
+    subtitle: "TECHNICAL SERVICE DIVISION",
     bgImage: "/banner/hero-1.jpg",
-    icon: <FaTools className="text-secondary" />,
-    stats: { label: "Booking Status", value: "Open" },
-    status: "Service slots available"
+    cta: "REQUEST SERVICE",
+    specs: ["SERVICE WARRANTY", "VERIFIED SPARE PARTS", "SCHEDULED VISITS"],
+    cardInfo: {
+      title: "Diagnostic Audit",
+      desc: "Comprehensive technical assessment of household appliances by our skilled technical team.",
+      code: "SERVICE-UNIT: A1",
+      icon: <FaTools />,
+      progress: "w-full",
+      status: "Ready for Dispatch"
+    }
   },
   {
     id: 2,
-    title: "Residential Refrigerator Repair Services",
-    subtitle: "Temperature Calibration • Component Repair",
-    description: "Addressing cooling inefficiencies and component failures in residential units. We service various refrigerator models to restore standard operation.",
+    title: "REFRIGERATOR COOLING SOLUTIONS",
+    subtitle: "TECHNICAL MAINTENANCE TEAM",
     bgImage: "/banner/hero-2.jpg",
-    icon: <FaSnowflake className="text-blue-400" />,
-    stats: { label: "Response", value: "Quick" },
-    status: "In-home service active"
+    cta: "SCHEDULE FIX",
+    specs: ["GAS REFILLING", "COMPRESSOR REPAIR", "RESIDENTIAL SERVICE"],
+    cardInfo: {
+      title: "Thermal Analysis",
+      desc: "Temperature calibration and technical pressure verification for cooling systems.",
+      code: "COOL-UNIT: B2",
+      icon: <FaSnowflake />,
+      progress: "w-4/5",
+      status: "Verified Protocol"
+    }
   },
   {
     id: 3,
-    title: "Washing Machine Diagnostic Services",
-    subtitle: "Mechanical Repair • Technical Maintenance",
-    description: "Maintenance for front-loading and top-loading machines. We address motor, drainage, and electronic control issues using standard industry tools.",
+    title: "WASHING MACHINE REPAIR SERVICE",
+    subtitle: "LAUNDRY APPLIANCE DIVISION",
     bgImage: "/banner/hero-3.jpg",
-    icon: <FaPlug className="text-primary" />,
-    stats: { label: "Availability", value: "Daily" },
-    status: "Bookings subject to slot"
+    cta: "BOOK APPOINTMENT",
+    specs: ["PCB BOARD FIX", "DRUM CALIBRATION", "MOTOR RESTORATION"],
+    cardInfo: {
+      title: "System Testing",
+      desc: "Mechanical performance verification and electronic diagnostic testing for laundry units.",
+      code: "WASH-SYS: C3",
+      icon: <FaCogs />,
+      progress: "w-3/4",
+      status: "Logic Confirmed"
+    }
   }
 ];
 
 const Hero = () => {
   const { openBookingModal } = useBooking();
+
   return (
-    <section id="home" className="relative h-[90vh] lg:min-h-screen bg-[#05070a] overflow-hidden">
+    <section id="home" className="relative h-[85vh] lg:h-[95vh] w-full bg-[#020617] overflow-hidden font-sans">
+      
+      <div className="absolute inset-0 pointer-events-none z-30 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-secondary/20 animate-scan pointer-events-none"></div>
+        <div className="absolute left-8 top-1/2 -rotate-90 origin-left hidden xl:block">
+           <span className="text-[9px] font-black tracking-[6px] text-white/30 uppercase">TECHNICAL INTERFACE</span>
+        </div>
+        <div className="absolute top-8 left-8 w-10 h-10 border-t border-l border-white/20"></div>
+        <div className="absolute top-8 right-8 w-10 h-10 border-t border-r border-white/20"></div>
+        <div className="absolute bottom-8 left-8 w-10 h-10 border-b border-l border-white/20"></div>
+        <div className="absolute bottom-8 right-8 w-10 h-10 border-b border-r border-white/20"></div>
+      </div>
+
       <Swiper
         spaceBetween={0}
         effect={'fade'}
         loop={true}
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
-        }}
+        speed={1200}
+        autoplay={{ delay: 7000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
-          renderBullet: (index, className) => {
-            return `<span class="${className} custom-bullet"></span>`;
-          },
+          renderBullet: (index, className) => `<span class="${className} custom-bullet"></span>`
         }}
         modules={[Autoplay, Pagination, EffectFade]}
         className="h-full w-full hero-swiper"
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
             <div className="relative h-full w-full flex items-center">
-              
               <div className="absolute inset-0 z-0">
-                <img src={slide.bgImage} alt={slide.title} className="w-full h-full object-cover opacity-30 swiper-bg-image" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#05070a] via-[#05070a]/80 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/70 to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-black/20 z-10"></div>
+                <img src={slide.bgImage} alt={slide.title} className="w-full h-full object-cover" />
               </div>
 
-              <div className="container mx-auto px-4 sm:px-6 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
+              <div className="container mx-auto px-6 md:px-16 lg:px-24 relative z-20">
+                <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
                   
-                  <div className="w-full lg:w-3/5 text-center lg:text-left">
-                    <div className="hero-element inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-6 lg:mb-8">
-                      <span className="flex h-2 w-2 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
-                      </span>
-                      <span className="text-white/70 text-[9px] md:text-[11px] font-bold uppercase tracking-[2px]">{slide.subtitle}</span>
-                    </div>
-
-                    <h1 className="hero-element text-2xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 lg:mb-6 leading-[1.3] lg:leading-[1.1] tracking-tight">
-                      {slide.title}
-                    </h1>
-
-                    <p className="hero-element text-xs md:text-xl text-gray-400 font-light mb-6 lg:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                      {slide.description}
-                    </p>
-
-                    <div className="hero-element flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8 lg:mb-12">
-                      <button onClick={() => openBookingModal()} className="w-full sm:w-auto px-6 py-3 bg-secondary text-white font-bold uppercase tracking-wider text-[11px] lg:text-sm rounded-xl hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-xl">
-                         <FaWrench /> Request Service
-                      </button>
-                      <a href="#services" className="w-full sm:w-auto px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold uppercase tracking-wider text-[11px] lg:text-sm rounded-xl hover:bg-white/10 transition-all flex items-center justify-center">
-                        View Solutions
-                      </a>
-                    </div>
-
-                    <div className="hero-element flex flex-wrap justify-center lg:justify-start items-center gap-6 lg:gap-8 text-gray-500">
-                      <div className="flex items-center gap-3">
-                        <FaShieldAlt className="text-secondary text-lg lg:text-xl" />
-                        <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-white/50">Service Quality Commitment</span>
+                  <div className="w-full lg:w-[60%] text-center lg:text-left">
+                    <div className="hero-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                      <div className="inline-flex items-center gap-3 bg-secondary/10 border border-secondary/20 px-4 py-1.5 rounded-lg mb-6 backdrop-blur-sm">
+                        <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">{slide.subtitle}</span>
                       </div>
-                      <div className="hidden sm:block w-px h-4 bg-white/10"></div>
-                      <div className="flex items-center gap-3">
-                        <FaClock className="text-secondary text-lg lg:text-xl" />
-                        <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-white/50">Support Availability</span>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="hidden lg:flex w-full lg:w-2/5 relative justify-center items-center">
-                    <div className="hero-element-visual relative w-72 h-72 md:w-96 md:h-96">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-full blur-[60px] animate-spin-slow"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-32 h-32 md:w-40 md:h-40 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] flex items-center justify-center text-6xl shadow-2xl relative z-10">
-                          {slide.icon}
-                        </div>
-                      </div>
-                      <div className="absolute -top-4 -right-4 md:top-10 md:-right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl z-20 animate-float">
-                        <div className="flex items-center gap-3">
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                          <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-tighter text-left">Service Status</p>
-                            <p className="text-xs text-white font-medium whitespace-nowrap">{slide.status}</p>
+                      <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] uppercase drop-shadow-xl">
+                        {slide.title}
+                      </h1>
+
+                      <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 mb-12">
+                        {slide.specs.map((spec, i) => (
+                          <div key={i} className="flex items-center gap-2.5">
+                            <FaCheckCircle className="text-secondary text-[10px]" />
+                            <span className="text-white/70 font-bold text-[10px] uppercase tracking-[2px]">{spec}</span>
                           </div>
-                        </div>
+                        ))}
                       </div>
-                      <div className="absolute -bottom-4 -left-4 md:bottom-10 md:-left-10 bg-secondary/90 backdrop-blur-md p-5 rounded-2xl shadow-2xl z-20 animate-float-delayed text-left">
-                        <p className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">{slide.stats.label}</p>
-                        <p className="text-2xl text-white font-black">{slide.stats.value}</p>
+
+                      <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+                        <button onClick={() => openBookingModal()} className="group relative px-10 py-4 bg-secondary text-white font-black uppercase tracking-[3px] text-[11px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all active:scale-95">
+                          <span className="relative z-10 flex items-center gap-3">{slide.cta} <FaArrowRight size={10} /></span>
+                          <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                        </button>
+                        <a href="tel:+15305544817" className="flex items-center gap-4 text-white hover:text-secondary transition-all">
+                           <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shadow-lg"><FaPhoneAlt size={16} /></div>
+                           <div className="text-left leading-none">
+                              <span className="block text-[9px] font-black text-white/40 uppercase tracking-[1px] mb-1.5">Direct Line</span>
+                              <span className="block text-xl font-black tracking-tight">+1 (530) 554-4817</span>
+                           </div>
+                        </a>
                       </div>
                     </div>
                   </div>
 
+                  <div className="hidden lg:block w-full lg:w-[40%]">
+                    <div className="hero-card opacity-0 translate-x-8 transition-all duration-1000 delay-300">
+                       <div className="relative p-10 bg-white rounded-[40px] shadow-2xl overflow-hidden border border-slate-100">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-slate-50 rounded-bl-full -z-0"></div>
+                          <div className="relative z-10">
+                             <div className="flex justify-between items-start mb-8">
+                                <div className="w-14 h-14 rounded-[20px] bg-primary flex items-center justify-center text-secondary text-2xl shadow-lg">{slide.cardInfo.icon}</div>
+                                <div className="text-right">
+                                   <p className="text-[9px] font-black text-slate-300 uppercase tracking-[2px] mb-1">{slide.cardInfo.code}</p>
+                                </div>
+                             </div>
+                             <h3 className="text-xl font-black text-primary mb-3 uppercase tracking-tighter">{slide.cardInfo.title}</h3>
+                             <p className="text-slate-500 text-xs font-medium leading-relaxed mb-8">{slide.cardInfo.desc}</p>
+                             <div className="space-y-5">
+                                <div className="flex justify-between items-end mb-1.5">
+                                   <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{slide.cardInfo.status}</span>
+                                   <FaMicrochip className="text-secondary animate-pulse" size={12} />
+                                </div>
+                                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden p-0.5">
+                                   <div className={`h-full bg-secondary rounded-full ${slide.cardInfo.progress} transition-all duration-[2s] delay-500`}></div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -147,26 +171,14 @@ const Hero = () => {
       </Swiper>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        .hero-swiper .swiper-pagination { bottom: 40px !important; left: 6% !important; text-align: left !important; }
-        .custom-bullet { width: 30px !important; height: 3px !important; border-radius: 0 !important; background: rgba(255, 255, 255, 0.1) !important; opacity: 1 !important; margin: 0 6px !important; transition: all 0.4s ease !important; }
-        .custom-bullet.swiper-pagination-bullet-active { background: #FF6600 !important; width: 50px !important; }
-        .hero-element { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+        @keyframes scan { 0% { top: 0%; opacity: 0; } 50% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+        .animate-scan { animation: scan 5s linear infinite; }
+        .hero-swiper .swiper-pagination { bottom: 40px !important; display: flex !important; gap: 12px !important; justify-content: center !important; }
+        @media (min-width: 1024px) { .hero-swiper .swiper-pagination { left: 15% !important; justify-content: flex-start !important; transform: none !important; } }
+        .custom-bullet { width: 45px !important; height: 3px !important; background: rgba(255, 255, 255, 0.15) !important; opacity: 1 !important; margin: 0 !important; transition: all 0.5s ease !important; cursor: pointer !important; }
+        .custom-bullet.swiper-pagination-bullet-active { background: #2563eb !important; width: 80px !important; }
         .swiper-slide-active .hero-element { opacity: 1; transform: translateY(0); }
-        .swiper-slide-active .hero-element:nth-child(1) { transition-delay: 0.2s; }
-        .swiper-slide-active .hero-element:nth-child(2) { transition-delay: 0.4s; }
-        .swiper-slide-active .hero-element:nth-child(3) { transition-delay: 0.6s; }
-        .swiper-slide-active .hero-element:nth-child(4) { transition-delay: 0.8s; }
-        .swiper-slide-active .hero-element:nth-child(5) { transition-delay: 1s; }
-        .hero-element-visual { opacity: 0; transform: scale(0.8) rotate(-5deg); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s; }
-        .swiper-slide-active .hero-element-visual { opacity: 1; transform: scale(1) rotate(0); }
-        .swiper-bg-image { transform: scale(1.1); transition: transform 10s ease-out; }
-        .swiper-slide-active .swiper-bg-image { transform: scale(1); }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        @keyframes float-delayed { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(12px); } }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-        .animate-float-delayed { animation: float-delayed 5s ease-in-out infinite; }
-        .animate-spin-slow { animation: spin 20s linear infinite; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .swiper-slide-active .hero-card { opacity: 1; transform: translateX(0); }
       `}} />
     </section>
   );

@@ -1,76 +1,107 @@
 import React from 'react';
-import { FaClipboardList, FaSearch, FaTools, FaCheckDouble } from 'react-icons/fa';
+import { FaClipboardList, FaSearch, FaTools, FaCheckDouble, FaArrowRight } from 'react-icons/fa';
 
 const steps = [
   {
     icon: <FaClipboardList />,
-    title: "Book a Service",
-    desc: "Simply fill out our online booking form or give us a call. Provide details about your appliance type and the issues you're facing. We'll schedule a time that works best for you."
+    title: "Schedule",
+    subtitle: "Step 01",
+    desc: "Use our intelligent booking system to select your appliance and preferred time slot."
   },
   {
     icon: <FaSearch />,
-    title: "Expert Diagnosis",
-    desc: "Our certified technician will arrive at your doorstep and perform a comprehensive inspection of your appliance to identify the root cause of the problem using advanced diagnostic tools."
+    title: "Diagnosis",
+    subtitle: "Step 02",
+    desc: "Our master technician performs a deep-scan to identify the core technical fault."
   },
   {
     icon: <FaTools />,
-    title: "Professional Repair",
-    desc: "Once you approve the estimate, we proceed with the repair using 100% genuine spare parts. We focus on technical precision to ensure the repair lasts and your appliance runs efficiently."
+    title: "Precision Fix",
+    subtitle: "Step 03",
+    desc: "We execute the repair using factory-grade parts and advanced equipment."
   },
   {
     icon: <FaCheckDouble />,
-    title: "Quality Check",
-    desc: "After the repair, we perform multiple tests to ensure your appliance is fully functional and safe to use. We don't leave until you're satisfied with the results and the workspace is clean."
+    title: "Validation",
+    subtitle: "Step 04",
+    desc: "Rigorous testing ensures your appliance meets original performance standards."
   }
 ];
 
 const Process = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden" id="process">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
-          <h6 className="text-secondary font-bold uppercase tracking-widest text-sm mb-3">How It Works</h6>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-6">Our Simple Repair Process</h2>
-          <p className="text-gray-500 text-lg">We've streamlined our service to provide you with a hassle-free experience from booking to completion.</p>
+    <section className="py-24 bg-white overflow-hidden relative" id="process">
+      {/* Decorative text background */}
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
+         <span className="text-[20vw] font-black text-primary uppercase tracking-tighter">PROCESS</span>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-24">
+          <div className="inline-flex items-center gap-3 bg-primary/5 px-4 py-2 rounded-full mb-6">
+            <span className="text-primary text-[10px] font-black uppercase tracking-[3px]">Workflow</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black text-primary mb-8 leading-[1.1] tracking-tight">
+            How We Restore <span className="text-secondary">Excellence</span>
+          </h2>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed">
+            A systematic approach to appliance repair, ensuring transparency and technical perfection at every stage.
+          </p>
         </div>
 
         <div className="relative">
-          {/* Connection line for desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -translate-y-1/2 z-0"></div>
+          {/* Progress Line */}
+          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-slate-100 -translate-y-1/2"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="text-center group"
+                className="relative group"
                 data-aos="fade-up"
-                data-aos-delay={index * 150}
+                data-aos-delay={index * 100}
               >
-                <div className="w-20 h-20 bg-white border-4 border-gray-50 rounded-[2rem] flex items-center justify-center text-primary text-3xl mx-auto mb-8 shadow-xl group-hover:bg-secondary group-hover:text-white transition-all duration-500 rotate-45 group-hover:rotate-0">
-                  <div className="-rotate-45 group-hover:rotate-0 transition-all duration-500">
-                    {step.icon}
+                {/* Step Card */}
+                <div className="h-full bg-slate-50 border border-slate-100 rounded-[40px] p-10 hover:bg-white hover:shadow-premium transition-all duration-500 text-center flex flex-col items-center">
+                  
+                  <div className="mb-8 relative">
+                    <div className="w-20 h-20 rounded-3xl bg-white shadow-sm flex items-center justify-center text-primary text-3xl group-hover:bg-secondary group-hover:text-white transition-all duration-500 transform group-hover:-translate-y-2">
+                      {step.icon}
+                    </div>
+                    {/* Floating Step Number */}
+                    <div className="absolute -top-4 -right-4 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">
+                      {step.subtitle}
+                    </div>
                   </div>
-                </div>
 
-                <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 group-hover:bg-white group-hover:shadow-2xl transition-all duration-500 h-full">
-                  <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-6 shadow-lg">
-                    {index + 1}
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <h4 className="text-xl font-black text-primary mb-4 uppercase tracking-tighter">
+                    {step.title}
+                  </h4>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6">
                     {step.desc}
                   </p>
+                  
+                  {/* Arrow for non-last items */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 text-slate-200 group-hover:text-secondary transition-colors group-hover:translate-x-2 duration-500">
+                      <FaArrowRight size={20} />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-36 text-center" data-aos="fade-up">
-          <div className="inline-flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-6 md:p-3 pr-8 rounded-[2rem] md:rounded-full border border-gray-100">
-            <p className="text-gray-600 font-medium px-4">Ready to get your appliance fixed? Schedule a service with our expert team today.</p>
-            <a href="#contact" className="text-primary font-bold uppercase tracking-widest text-xs border-b-2 border-secondary pb-1 hover:text-secondary transition-colors">Book Now &rarr;</a>
-          </div>
+        <div className="mt-24 text-center">
+           <div className="inline-block p-1 bg-slate-50 rounded-full border border-slate-100">
+              <div className="flex flex-col sm:flex-row items-center gap-6 px-8 py-3">
+                 <p className="text-slate-400 text-sm font-bold tracking-tight">Need immediate technical assistance?</p>
+                 <a href="tel:+15305544817" className="px-6 py-3 bg-primary text-white text-[10px] font-black uppercase tracking-[3px] rounded-full shadow-lg hover:bg-secondary transition-colors">
+                   Emergency Line
+                 </a>
+              </div>
+           </div>
         </div>
       </div>
     </section>

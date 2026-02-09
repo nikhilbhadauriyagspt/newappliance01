@@ -8,25 +8,31 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#003366', // Classic Navy
-          dark: '#002244',
+          DEFAULT: '#0f172a', // Slate 900
+          light: '#1e293b',
+          accent: '#2563eb', // Blue 600
         },
         secondary: {
-          DEFAULT: '#FF6600', // Vibrant Orange
-          hover: '#e65c00',
+          DEFAULT: '#2563eb', // Blue 600
+          hover: '#1d4ed8',
+          light: '#dbeafe',
         },
-        light: '#F4F7F6',
-        dark: '#1A1A1A',
+        accent: {
+          DEFAULT: '#f59e0b', // Amber 500
+          hover: '#d97706',
+        },
+        light: '#f8fafc',
+        dark: '#020617',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
-        logo: ['Montserrat', 'sans-serif'],
+        sans: ['Urbanist', 'sans-serif'],
+        heading: ['Urbanist', 'sans-serif'],
+        logo: ['Urbanist', 'sans-serif'],
       },
       boxShadow: {
-        'premium': '0 4px 15px rgba(255, 102, 0, 0.3)',
-        'premium-hover': '0 8px 25px rgba(255, 102, 0, 0.4)',
-        'glass': '0 4px 30px rgba(0, 0, 0, 0.05)',
+        'soft': '0 20px 50px rgba(0, 0, 0, 0.03)',
+        'premium': '0 30px 60px -12px rgba(50, 50, 93, 0.12), 0 18px 36px -18px rgba(0, 0, 0, 0.15)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.04)',
       }
     },
   },
