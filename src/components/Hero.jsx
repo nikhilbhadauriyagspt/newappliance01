@@ -144,9 +144,6 @@ const Hero = () => {
                           <div className="relative z-10">
                              <div className="flex justify-between items-start mb-8">
                                 <div className="w-14 h-14 rounded-[20px] bg-primary flex items-center justify-center text-secondary text-2xl shadow-lg">{slide.cardInfo.icon}</div>
-                                <div className="text-right">
-                                   <p className="text-[9px] font-black text-slate-300 uppercase tracking-[2px] mb-1">{slide.cardInfo.code}</p>
-                                </div>
                              </div>
                              <h3 className="text-xl font-black text-primary mb-3 uppercase tracking-tighter">{slide.cardInfo.title}</h3>
                              <p className="text-slate-500 text-xs font-medium leading-relaxed mb-8">{slide.cardInfo.desc}</p>
