@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus, FaLightbulb } from 'react-icons/fa';
+import { useBooking } from '../context/BookingContext';
 
 const faqs = [
   {
@@ -26,6 +27,7 @@ const faqs = [
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { openBookingModal } = useBooking();
 
   return (
     <section className="py-24 bg-white relative overflow-hidden" id="faq">
@@ -53,10 +55,10 @@ const FAQ = () => {
                     <FaLightbulb />
                   </div>
                   <h4 className="text-lg font-black text-primary mb-2">Need a custom quote?</h4>
-                  <p className="text-slate-400 text-sm font-medium mb-6">Our experts are ready to assist with complex Specialized inquiries.</p>
-                  <a href="tel:+15305544817" className="inline-flex items-center gap-2 text-secondary font-black uppercase tracking-widest text-[10px] hover:gap-4 transition-all">
+                  <p className="text-slate-400 text-sm font-medium mb-6">Our experts are ready to assist with complex inquiries.</p>
+                  <button onClick={() => openBookingModal()} className="inline-flex items-center gap-2 text-secondary font-black uppercase tracking-widest text-[10px] hover:gap-4 transition-all">
                     Connect With Us &rarr;
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
