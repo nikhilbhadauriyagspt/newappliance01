@@ -13,8 +13,8 @@ const WashingMachineRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Professional Washing Machine Repair Service | appliance nerds</title>
-        <meta name="description" content="Technical washing machine maintenance for major brands. Diagnostic services for front-load and top-load systems. Skilled technicians and manufacturer-grade components." />
+        <title>Professional Washing Machine Repair Service | Appliance Nerds</title>
+        <meta name="description" content="Specialized washing machine maintenance for major brands. Diagnostic services for front-load and top-load systems. Skilled technicians and manufacturer-grade components." />
       </Helmet>
 
       <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
@@ -23,11 +23,11 @@ const WashingMachineRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> Service Directory
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
-            Washing Machine Technical Service
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+            Washing Machine Specialized Service
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
-            Systematic diagnostics and technical restoration for residential laundry systems. Focus on performance optimization and component integrity.
+            Systematic diagnostics and Specialized restoration for residential laundry systems. Focus on performance optimization and component integrity.
           </p>
         </div>
       </section>
@@ -64,19 +64,17 @@ const WashingMachineRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service ID: WM-DIV</span>
-            </div>
+
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
               Systematic Diagnostic Framework
             </h2>
 
             <div className="prose prose-lg text-slate-500 font-medium mb-12 max-w-none space-y-6">
               <p>
-                Modern laundry equipment consists of integrated electronic and mechanical subsystems. Our technical team utilizes professional diagnostic tools to identify failures in drive systems, control circuitry, and fluid dynamics.
+                Modern laundry equipment consists of integrated electronic and mechanical subsystems. Our Specialized team utilizes professional diagnostic tools to identify failures in drive systems, control circuitry, and fluid dynamics.
               </p>
               <p>
-                We provide technical support for major global manufacturers, adhering to standard industry maintenance procedures to restore original equipment functionality.
+                We provide Specialized support for major global manufacturers, adhering to standard industry maintenance procedures to restore original equipment functionality.
               </p>
 
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
@@ -103,15 +101,7 @@ const WashingMachineRepair = () => {
               <button onClick={() => openBookingModal('Washing Machine')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Schedule Service <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary">
-                  <FaRegClock />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Service Status</span>
-                  <span className="text-sm font-black text-primary leading-none">Prompt Dispatch Available</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -123,10 +113,10 @@ const WashingMachineRepair = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: <FaClipboardList />, title: "Technical Audit", desc: "Digital logging of error symptoms and fault analysis." },
+              { icon: <FaClipboardList />, title: "Specialized Audit", desc: "Digital logging of error symptoms and fault analysis." },
               { icon: <FaSearch />, title: "Logic Mapping", desc: "Circuit-level testing and mechanical verification." },
               { icon: <FaWrench />, title: "Component Fix", desc: "Service using manufacturer-grade parts and specifications." },
-              { icon: <FaCheckCircle />, title: "Calibration", desc: "Operational testing to verify technical stability." }
+              { icon: <FaCheckCircle />, title: "Calibration", desc: "Operational testing to verify Specialized stability." }
             ].map((step, i) => (
               <div key={i} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 hover:shadow-premium transition-all duration-500 group">
                 <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary text-2xl mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
@@ -164,10 +154,10 @@ const WashingMachineRepair = () => {
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Standard Service Warranty</h3>
           <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">
-            Technical work performed includes a standard labor warranty. Replaced components carry individual manufacturer coverage where applicable.
+            Specialized work performed includes a standard labor warranty. Replaced components carry individual manufacturer coverage where applicable.
           </p>
           <button onClick={() => openBookingModal('Washing Machine')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">
-            Request Technical Visit
+            Request Specialized Visit
           </button>
         </div>
 

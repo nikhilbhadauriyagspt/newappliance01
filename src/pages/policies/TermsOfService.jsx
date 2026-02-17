@@ -7,10 +7,10 @@ const TermsOfService = () => {
   }, []);
 
   return (
-    <div className="bg-white min-h-screen pt-32 pb-24">
+    <div className="bg-white min-h-screen pt-48 pb-24">
       <Helmet>
-        <title>Terms of Service - appliance nerds</title>
-        <meta name="description" content="Official Terms of Service for appliance nerds. Agreement to our legal terms and conditions." />
+        <title>Terms of Service - Appliance Nerds</title>
+        <meta name="description" content="Official Terms of Service for Appliance Nerds. Agreement to our legal terms and conditions." />
         <link rel="canonical" href="https://www.appliancenerds.shop/terms-of-service" />
       </Helmet>
 
@@ -23,8 +23,8 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">AGREEMENT TO OUR LEGAL TERMS</h2>
             <p>
-              We are appliance nerds ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in California,
-              United States at Grandview, Glendale, CA 91201.
+              We are Appliance Nerds ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in Idaho,
+              United States at Caldwell Blvd, Nampa, ID 83651.
             </p>
             <p>
               We operate the website <a href="http://appliancenerds.shop/" className="text-primary hover:text-secondary">http://appliancenerds.shop/</a> (the "<strong>Site</strong>"), as well as any other related
@@ -32,18 +32,17 @@ const TermsOfService = () => {
               the "<strong>Services</strong>").
             </p>
             <p>
-              appliance nerds was founded on the principle that household repairs should be handled with
+              Appliance Nerds was founded on the principle that household repairs should be handled with
               the same level of precision as industrial maintenance. We recognize that modern appliances
               are complex electronic systems that require specialized knowledge and calibrated tools for
               effective servicing.
             </p>
             <p>
-              You can contact us by phone at +1 (530) 554-4817, email at <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>, or by
-              mail to Grandview, Glendale, CA 91201, United States.
-            </p>
-            <p>
+              You can contact us by phone at +1 (530) 554-4817, email at <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>, or by
+              mail to Caldwell Blvd, Nampa, ID 83651, United States.
+            </p>            <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
-              personally or on behalf of an entity ("<strong>you</strong>"), and appliance nerds, concerning your access to
+              personally or on behalf of an entity ("<strong>you</strong>"), and Appliance Nerds, concerning your access to
               and use of the Services. You agree that by accessing the Services, you have read,
               understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE
                 WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
@@ -116,7 +115,7 @@ const TermsOfService = () => {
             </ul>
             <p>solely for your personal, non-commercial use or internal business purpose.</p>
             <p>Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
-            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
             <p>We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.</p>
             <p>Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</p>
 
@@ -275,12 +274,12 @@ const TermsOfService = () => {
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">21. CONTACT US</h3>
             <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
-              appliance nerds<br />
-              Grandview<br />
-              Glendale, CA 91201<br />
+              Appliance Nerds<br />
+              Caldwell Blvd<br />
+              Nampa, ID 83651<br />
               United States<br />
               Phone: +1 (530) 554-4817<br />
-              <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>
+              <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>
             </address>
           </section>
         </div>

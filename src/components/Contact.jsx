@@ -7,7 +7,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
+
     try {
       const response = await fetch("/", {
         method: "POST",
@@ -43,17 +43,17 @@ const Contact = () => {
                 <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Get In Touch</span>
               </div>
               <h2 className="text-4xl md:text-7xl font-black text-primary mb-8 leading-[1.1] tracking-tighter">
-                Connect with <br /><span className="text-secondary">Master Technicians</span>
+                Talk to our <br /><span className="text-secondary">Expert Repair Team</span>
               </h2>
               <p className="text-slate-500 text-lg font-medium leading-relaxed mb-12 max-w-md">
-                Experience the gold standard in appliance repair. Our technical support team is standing by to resolve your inquiries.
+                Get the best help for your home appliances. Our team is ready to answer your questions and fix your problems.
               </p>
 
               <div className="space-y-4">
                 {[
-                  { icon: <FaPhoneAlt />, label: 'Direct Line', val: '+1 (530) 554-4817', sub: 'Available 24/7' },
-                  { icon: <FaEnvelope />, label: 'Official Email', val: 'appliancenerds@outlook.com', sub: 'Response within 12h' },
-                  { icon: <FaClock />, label: 'Working Hours', val: 'Mon - Sat: 8AM - 9PM', sub: 'Sunday Emergency Only' }
+                  { icon: <FaPhoneAlt />, label: 'Call us', val: '+1 (530) 554-4817', sub: 'Available 24/7' },
+                  { icon: <FaEnvelope />, label: 'Email us', val: 'info@appliancenerds.shop', sub: 'We reply fast' },
+                  { icon: <FaClock />, label: 'Open Hours', val: 'Mon - Sat: 8AM - 9PM', sub: 'Sunday Emergency Only' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-6 p-6 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-premium transition-all group">
                     <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
@@ -79,8 +79,8 @@ const Contact = () => {
 
               <div className="relative z-10">
                 <div className="mb-12">
-                  <h3 className="text-3xl font-black text-white mb-4 tracking-tight">Request Service</h3>
-                  <p className="text-slate-400 font-medium">Please provide your details and appliance information below.</p>
+                  <h3 className="text-3xl font-black text-white mb-4 tracking-tight">Need help?</h3>
+                  <p className="text-slate-400 font-medium">Tell us what's wrong and we'll get back to you.</p>
                 </div>
 
                 {submitted ? (
@@ -88,16 +88,16 @@ const Contact = () => {
                     <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-xl shadow-secondary/20">
                       <FaHeadset />
                     </div>
-                    <h4 className="text-2xl font-black text-white mb-4">Message Transmitted</h4>
-                    <p className="text-slate-400 font-medium mb-8">One of our master technicians will contact you shortly to confirm your appointment.</p>
-                    <button onClick={() => setSubmitted(false)} className="text-secondary font-black uppercase tracking-widest text-[10px] border-b border-secondary pb-1">Send Another Message</button>
+                    <h4 className="text-2xl font-black text-white mb-4">Message Sent</h4>
+                    <p className="text-slate-400 font-medium mb-8">One of our experts will call you soon to help.</p>
+                    <button onClick={() => setSubmitted(false)} className="text-secondary font-black uppercase tracking-widest text-[10px] border-b border-secondary pb-1">Send another message</button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6" name="contact-home" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact-home" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Full Name</label>
+                        <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Your Name</label>
                         <input required name="name" type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: John Smith" />
                       </div>
                       <div className="space-y-3">
@@ -107,7 +107,7 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Appliance Type / Subject</label>
+                      <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">What needs fixing?</label>
                       <select name="appliance" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white font-medium appearance-none">
                         <option className="bg-primary text-white">Select Appliance</option>
                         <option className="bg-primary text-white">Washing Machine</option>
@@ -118,12 +118,12 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Detail of the issue</label>
-                      <textarea required name="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium resize-none" placeholder="Briefly describe the malfunction..."></textarea>
+                      <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Tell us about the issue</label>
+                      <textarea required name="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium resize-none" placeholder="What is the problem?"></textarea>
                     </div>
 
                     <button type="submit" className="w-full bg-secondary text-white py-5 rounded-2xl font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-white hover:text-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
-                      Submit Request <FaPaperPlane />
+                      Send Request <FaPaperPlane />
                     </button>
                   </form>
                 )}
@@ -142,15 +142,15 @@ const Contact = () => {
             style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) invert(90%)' }}
             loading="lazy"
             allowFullScreen
-            src="https://maps.google.com/maps?q=Grandview%20Glendale,%20CA%2091201,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            src="https://maps.google.com/maps?q=Caldwell%20Blvd,%20Nampa,%20ID%2083651,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed">
           </iframe>
 
           {/* Address Overlay Card */}
           <div className="absolute bottom-10 left-10 z-20 bg-white p-8 rounded-[32px] shadow-2xl max-w-xs border border-slate-100 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <h5 className="text-[10px] font-black uppercase tracking-[3px] text-secondary mb-3">Service Headquarters</h5>
-            <p className="text-primary font-black text-lg leading-tight mb-4">Grandview Glendale, California 91201, USA</p>
+            <h5 className="text-[10px] font-black uppercase tracking-[3px] text-secondary mb-3">Our Office</h5>
+            <p className="text-primary font-black text-lg leading-tight mb-4">Caldwell Blvd, Nampa, ID 83651, USA</p>
             <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-              <FaMapMarkerAlt className="text-secondary" /> Open for walk-ins
+              <FaMapMarkerAlt className="text-secondary" /> Open for visits
             </div>
           </div>
         </div>

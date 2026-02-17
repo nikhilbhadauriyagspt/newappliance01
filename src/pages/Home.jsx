@@ -24,12 +24,12 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>appliance nerds - Trusted Home Appliance Repair Services</title>
+        <title>Appliance Nerds - Trusted Home Appliance Repair Services</title>
         <meta name="description" content="Reliable home appliance repair near you. Experts in washing machines, refrigerators, ACs & more. Certified technicians, same-day service, fair pricing." />
         <link rel="canonical" href="https://www.appliancenerds.shop/" />
 
         {/* Social Media Sharing Tags */}
-        <meta property="og:title" content="appliance nerds - Trusted Home Appliance Repair Services" />
+        <meta property="og:title" content="Appliance Nerds - Trusted Home Appliance Repair Services" />
         <meta property="og:description" content="Reliable home appliance repair near you. Experts in washing machines, refrigerators, ACs & more. Certified technicians, same-day service, fair pricing." />
         <meta property="og:image" content="https://www.appliancenerds.shop/logo/logo.png" />
         <meta property="og:url" content="https://www.appliancenerds.shop/" />

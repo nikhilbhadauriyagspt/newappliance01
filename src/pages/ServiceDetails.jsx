@@ -18,13 +18,13 @@ const ServiceDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 font-sans">
         <Helmet>
-          <title>Service Not Found - appliance nerds</title>
+          <title>Not Found - Appliance Nerds</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-6xl font-black text-primary mb-6 tracking-tighter uppercase">404</h2>
-          <p className="text-slate-500 mb-8 font-medium uppercase tracking-widest">Technical Path Not Found</p>
+          <p className="text-slate-500 mb-8 font-medium uppercase tracking-widest">Page not found</p>
           <Link to="/" className="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-[3px] text-xs hover:bg-secondary transition-all shadow-xl">
-            Return to Base
+            Go back home
           </Link>
         </div>
       </div>
@@ -34,7 +34,7 @@ const ServiceDetails = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>{service.title} - appliance nerds Services</title>
+        <title>{service.title} - Appliance Nerds</title>
         <meta name="description" content={service.shortDesc} />
         <link rel="canonical" href={`https://www.appliancenerds.shop/service/${service.slug}`} />
       </Helmet>
@@ -44,9 +44,9 @@ const ServiceDetails = () => {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
-            <FaArrowLeft /> View All Solutions
+            <FaArrowLeft /> View All Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             {service.title.split(' ').map((word, i) => i === service.title.split(' ').length - 1 ? <span key={i} className="text-secondary">{word}</span> : word + ' ')}
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -77,20 +77,17 @@ const ServiceDetails = () => {
                     <FaShieldAlt size={24} />
                   </div>
                   <div>
-                    <h5 className="text-primary font-black text-sm uppercase tracking-widest leading-none">100% Quality Assurance</h5>
+                    <h5 className="text-primary font-black text-sm uppercase tracking-widest leading-none">100% Quality Guaranteed</h5>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Technical Protocol Content */}
+          {/* Specialized Protocol Content */}
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Protocol: Certified Service</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
-              Operational <span className="text-secondary">Summary</span>
+              How we <span className="text-secondary">fix it</span>
             </h2>
 
             <div className="prose prose-lg text-slate-500 font-medium mb-12 max-w-none">
@@ -100,7 +97,7 @@ const ServiceDetails = () => {
             <div className="bg-slate-50 rounded-[40px] p-10 border border-slate-100 mb-12">
               <h5 className="font-black text-xl text-primary mb-8 tracking-tighter uppercase flex items-center gap-4">
                 <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-white"><FaTools size={14} /></div>
-                Service Benchmarks
+                What we check
               </h5>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {service.features.map((feature, index) => (
@@ -117,14 +114,14 @@ const ServiceDetails = () => {
                 onClick={() => openBookingModal(service.title)}
                 className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4"
               >
-                Execute Booking <FaArrowRight />
+                Book your repair <FaArrowRight />
               </button>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary">
                   <FaRegClock />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Arrival Window</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">We'll arrive in</span>
                   <span className="text-sm font-black text-primary leading-none">Under 2.0 Hours</span>
                 </div>
               </div>
@@ -132,19 +129,19 @@ const ServiceDetails = () => {
           </div>
         </div>
 
-        {/* New Section: Technical Workflow */}
+        {/* New Section: Specialized Workflow */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Standard Repair <span className="text-secondary">Protocol</span></h3>
-            <p className="text-slate-500 font-medium">Our systematic approach ensures diagnosis accuracy and repair longevity.</p>
+            <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Our simple <span className="text-secondary">Steps</span></h3>
+            <p className="text-slate-500 font-medium">We follow a simple plan to make sure your repair lasts a long time.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: <FaClipboardList />, title: "Initial Audit", desc: "Digital logging of error codes and symptom analysis." },
-              { icon: <FaSearch />, title: "Deep Diagnostic", desc: "Component-level testing using calibrated industrial tools." },
-              { icon: <FaWrench />, title: "Precision Fix", desc: "Replacement of failed units with OEM certified parts." },
-              { icon: <FaCheckCircle />, title: "Final Calibration", desc: "Performance stress-testing before job closure." }
+              { icon: <FaClipboardList />, title: "Quick Look", desc: "We check the problem and find out what's wrong." },
+              { icon: <FaSearch />, title: "Full Check", desc: "We look deep into the machine using the best tools." },
+              { icon: <FaWrench />, title: "Expert Fix", desc: "We replace broken parts with original, high-quality ones." },
+              { icon: <FaCheckCircle />, title: "Final Test", desc: "We test everything to make sure it works perfectly." }
             ].map((step, i) => (
               <div key={i} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 hover:shadow-premium transition-all duration-500 group">
                 <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary text-2xl mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
@@ -168,20 +165,20 @@ const ServiceDetails = () => {
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
                 <div className="inline-flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/10">
-                  <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Scope of Work</span>
+                  <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Total Checkup</span>
                 </div>
-                <h3 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter uppercase">Multi-Point <br /><span className="text-secondary">System Inspection</span></h3>
+                <h3 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter uppercase">Looking at every <br /><span className="text-secondary">Part of the system</span></h3>
               </div>
               <p className="text-slate-400 max-w-sm font-medium text-sm leading-relaxed">
-                We don't just fix the obvious. Our technicians perform a comprehensive health check on critical subsystems.
+                We don't just fix the obvious. Our team does a full check on all the important parts.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                "Main Logic Control Board", "Motor Drive Assembly", "Power Supply Unit",
-                "Sensor Network Array", "Fluid/Gas Integrity", "Mechanical Linkages",
-                "Thermal Regulation", "Safety Interlocks", "User Interface Panel"
+                "Main Control Board", "Drive Motor System", "Power Supply Unit",
+                "Sensors and Wiring", "Plumbing and Gas lines", "Mechanical Links",
+                "Temperature Control", "Safety Switches", "User Panel"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 bg-white/5 border border-white/5 p-5 rounded-2xl hover:bg-white/10 transition-all">
                   <FaMicrochip className="text-secondary" />
@@ -197,14 +194,14 @@ const ServiceDetails = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary/10 text-secondary rounded-full mb-8 animate-pulse">
             <FaShieldAlt size={32} />
           </div>
-                      <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">The APPLIANCE NERDS® Guarantee</h3>          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">
-            We stand firmly behind our engineering. All technical labor is backed by a 30-day warranty, and replaced components carry a manufacturer warranty of up to 90 days.
+          <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">The Appliance Nerds Promise</h3>          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">
+            We stand firmly behind our work. All repair help is backed by a 30-day warranty, and parts come with a warranty of up to 90 days.
           </p>
           <button
             onClick={() => openBookingModal(service.title)}
             className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all"
           >
-            Schedule Inspection
+            Book a checkup now
           </button>
         </div>
 

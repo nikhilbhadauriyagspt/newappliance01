@@ -11,7 +11,7 @@ const AirConditionerRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert AC Repair Service | Air Conditioner Fix | appliance nerds</title>
+        <title>Expert AC Repair Service | Air Conditioner Fix | Appliance Nerds</title>
         <meta name="description" content="Professional air conditioner repair for all brands. We fix gas leaks, cooling issues, PCB failures, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const AirConditionerRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Climate <span className="text-secondary">Control Restoration</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -60,9 +60,6 @@ const AirConditionerRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: AC-07</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter">
               Advanced <span className="text-secondary">Thermal</span> Audit
             </h2>
@@ -70,7 +67,7 @@ const AirConditionerRepair = () => {
               <p>AC systems are critical for indoor air quality and comfort. We utilize manifold gauges and digital leak detectors to identify failures in inverter compressors and condenser coils.</p>
               <p>Our HVAC technicians are certified for global brands like <strong>Daikin, Samsung, LG, and Carrier</strong>, ensuring your cooling system operates at peak energy efficiency.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Gas Leak Detection & Fill", "Compressor Overhaul", "PCB Mainboard Fix", "Copper Pipe Brazing", "Evaporator Cleaning", "Fan Motor Replacement"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -85,13 +82,6 @@ const AirConditionerRepair = () => {
               <button onClick={() => openBookingModal('Air Conditioner')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Launch AC Request <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary"><FaRegClock /></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Response Time</span>
-                  <span className="text-sm font-black text-primary leading-none">Under 2 Hours</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const TelevisionRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert TV Repair Service | LED & Smart TV Fix | appliance nerds</title>
+        <title>Expert TV Repair Service | LED & Smart TV Fix | Appliance Nerds</title>
         <meta name="description" content="Professional television repair for all brands. We fix display issues, board failures, audio problems, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const TelevisionRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Television <span className="text-secondary">Panel Restoration</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -60,17 +60,14 @@ const TelevisionRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: TV-04</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter">
               Advanced <span className="text-secondary">Display</span> Framework
             </h2>
             <div className="prose prose-lg text-slate-500 font-medium mb-12 max-w-none space-y-6">
               <p>Modern televisions are high-density electronic systems requiring clean-room level care. We use digital oscilloscopes and panel testers to identify failures in T-Con boards, power modules, and backlight arrays.</p>
-              <p>Our technical team is certified for premium brands like <strong>Sony, Samsung, LG, and Vizio</strong>, ensuring your entertainment hub is restored to factory color and clarity standards.</p>
+              <p>Our Specialized team is certified for premium brands like <strong>Sony, Samsung, LG, and Vizio</strong>, ensuring your entertainment hub is restored to factory color and clarity standards.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Panel Backlight Fix", "Logic Board Repair", "Power Supply Unit Fix", "Display Color Calibration", "HDMI/Port Restoration", "Audio System Fix"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -85,13 +82,6 @@ const TelevisionRepair = () => {
               <button onClick={() => openBookingModal('Television')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Request TV Expert <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary"><FaRegClock /></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Response Time</span>
-                  <span className="text-sm font-black text-primary leading-none">Under 2 Hours</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { FaUserShield, FaBolt, FaAward, FaHistory, FaCheckCircle, FaTools, FaShieldAlt, FaClock } from 'react-icons/fa';
 
 const features = [
-  { icon: <FaShieldAlt />, label: "Security", val: "Vetted", sub: "Technical Team" },
+  { icon: <FaShieldAlt />, label: "Security", val: "Vetted", sub: "Specialized Team" },
   { icon: <FaClock />, label: "Response", val: "Prompt", sub: "Service Visits" },
   { icon: <FaTools />, label: "Standard", val: "Verified", sub: "Spare Parts" },
   { icon: <FaCheckCircle />, label: "Warranty", val: "Labor", sub: "Coverage" }
@@ -12,7 +12,7 @@ const Stats = () => {
   return (
     <section className="py-24 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] select-none pointer-events-none w-full text-center">
-         <span className="text-[25vw] font-black text-primary tracking-tighter uppercase leading-none">TRUST</span>
+        <span className="text-[25vw] font-black text-primary tracking-tighter uppercase leading-none">TRUST</span>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">

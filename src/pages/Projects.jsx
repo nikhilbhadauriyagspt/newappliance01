@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Portfolio of Excellence - appliance nerds</title>
+        <title>Portfolio of Excellence - Appliance Nerds</title>
         <meta name="description" content="View our portfolio of successful appliance repairs and maintenance projects." />
         <link rel="canonical" href="https://www.appliancenerds.shop/projects" />
       </Helmet>
@@ -24,8 +24,8 @@ const Projects = () => {
           <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
             <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Success Portfolio</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
-            Technical <br />Case <span className="text-secondary">Studies</span>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+            Specialized <br />Case <span className="text-secondary">Studies</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             A curated selection of complex restoration projects demonstrating our commitment to engineering perfection.

@@ -14,7 +14,7 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.target);
-    
+
     try {
       const response = await fetch("/", {
         method: "POST",
@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Contact Us - appliance nerds | Professional Support</title>
+        <title>Contact Us - Appliance Nerds | Professional Support</title>
         <meta name="description" content="Get in touch with us for professional appliance maintenance and repair services." />
         <link rel="canonical" href="https://www.appliancenerds.shop/contact" />
       </Helmet>
@@ -49,13 +49,13 @@ const Contact = () => {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white/[0.02] -skew-x-12 translate-x-1/4 pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
-            <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Technical Support</span>
+            <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Expert Help</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
-            Let's Discuss Your Technical Needs
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+            Let's Talk About Your Repairs
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            Direct access to our technical support division. We provide professional diagnostic information and systematic repair scheduling.
+            Quick access to our repair team. We give you easy-to-understand advice and schedule your fix right away.
           </p>
         </div>
       </section>
@@ -65,34 +65,34 @@ const Contact = () => {
 
           <div className="w-full lg:w-5/12">
             <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Grid</span>
+              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Quick Service</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
-              A Professional Standard of <span className="text-secondary">Service Delivery</span>
+              A High Standard of <span className="text-secondary">Expert Care</span>
             </h2>
             <p className="text-slate-500 text-lg font-medium mb-12 leading-relaxed">
-              Our technical support channels are designed for clear communication and professional service scheduling. We focus on providing accurate diagnostic information and efficient repair timelines.
+              Our help channels are built for easy talk and fast scheduling. We focus on finding the problem right and fixing it on time.
             </p>
 
             <div className="space-y-6">
               {[
                 {
                   icon: <FaPhoneAlt />,
-                  label: 'Support Line',
+                  label: 'Help Line',
                   val: '+1 (530) 554-4817',
                   color: 'bg-slate-50',
                   textColor: 'text-primary'
                 },
                 {
                   icon: <FaEnvelope />,
-                  label: 'Service Correspondence',
-                  val: 'appliancenerds@outlook.com',
+                  label: 'Email Us',
+                  val: 'info@appliancenerds.shop',
                   color: 'bg-slate-50',
                   textColor: 'text-primary'
                 },
                 {
                   icon: <FaClock />,
-                  label: 'Operational Hours',
+                  label: 'Open Hours',
                   val: 'Mon - Sat: 8:00 AM - 9:00 PM',
                   color: 'bg-slate-50',
                   textColor: 'text-primary'
@@ -120,9 +120,9 @@ const Contact = () => {
                   <div className="w-24 h-24 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
                     <FaCheckCircle size={40} />
                   </div>
-                  <h3 className="text-4xl font-black text-primary mb-4 tracking-tighter uppercase">Inquiry Transmitted</h3>
-                  <p className="text-slate-500 font-medium max-w-sm mx-auto mb-10 text-lg">Your service request has been successfully logged. A member of our technical team will contact you shortly.</p>
-                  <button onClick={() => setIsSubmitted(false)} className="text-secondary font-black uppercase tracking-[3px] text-[10px] border-b-2 border-secondary pb-1">Submit Another Inquiry</button>
+                  <h3 className="text-4xl font-black text-primary mb-4 tracking-tighter uppercase">Message Sent</h3>
+                  <p className="text-slate-500 font-medium max-w-sm mx-auto mb-10 text-lg">Your request has been received. A member of our team will contact you very soon.</p>
+                  <button onClick={() => setIsSubmitted(false)} className="text-secondary font-black uppercase tracking-[3px] text-[10px] border-b-2 border-secondary pb-1">Send Another Message</button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="relative z-10 space-y-8" name="contact-page" data-netlify="true">
@@ -138,25 +138,25 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Appliance Category</label>
+                    <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">What needs help?</label>
                     <div className="relative">
                       <select required name="category" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all text-primary font-black appearance-none cursor-pointer">
-                        <option value="">Choose Classification</option>
+                        <option value="">Choose One</option>
                         <option>Washing Machines</option>
-                        <option>Refrigeration Systems</option>
-                        <option>HVAC / Air Conditioning</option>
-                        <option>Cooking / Oven Systems</option>
-                        <option>Other Domestic Assets</option>
+                        <option>Fridges</option>
+                        <option>AC Units</option>
+                        <option>Ovens and Cooking</option>
+                        <option>Other Appliances</option>
                       </select>
                       <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"><FaArrowRight size={14} /></div>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Technical Description</label>
-                    <textarea required name="message" rows="5" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary resize-none" placeholder="Provide details of the malfunction..."></textarea>
+                    <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Description</label>
+                    <textarea required name="message" rows="5" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary resize-none" placeholder="Tell us about the problem..."></textarea>
                   </div>
                   <button disabled={isLoading} type="submit" className="w-full bg-primary text-white font-black uppercase tracking-[4px] py-6 rounded-2xl shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4 text-xs">
-                    {isLoading ? <><FaSpinner className="animate-spin" /> Transmission In Progress...</> : <>Submit Technical Request <FaArrowRight /></>}
+                    {isLoading ? <><FaSpinner className="animate-spin" /> Sending...</> : <>Send Help Request <FaArrowRight /></>}
                   </button>
                 </form>
               )}

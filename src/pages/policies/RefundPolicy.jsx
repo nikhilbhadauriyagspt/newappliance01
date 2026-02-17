@@ -7,10 +7,10 @@ const RefundPolicy = () => {
   }, []);
 
   return (
-    <div className="bg-white min-h-screen pt-32 pb-24">
+    <div className="bg-white min-h-screen pt-48 pb-24">
       <Helmet>
-        <title>Return Policy - appliance nerds</title>
-        <meta name="description" content="Official Return Policy for appliance nerds. Details on returns, process, and refunds." />
+        <title>Return Policy - Appliance Nerds</title>
+        <meta name="description" content="Official Return Policy for Appliance Nerds. Details on returns, process, and refunds." />
         <link rel="canonical" href="https://www.appliancenerds.shop/refund-policy" />
       </Helmet>
 
@@ -38,17 +38,17 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">RETURN PROCESS</h2>
             <p>
-              To return an item, please email customer service at <a href="mailto:appliancenerds@outlook.com" className="text-primary font-bold">appliancenerds@outlook.com</a> to obtain
+              To return an item, please email customer service at <a href="mailto:info@appliancenerds.shop" className="text-primary font-bold">info@appliancenerds.shop</a> to obtain
               an Return Merchandise Authorization (RMA) number. After receiving an RMA number, place
               the item securely in its original packaging and include your proof of purchase, then mail your
               return to the following address:
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              appliance nerds<br />
+              Appliance Nerds<br />
               Attn: Returns<br />
               RMA #<br />
-              Grandview<br />
-              Glendale, CA 91201<br />
+              Caldwell Blvd<br />
+              Nampa, ID 83651<br />
               United States
             </address>
             <p className="mt-6">Return shipping charges will be paid or reimbursed by us.</p>
@@ -80,7 +80,7 @@ const RefundPolicy = () => {
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
               <p className="font-bold text-xl mb-2">+1 (530) 554-4817</p>
-              <a href="mailto:appliancenerds@outlook.com" className="text-secondary font-bold text-lg hover:underline">appliancenerds@outlook.com</a>
+              <a href="mailto:info@appliancenerds.shop" className="text-secondary font-bold text-lg hover:underline">info@appliancenerds.shop</a>
             </div>
           </section>
         </div>

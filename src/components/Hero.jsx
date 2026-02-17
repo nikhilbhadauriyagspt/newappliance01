@@ -12,50 +12,50 @@ import 'swiper/css/effect-fade';
 const slides = [
   {
     id: 1,
-    title: "PROFESSIONAL HOME APPLIANCE REPAIR",
-    subtitle: "TECHNICAL SERVICE DIVISION",
+    title: "EXPERT HOME APPLIANCE REPAIR",
+    subtitle: "WE FIX IT RIGHT",
     bgImage: "/banner/hero-1.jpg",
-    cta: "REQUEST SERVICE",
-    specs: ["SERVICE WARRANTY", "VERIFIED SPARE PARTS", "SCHEDULED VISITS"],
+    cta: "BOOK A REPAIR",
+    specs: ["FULL WARRANTY", "REAL SPARE PARTS", "ON-TIME VISITS"],
     cardInfo: {
-      title: "Diagnostic Audit",
-      desc: "Comprehensive technical assessment of household appliances by our skilled technical team.",
-      code: "SERVICE-UNIT: A1",
+      title: "Friendly Checkup",
+      desc: "Our team looks over your home appliances to find and fix any issues quickly.",
+      code: "HELP-UNIT: A1",
       icon: <FaTools />,
       progress: "w-full",
-      status: "Ready for Dispatch"
+      status: "Ready to help"
     }
   },
   {
     id: 2,
-    title: "REFRIGERATOR COOLING SOLUTIONS",
-    subtitle: "TECHNICAL MAINTENANCE TEAM",
+    title: "FRIDGE REPAIR & COOLING FIX",
+    subtitle: "KEEPING THINGS COOL",
     bgImage: "/banner/hero-2.jpg",
-    cta: "SCHEDULE FIX",
-    specs: ["GAS REFILLING", "COMPRESSOR REPAIR", "RESIDENTIAL SERVICE"],
+    cta: "BOOK A FIX",
+    specs: ["GAS REFILLS", "FRIDGE REPAIRS", "LOCAL SERVICE"],
     cardInfo: {
-      title: "Thermal Analysis",
-      desc: "Temperature calibration and technical pressure verification for cooling systems.",
+      title: "Cooling Check",
+      desc: "We check your fridge's cooling and gas levels to make sure it's working perfectly.",
       code: "COOL-UNIT: B2",
       icon: <FaSnowflake />,
       progress: "w-4/5",
-      status: "Verified Protocol"
+      status: "Check complete"
     }
   },
   {
     id: 3,
-    title: "WASHING MACHINE REPAIR SERVICE",
-    subtitle: "LAUNDRY APPLIANCE DIVISION",
+    title: "WASHING MACHINE EXPERT SERVICE",
+    subtitle: "LAUNDRY REPAIR TEAM",
     bgImage: "/banner/hero-3.jpg",
-    cta: "BOOK APPOINTMENT",
-    specs: ["PCB BOARD FIX", "DRUM CALIBRATION", "MOTOR RESTORATION"],
+    cta: "BOOK A VISIT",
+    specs: ["BOARD FIXES", "DRUM CHECKS", "MOTOR REPAIRS"],
     cardInfo: {
-      title: "System Testing",
-      desc: "Mechanical performance verification and electronic diagnostic testing for laundry units.",
+      title: "System Check",
+      desc: "We test the electronics and moving parts of your washer to keep it running smooth.",
       code: "WASH-SYS: C3",
       icon: <FaCogs />,
       progress: "w-3/4",
-      status: "Logic Confirmed"
+      status: "All clear"
     }
   }
 ];
@@ -69,7 +69,7 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none z-30 opacity-30">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-secondary/20 animate-scan pointer-events-none"></div>
         <div className="absolute left-8 top-1/2 -rotate-90 origin-left hidden xl:block">
-           <span className="text-[9px] font-black tracking-[6px] text-white/30 uppercase">TECHNICAL INTERFACE</span>
+           <span className="text-[9px] font-black tracking-[6px] text-white/30 uppercase">FAST HELP INTERFACE</span>
         </div>
         <div className="absolute top-8 left-8 w-10 h-10 border-t border-l border-white/20"></div>
         <div className="absolute top-8 right-8 w-10 h-10 border-t border-r border-white/20"></div>

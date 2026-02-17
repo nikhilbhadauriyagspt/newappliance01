@@ -13,7 +13,7 @@ const RefrigeratorRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert Refrigerator Repair Service | appliance nerds</title>
+        <title>Expert Refrigerator Repair Service | Appliance Nerds</title>
         <meta name="description" content="Professional refrigerator repair for all brands. We fix cooling issues, gas leaks, compressor problems, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -24,7 +24,7 @@ const RefrigeratorRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Refrigerator <span className="text-secondary">System Restoration</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -65,9 +65,6 @@ const RefrigeratorRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: RF-02</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter">
               Precision <span className="text-secondary">Cooling</span> Analysis
             </h2>
@@ -81,7 +78,7 @@ const RefrigeratorRepair = () => {
               </p>
 
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
                     "Compressor Valve Repair",
@@ -117,7 +114,7 @@ const RefrigeratorRepair = () => {
           </div>
         </div>
 
-        {/* Technical Workflow */}
+        {/* Specialized Workflow */}
         <div className="mb-32">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Cooling Restoration <span className="text-secondary">Protocol</span></h3>
@@ -168,7 +165,7 @@ const RefrigeratorRepair = () => {
           </div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Cooling Performance Guarantee</h3>
           <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">
-            Every refrigeration repair is backed by our technical seal of approval, ensuring long-term food safety and unit efficiency.
+            Every refrigeration repair is backed by our Specialized seal of approval, ensuring long-term food safety and unit efficiency.
           </p>
           <button onClick={() => openBookingModal('Refrigerator')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">
             Book Service Visit

@@ -16,7 +16,7 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 font-sans">
         <Helmet>
-          <title>Article Not Found - appliance nerds</title>
+          <title>Article Not Found - Appliance Nerds</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-6xl font-black text-primary mb-6 tracking-tighter uppercase">404</h2>
@@ -32,7 +32,7 @@ const BlogDetails = () => {
   return (
     <article className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>{blog.title} - appliance nerds Journal</title>
+        <title>{blog.title} - Appliance Nerds Journal</title>
         <meta name="description" content={blog.shortDesc} />
         <link rel="canonical" href={`https://www.appliancenerds.shop/blog/${blog.id}`} />
       </Helmet>
@@ -84,7 +84,7 @@ const BlogDetails = () => {
           <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-8">
             <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Next Actions</span>
           </div>
-          <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Requiring Technical Support?</h3>
+          <h3 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Requiring Specialized Support?</h3>
           <p className="text-slate-400 max-w-lg mx-auto mb-12 font-medium text-lg leading-relaxed">
             Our expert technicians are available 24/7 to help you implement these repair strategies or handle the maintenance for you.
           </p>

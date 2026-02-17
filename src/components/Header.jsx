@@ -82,13 +82,14 @@ const Header = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Professional Service Appointments Available
             </span>
             <span className="hidden md:flex items-center gap-2 opacity-70">
-              <FaMapMarkerAlt /> Serving Glendale, California & Surrounding Regions
+              <FaMapMarkerAlt /> Helping homes in Nampa, Idaho & nearby areas
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://wa.me/15305544817" className="flex items-center gap-2 hover:text-secondary transition-colors">
-              <FaWhatsapp size={14} className="text-green-400" /> Technical Support
-            </a>
+            <Link to="/contact" className="flex items-center gap-2 hover:text-secondary transition-colors group">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary group-hover:animate-ping"></span>
+              Fast Help
+            </Link>
           </div>
         </div>
       </div>
@@ -98,7 +99,7 @@ const Header = () => {
           <div className="flex items-center justify-between gap-8">
             <Link to="/" className="flex items-center shrink-0">
               <div className="h-12 md:h-16 flex items-center justify-center">
-                <img src="/logo/logo.png" alt="appliance nerds" className="h-full w-auto object-contain" />
+                <img src="/logo/logo.png" alt="Appliance Nerds" className="h-full w-auto object-contain" />
               </div>
             </Link>
 
@@ -111,7 +112,7 @@ const Header = () => {
               ))}
               <div className="relative group ml-2">
                 <button className="flex items-center gap-2 px-6 py-2.5 bg-slate-50 rounded-full text-[13px] font-bold text-slate-700 hover:bg-white hover:shadow-premium transition-all border border-slate-100 uppercase tracking-wider">
-                  Our Services <FaChevronDown size={8} className="group-hover:rotate-180 transition-transform duration-300 text-slate-400" />
+                  Our Services<FaChevronDown size={8} className="group-hover:rotate-180 transition-transform duration-300 text-slate-400" />
                 </button>
                 <div className="absolute top-full right-1/2 translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50">
                   <div className="w-[850px] bg-white rounded-[32px] shadow-premium-hover border border-slate-100 p-8 flex gap-8">
@@ -125,14 +126,14 @@ const Header = () => {
                     </div>
                     <div className="w-64 bg-slate-50 rounded-3xl p-6 flex flex-col">
                       <div className="flex-1">
-                        <h4 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Service Standards</h4>
+                        <h4 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Our Promise</h4>
                         <ul className="space-y-3">
-                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Skilled Technical Team</li>
-                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Standard Service Warranty</li>
-                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified Spare Parts</li>
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Friendly Repair Team</li>
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Solid Work Warranty</li>
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Best Quality Parts</li>
                         </ul>
                       </div>
-                      <button onClick={() => openBookingModal()} className="mt-6 w-full py-3 bg-primary text-white rounded-xl text-xs font-bold hover:bg-secondary transition-colors shadow-lg uppercase tracking-widest">Request Quote</button>
+                      <button onClick={() => openBookingModal()} className="mt-6 w-full py-3 bg-primary text-white rounded-xl text-xs font-bold hover:bg-secondary transition-colors shadow-lg uppercase tracking-widest">Get a Quote</button>
                     </div>
                   </div>
                 </div>
@@ -141,7 +142,7 @@ const Header = () => {
 
             <div className="flex items-center gap-4 md:gap-6">
               <div ref={searchRef} className={`relative hidden xl:flex items-center transition-all duration-500 ${searchActive ? 'w-64' : 'w-48'}`}>
-                <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Search services..." className="w-full bg-slate-100/50 border border-slate-200 rounded-full py-2.5 pl-10 pr-4 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:bg-white transition-all uppercase tracking-wider" onFocus={() => searchQuery && setSearchActive(true)} />
+                <input type="text" value={searchQuery} onChange={handleSearch} placeholder="What needs fixing?" className="w-full bg-slate-100/50 border border-slate-200 rounded-full py-2.5 pl-10 pr-4 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:bg-white transition-all uppercase tracking-wider" onFocus={() => searchQuery && setSearchActive(true)} />
                 <FaSearch className="absolute left-4 text-slate-400" size={12} />
                 {searchActive && filteredResults.length > 0 && (
                   <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-premium border border-slate-100 overflow-hidden z-50">
@@ -157,12 +158,12 @@ const Header = () => {
               <div className="hidden md:flex items-center gap-4">
                 <Link to="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:text-secondary hover:bg-white hover:shadow-sm transition-all border border-slate-100 group"><FaUserCheck size={16} /></Link>
                 <a href="tel:+15305544817" className="flex flex-col items-end">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Contact Line</span>
+                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Call us now</span>
                   <span className="text-sm font-black text-primary">+1 530 554 4817</span>
                 </a>
               </div>
               <button onClick={() => openBookingModal()} className="group relative hidden md:flex px-7 py-3.5 bg-secondary text-white text-[11px] font-black uppercase tracking-[2px] rounded-2xl overflow-hidden shadow-xl active:scale-95 transition-all duration-300">
-                <span className="relative z-10 flex items-center gap-3">Book Service <FaWrench /></span>
+                <span className="relative z-10 flex items-center gap-3">Book a Fix <FaWrench /></span>
                 <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </button>
               <button className="lg:hidden w-12 h-12 rounded-2xl bg-slate-900 text-white flex flex-col items-center justify-center gap-1.5 active:scale-90 transition-all shadow-xl" onClick={() => setIsMenuOpen(true)}>
@@ -182,7 +183,7 @@ const Header = () => {
             <div className="p-8 flex justify-between items-center border-b border-slate-50">
               <div>
                 <h2 className="text-2xl font-black text-primary tracking-tighter uppercase">Menu</h2>
-                <p className="text-[10px] font-black text-secondary uppercase tracking-[3px]">Service Navigation</p>
+                <p className="text-[10px] font-black text-secondary uppercase tracking-[3px]">Explore our site</p>
               </div>
               <button onClick={() => setIsMenuOpen(false)} className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100"><FaTimes size={20} /></button>
             </div>
@@ -197,11 +198,11 @@ const Header = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary"><FaPhoneAlt /></div>
                 <div>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase">Support Line</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Call us today</p>
                   <p className="text-lg font-black text-primary">+1 530 554 4817</p>
                 </div>
               </div>
-              <button onClick={() => { openBookingModal(); setIsMenuOpen(false); }} className="w-full py-5 bg-primary text-white rounded-[20px] font-black uppercase tracking-[3px] text-xs shadow-2xl">Book Appointment</button>
+              <button onClick={() => { openBookingModal(); setIsMenuOpen(false); }} className="w-full py-5 bg-primary text-white rounded-[20px] font-black uppercase tracking-[3px] text-xs shadow-2xl">Book a Visit</button>
             </div>
           </div>
         </div>

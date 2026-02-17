@@ -8,26 +8,26 @@ const About = () => {
   const values = [
     {
       icon: <FaShieldAlt />,
-      title: "Technical Integrity",
-      desc: "We adhere to manufacturer-mandated diagnostic protocols, focusing on equipment performance and technical accuracy."
+      title: "Specialized Integrity",
+      desc: "We adhere to manufacturer-mandated diagnostic protocols, focusing on equipment performance and Specialized accuracy."
     },
     {
       icon: <FaCogs />,
       title: "Operational Precision",
-      desc: "Our workflow is engineered for efficiency, managing the process from initial scheduling to technical validation."
+      desc: "Our workflow is engineered for efficiency, managing the process from initial scheduling to Specialized validation."
     },
     {
       icon: <FaHandshake />,
       title: "Service Transparency",
-      desc: "We provide comprehensive service assessments and cost estimates before any technical work is initiated."
+      desc: "We provide comprehensive service assessments and cost estimates before any Specialized work is initiated."
     }
   ];
 
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>About appliance nerds | Professional Repair Standards</title>
-        <meta name="description" content="Discover appliance nerds's commitment to professional appliance repair standards, technical expertise, and transparent service delivery." />
+        <title>About Appliance Nerds | Professional Repair Standards</title>
+        <meta name="description" content="Discover Appliance Nerds's commitment to professional appliance repair standards, Specialized expertise, and transparent service delivery." />
         <link rel="canonical" href="https://www.appliancenerds.shop/about" />
       </Helmet>
 
@@ -37,11 +37,11 @@ const About = () => {
           <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
             <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Overview</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Professional <br />Appliance <span className="text-secondary">Maintenance</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            A dedicated technical division providing maintenance solutions for essential household equipment with a focus on reliability and professional standards.
+            A dedicated Specialized division providing maintenance solutions for essential household equipment with a focus on reliability and professional standards.
           </p>
         </div>
       </section>
@@ -52,14 +52,14 @@ const About = () => {
             <div className="w-full lg:w-1/2 relative">
               <div className="absolute -inset-6 border-2 border-slate-50 rounded-[4rem] pointer-events-none"></div>
               <div className="relative rounded-[3rem] overflow-hidden shadow-premium group">
-                <img src="/banner/about.jpg" className="w-full h-[500px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110" alt="Technical Service Division" />
+                <img src="/banner/about.jpg" className="w-full h-[500px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110" alt="Specialized Service Division" />
                 <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-white shadow-2xl">
                   <div className="flex items-center gap-6">
                     <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-secondary text-2xl">
                       <FaQuoteLeft />
                     </div>
                     <p className="text-primary font-black text-sm italic leading-relaxed">
-                      "Our objective is to maintain high technical standards across all service operations."
+                      "Our objective is to maintain high Specialized standards across all service operations."
                     </p>
                   </div>
                 </div>
@@ -71,14 +71,14 @@ const About = () => {
                 <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Organization Standards</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-primary mb-10 leading-[1.1] tracking-tighter uppercase">
-                Systematic Approach to <span className="text-secondary">Technical Care</span>
+                Systematic Approach to <span className="text-secondary">Specialized Care</span>
               </h2>
               <div className="space-y-8 text-slate-500 text-lg font-medium leading-relaxed mb-12">
                 <p>
-                  appliance nerds provides residential repair services focused on technical accuracy. We recognize that modern appliances are complex systems that benefit from specialized diagnostic knowledge.
+                  Appliance Nerds provides residential repair services focused on Specialized accuracy. We recognize that modern appliances are complex systems that benefit from specialized diagnostic knowledge.
                 </p>
                 <p>
-                  Our focus is on restoring equipment functionality using verified diagnostic procedures and manufacturer-grade components. We aim to identify and address technical issues with professional precision.
+                  Our focus is on restoring equipment functionality using verified diagnostic procedures and manufacturer-grade components. We aim to identify and address Specialized issues with professional precision.
                 </p>
               </div>
 
@@ -106,7 +106,7 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-6 tracking-tighter uppercase">Operational Principles</h2>
-            <p className="text-slate-500 font-medium">The core standards that guide our technical service delivery.</p>
+            <p className="text-slate-500 font-medium">The core standards that guide our Specialized service delivery.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((v, i) => (
@@ -126,10 +126,10 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl">
           <h2 className="text-3xl font-black text-primary mb-8 tracking-tighter uppercase">Commitment to Service Integrity</h2>
           <p className="text-slate-500 text-lg font-medium leading-relaxed mb-12">
-            We operate with a focus on clear communication. Our service includes detailed assessments of technical faults and a breakdown of parts and labor before work begins. We prioritize honesty and professional accountability in every client interaction.
+            We operate with a focus on clear communication. Our service includes detailed assessments of Specialized faults and a breakdown of parts and labor before work begins. We prioritize honesty and professional accountability in every client interaction.
           </p>
           <div className="inline-block px-12 py-1 border-t-2 border-b-2 border-secondary/20">
-            <p className="font-black text-primary tracking-[8px] text-xs uppercase py-4">appliance nerds / Service Division</p>
+            <p className="font-black text-primary tracking-[8px] text-xs uppercase py-4">Appliance Nerds / Service Division</p>
           </div>
         </div>
       </section>

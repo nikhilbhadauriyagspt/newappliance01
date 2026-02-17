@@ -11,7 +11,7 @@ const KitchenChimneyRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert Kitchen Chimney Repair | Exhaust Hood Service | appliance nerds</title>
+        <title>Expert Kitchen Chimney Repair | Exhaust Hood Service | Appliance Nerds</title>
         <meta name="description" content="Professional kitchen chimney repair for all brands. We fix motor failures, suction issues, noise, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const KitchenChimneyRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Exhaust <span className="text-secondary">System Restoration</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -60,17 +60,14 @@ const KitchenChimneyRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: KC-12</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
               Precision <span className="text-secondary">Suction</span> Audit
             </h2>
             <div className="prose prose-lg text-slate-500 font-medium mb-12 max-w-none space-y-6">
               <p>Kitchen chimneys involve high-RPM ventilation motors and complex filtration grids. We use digital anemometers to measure CFM output and identify failures in capacitors, control switches, and motor windings.</p>
-              <p>Our technical team is certified for global brands like <strong>Faber, Elica, Glen, and Hindware</strong>, ensuring your kitchen air quality is restored to optimal levels.</p>
+              <p>Our Specialized team is certified for global brands like <strong>Faber, Elica, Glen, and Hindware</strong>, ensuring your kitchen air quality is restored to optimal levels.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Motor Overhaul", "Suction Level Fix", "Capacitor Replacement", "Baffle Filter Service", "Touch Panel Repair", "Vibration Fix"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -85,13 +82,6 @@ const KitchenChimneyRepair = () => {
               <button onClick={() => openBookingModal('Kitchen Chimney')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Book Hood Expert <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary"><FaRegClock /></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Response Time</span>
-                  <span className="text-sm font-black text-primary leading-none">Under 2 Hours</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -135,8 +125,8 @@ const KitchenChimneyRepair = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary/10 text-secondary rounded-full mb-8 animate-pulse"><FaShieldAlt size={32} /></div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Fresh Kitchen Guarantee</h3>
-          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every kitchen chimney repair includes a comprehensive airflow validation and a 30-day technical performance warranty.</p>
-          <button onClick={() => openBookingModal('Kitchen Chimney')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Request Technical Service</button>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every kitchen chimney repair includes a comprehensive airflow validation and a 30-day Specialized performance warranty.</p>
+          <button onClick={() => openBookingModal('Kitchen Chimney')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Request Specialized Service</button>
         </div>
       </div>
     </div>

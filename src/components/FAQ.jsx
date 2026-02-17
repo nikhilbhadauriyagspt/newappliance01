@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "Are your technicians manufacturer-certified?",
-    answer: "Every member of our technical team undergoes rigorous factory-grade training and background verification. We maintain high standards of technical excellence and professional conduct."
+    answer: "Every member of our Specialized team undergoes rigorous factory-grade training and background verification. We maintain high standards of Specialized excellence and professional conduct."
   },
   {
     question: "What is your warranty policy on repairs?",
@@ -30,9 +30,9 @@ const FAQ = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden" id="faq">
       <div className="container mx-auto px-4 md:px-8">
-        
+
         <div className="flex flex-col lg:flex-row gap-20">
-          
+
           {/* Left Side: Content */}
           <div className="w-full lg:w-2/5">
             <div className="sticky top-32">
@@ -53,7 +53,7 @@ const FAQ = () => {
                     <FaLightbulb />
                   </div>
                   <h4 className="text-lg font-black text-primary mb-2">Need a custom quote?</h4>
-                  <p className="text-slate-400 text-sm font-medium mb-6">Our experts are ready to assist with complex technical inquiries.</p>
+                  <p className="text-slate-400 text-sm font-medium mb-6">Our experts are ready to assist with complex Specialized inquiries.</p>
                   <a href="tel:+15305544817" className="inline-flex items-center gap-2 text-secondary font-black uppercase tracking-widest text-[10px] hover:gap-4 transition-all">
                     Connect With Us &rarr;
                   </a>
@@ -66,36 +66,31 @@ const FAQ = () => {
           <div className="w-full lg:w-3/5">
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div 
-                  key={index} 
-                  className={`group rounded-[32px] border transition-all duration-500 overflow-hidden ${
-                    activeIndex === index 
-                      ? 'bg-primary border-primary shadow-xl shadow-primary/20' 
+                <div
+                  key={index}
+                  className={`group rounded-[32px] border transition-all duration-500 overflow-hidden ${activeIndex === index
+                      ? 'bg-primary border-primary shadow-xl shadow-primary/20'
                       : 'bg-white border-slate-100 hover:border-secondary/30'
-                  }`}
+                    }`}
                 >
-                  <button 
+                  <button
                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                     className="w-full flex items-center justify-between p-8 text-left"
                   >
-                    <span className={`text-lg font-black tracking-tight transition-colors duration-500 ${
-                      activeIndex === index ? 'text-white' : 'text-primary'
-                    }`}>
+                    <span className={`text-lg font-black tracking-tight transition-colors duration-500 ${activeIndex === index ? 'text-white' : 'text-primary'
+                      }`}>
                       {faq.question}
                     </span>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
-                      activeIndex === index ? 'bg-secondary text-white' : 'bg-slate-50 text-slate-400 group-hover:bg-secondary/10 group-hover:text-secondary'
-                    }`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${activeIndex === index ? 'bg-secondary text-white' : 'bg-slate-50 text-slate-400 group-hover:bg-secondary/10 group-hover:text-secondary'
+                      }`}>
                       {activeIndex === index ? <FaMinus size={10} /> : <FaPlus size={10} />}
                     </div>
                   </button>
-                  
-                  <div className={`transition-all duration-500 ease-in-out ${
-                    activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
-                    <div className={`p-8 pt-0 font-medium leading-relaxed transition-colors duration-500 ${
-                      activeIndex === index ? 'text-slate-300' : 'text-slate-500'
+
+                  <div className={`transition-all duration-500 ease-in-out ${activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}>
+                    <div className={`p-8 pt-0 font-medium leading-relaxed transition-colors duration-500 ${activeIndex === index ? 'text-slate-300' : 'text-slate-500'
+                      }`}>
                       <div className="h-px w-full bg-white/10 mb-6"></div>
                       {faq.answer}
                     </div>

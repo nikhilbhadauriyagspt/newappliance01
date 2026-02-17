@@ -14,7 +14,7 @@ const testimonials = [
     id: 2,
     name: 'Michael Smith',
     role: 'Estate Manager',
-    quote: 'We use appliance nerds for all our properties. Their precision and technical knowledge of smart home appliances are unmatched in the industry.',
+    quote: 'We use Appliance Nerds for all our properties. Their precision and Specialized knowledge of smart home appliances are unmatched in the industry.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'
   },
@@ -22,7 +22,7 @@ const testimonials = [
     id: 3,
     name: 'Emily Davis',
     role: 'Interior Designer',
-    quote: 'Fast, clean, and reliable. They respect the aesthetics of a home while performing high-end technical repairs. The only team I trust.',
+    quote: 'Fast, clean, and reliable. They respect the aesthetics of a home while performing high-end Specialized repairs. The only team I trust.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80'
   }

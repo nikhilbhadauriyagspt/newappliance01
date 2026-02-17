@@ -12,7 +12,7 @@ const steps = [
     icon: <FaSearch />,
     title: "Diagnosis",
     subtitle: "Step 02",
-    desc: "Our master technician performs a deep-scan to identify the core technical fault."
+    desc: "Our master technician performs a deep-scan to identify the core Specialized fault."
   },
   {
     icon: <FaTools />,
@@ -33,7 +33,7 @@ const Process = () => {
     <section className="py-24 bg-white overflow-hidden relative" id="process">
       {/* Decorative text background */}
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
-         <span className="text-[20vw] font-black text-primary uppercase tracking-tighter">PROCESS</span>
+        <span className="text-[20vw] font-black text-primary uppercase tracking-tighter">PROCESS</span>
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -45,7 +45,7 @@ const Process = () => {
             How We Restore <span className="text-secondary">Excellence</span>
           </h2>
           <p className="text-slate-500 text-lg font-medium leading-relaxed">
-            A systematic approach to appliance repair, ensuring transparency and technical perfection at every stage.
+            A systematic approach to appliance repair, ensuring transparency and Specialized perfection at every stage.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const Process = () => {
               >
                 {/* Step Card */}
                 <div className="h-full bg-slate-50 border border-slate-100 rounded-[40px] p-10 hover:bg-white hover:shadow-premium transition-all duration-500 text-center flex flex-col items-center">
-                  
+
                   <div className="mb-8 relative">
                     <div className="w-20 h-20 rounded-3xl bg-white shadow-sm flex items-center justify-center text-primary text-3xl group-hover:bg-secondary group-hover:text-white transition-all duration-500 transform group-hover:-translate-y-2">
                       {step.icon}
@@ -80,7 +80,7 @@ const Process = () => {
                   <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6">
                     {step.desc}
                   </p>
-                  
+
                   {/* Arrow for non-last items */}
                   {index < steps.length - 1 && (
                     <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 text-slate-200 group-hover:text-secondary transition-colors group-hover:translate-x-2 duration-500">
@@ -94,14 +94,14 @@ const Process = () => {
         </div>
 
         <div className="mt-24 text-center">
-           <div className="inline-block p-1 bg-slate-50 rounded-full border border-slate-100">
-              <div className="flex flex-col sm:flex-row items-center gap-6 px-8 py-3">
-                 <p className="text-slate-400 text-sm font-bold tracking-tight">Need immediate technical assistance?</p>
-                 <a href="tel:+15305544817" className="px-6 py-3 bg-primary text-white text-[10px] font-black uppercase tracking-[3px] rounded-full shadow-lg hover:bg-secondary transition-colors">
-                   Emergency Line
-                 </a>
-              </div>
-           </div>
+          <div className="inline-block p-1 bg-slate-50 rounded-full border border-slate-100">
+            <div className="flex flex-col sm:flex-row items-center gap-6 px-8 py-3">
+              <p className="text-slate-400 text-sm font-bold tracking-tight">Need immediate Specialized assistance?</p>
+              <a href="tel:+15305544817" className="px-6 py-3 bg-primary text-white text-[10px] font-black uppercase tracking-[3px] rounded-full shadow-lg hover:bg-secondary transition-colors">
+                Emergency Line
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

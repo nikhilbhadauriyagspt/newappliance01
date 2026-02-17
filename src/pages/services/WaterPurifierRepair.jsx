@@ -11,7 +11,7 @@ const WaterPurifierRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert Water Purifier Repair | RO & UV Service | appliance nerds</title>
+        <title>Expert Water Purifier Repair | RO & UV Service | Appliance Nerds</title>
         <meta name="description" content="Professional water purifier repair for all brands. We fix RO membrane issues, filter clogs, pump failures, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const WaterPurifierRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Purification <span className="text-secondary">System Restoration</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -60,9 +60,6 @@ const WaterPurifierRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: WP-10</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
               Hydro <span className="text-secondary">Purity</span> Analysis
             </h2>
@@ -70,7 +67,7 @@ const WaterPurifierRepair = () => {
               <p>Water purifiers are critical for family health. We use digital TDS meters and flow sensors to identify failures in RO membranes, booster pumps, and UV sterilizer units.</p>
               <p>Our technicians are certified for global brands like <strong>Kent, Aquaguard, Pureit, and AO Smith</strong>, focusing on absolute filtration integrity.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["RO Membrane Swap", "Booster Pump Fix", "UV Lamp Replacement", "TDS Level Adjustment", "Filter Cartridge Change", "Leakage Rectification"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -85,13 +82,6 @@ const WaterPurifierRepair = () => {
               <button onClick={() => openBookingModal('Water Purifier')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Request Purity Check <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary"><FaRegClock /></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Response Time</span>
-                  <span className="text-sm font-black text-primary leading-none">Under 2 Hours</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -135,7 +125,7 @@ const WaterPurifierRepair = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary/10 text-secondary rounded-full mb-8 animate-pulse"><FaShieldAlt size={32} /></div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Health & Purity Guarantee</h3>
-          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every water purifier service includes our 100% purity level validation and a 30-day performance warranty on all technical work.</p>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every water purifier service includes our 100% purity level validation and a 30-day performance warranty on all Specialized work.</p>
           <button onClick={() => openBookingModal('Water Purifier')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Request Filter Service</button>
         </div>
       </div>

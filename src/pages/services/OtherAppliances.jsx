@@ -11,7 +11,7 @@ const OtherAppliances = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>General Appliance Repair | Multi-Brand Maintenance | appliance nerds</title>
+        <title>General Appliance Repair | Multi-Brand Maintenance | Appliance Nerds</title>
         <meta name="description" content="Professional repair for all household appliances. We fix small kitchen assets, home utility machines, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,11 +21,11 @@ const OtherAppliances = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Miscellaneous <span className="text-secondary">Systems Repair</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
-            Specialized technical support for various domestic electronic assets. From small kitchen gadgets to complex home utility equipment.
+            Specialized Specialized support for various domestic electronic assets. From small kitchen gadgets to complex home utility equipment.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ const OtherAppliances = () => {
                     <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shadow-sm">
                       <FaShieldAlt size={20} />
                     </div>
-                    <p className="text-primary font-black text-sm leading-tight tracking-tight uppercase">Technical Logic <br />Certified</p>
+                    <p className="text-primary font-black text-sm leading-tight tracking-tight uppercase">Specialized Logic <br />Certified</p>
                   </div>
                   <div className="h-px bg-slate-100 w-full"></div>
                   <div className="flex items-center gap-4">
@@ -60,9 +60,6 @@ const OtherAppliances = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: GS-06</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
               Domestic <span className="text-secondary">Asset</span> Restoration
             </h2>
@@ -70,7 +67,7 @@ const OtherAppliances = () => {
               <p>We provide a wide-spectrum diagnostic framework for various household appliances not covered in standard categories. Our technicians utilize universal diagnostic tools to restore mechanical and electrical functionality.</p>
               <p>Certified for a vast range of domestic brands, ensuring every specialized asset in your home receives professional care.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Small Motor Repair", "Electronic PCB Fix", "Heating Element Check", "Wiring Harness Restore", "Switch & UI Repair", "General Safety Scan"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -103,7 +100,7 @@ const OtherAppliances = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: <FaClipboardList />, title: "Technical Audit", desc: "Initial symptom logging and load-capacity analysis." },
+              { icon: <FaClipboardList />, title: "Specialized Audit", desc: "Initial symptom logging and load-capacity analysis." },
               { icon: <FaSearch />, title: "Logic Diagnostic", desc: "Verifying circuit continuity and component resistance." },
               { icon: <FaWrench />, title: "Precision Fix", desc: "Replacement of failed units with compatible parts." },
               { icon: <FaCheckCircle />, title: "Safety Test", desc: "Final grounding and thermal stability verification." }
@@ -135,8 +132,8 @@ const OtherAppliances = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary/10 text-secondary rounded-full mb-8 animate-pulse"><FaShieldAlt size={32} /></div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Professional Asset Guarantee</h3>
-          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every appliance repair, regardless of category, includes our technical seal of approval and a 30-day labor warranty.</p>
-          <button onClick={() => openBookingModal('Other Appliances')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Book Technical Visit</button>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every appliance repair, regardless of category, includes our Specialized seal of approval and a 30-day labor warranty.</p>
+          <button onClick={() => openBookingModal('Other Appliances')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Book Specialized Visit</button>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden" id="blog">
       <div className="container mx-auto px-4 md:px-8">
-        
+
         {/* Section Title */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
@@ -39,7 +39,7 @@ const Blog = () => {
                   alt={blog.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 {/* Floating Date Badge */}
                 <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg">
                   <span className="text-[10px] font-black text-primary uppercase tracking-widest">{blog.date}</span>
@@ -50,7 +50,7 @@ const Blog = () => {
               <div className="p-10 flex-grow flex flex-col">
                 <div className="flex items-center gap-2 text-secondary text-[10px] font-black uppercase tracking-[2px] mb-4">
                   <FaTag size={10} />
-                  <span>Technical Guide</span>
+                  <span>Specialized Guide</span>
                 </div>
 
                 <h3 className="text-2xl font-black text-primary mb-4 group-hover:text-secondary transition-colors leading-tight tracking-tight">

@@ -11,7 +11,7 @@ const MicrowaveOvenRepair = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>Expert Microwave Oven Repair | Professional Kitchen Fix | appliance nerds</title>
+        <title>Expert Microwave Oven Repair | Professional Kitchen Fix | Appliance Nerds</title>
         <meta name="description" content="Professional microwave repair for all brands. We fix heating issues, panel failures, sparks, and more. Certified technicians & genuine parts. Book now!" />
       </Helmet>
 
@@ -21,7 +21,7 @@ const MicrowaveOvenRepair = () => {
           <Link to="/services" className="inline-flex items-center gap-3 text-secondary font-black uppercase tracking-[3px] text-[10px] mb-10 hover:gap-5 transition-all">
             <FaArrowLeft /> All Repair Services
           </Link>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Microwave <span className="text-secondary">Thermal Systems Fix</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
@@ -60,17 +60,14 @@ const MicrowaveOvenRepair = () => {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-              <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Service Code: MW-08</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-8 leading-tight tracking-tighter uppercase">
               Precision <span className="text-secondary">Heating</span> Scan
             </h2>
             <div className="prose prose-lg text-slate-500 font-medium mb-12 max-w-none space-y-6">
-              <p>Microwave ovens combine high-voltage electronics with precise mechanical timing. We use specialized radiation leakage meters and capacitor discharge tools to ensure safe and effective technical restoration.</p>
+              <p>Microwave ovens combine high-voltage electronics with precise mechanical timing. We use specialized radiation leakage meters and capacitor discharge tools to ensure safe and effective Specialized restoration.</p>
               <p>Our technicians are certified for global brands like <strong>Panasonic, LG, Samsung, and Whirlpool</strong>, focusing on thermal consistency and user safety.</p>
               <div className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 mt-12">
-                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Technical Scope</h3>
+                <h3 className="text-primary font-black text-2xl mb-8 tracking-tighter uppercase">Specialized Scope</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Magnetron Replacement", "High-Voltage Capacitor", "Touch Panel Fix", "Diode & Fuse Replacement", "Turntable Motor Fix", "Radiation Leakage Check"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
@@ -85,13 +82,6 @@ const MicrowaveOvenRepair = () => {
               <button onClick={() => openBookingModal('Microwave')} className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[24px] font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4">
                 Launch Repair Request <FaArrowRight />
               </button>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-secondary"><FaRegClock /></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-widest leading-none mb-1">Dispatch Time</span>
-                  <span className="text-sm font-black text-primary leading-none">Within 2 Hours</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -135,7 +125,7 @@ const MicrowaveOvenRepair = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary/10 text-secondary rounded-full mb-8 animate-pulse"><FaShieldAlt size={32} /></div>
           <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 tracking-tighter uppercase">Safety First Guarantee</h3>
-          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every microwave repair includes a comprehensive radiation safety check and a 30-day performance warranty on all technical work.</p>
+          <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10">Every microwave repair includes a comprehensive radiation safety check and a 30-day performance warranty on all Specialized work.</p>
           <button onClick={() => openBookingModal('Microwave')} className="px-12 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-[3px] text-xs shadow-xl hover:bg-primary transition-all">Book Safety Checkup</button>
         </div>
       </div>

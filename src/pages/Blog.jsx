@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Our Blog - appliance nerds | Professional Insights</title>
+        <title>Our Blog - Appliance Nerds | Professional Insights</title>
         <meta name="description" content="Read our latest articles about appliance maintenance, repair tips, and industry news." />
         <link rel="canonical" href="https://www.appliancenerds.shop/blog" />
       </Helmet>
@@ -24,11 +24,11 @@ const Blog = () => {
           <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">
             <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Intellectual Hub</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tighter uppercase">
             Repair <br />& Maintenance <span className="text-secondary">Journal</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            Professional perspectives on high-end appliance maintenance, technical diagnostics, and industry advancements.
+            Professional perspectives on high-end appliance maintenance, Specialized diagnostics, and industry advancements.
           </p>
         </div>
       </section>

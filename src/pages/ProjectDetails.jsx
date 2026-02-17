@@ -16,7 +16,7 @@ const ProjectDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 font-sans">
         <Helmet>
-          <title>Project Not Found - appliance nerds</title>
+          <title>Project Not Found - Appliance Nerds</title>
         </Helmet>
         <div className="text-center">
           <h2 className="text-6xl font-black text-primary mb-6 tracking-tighter uppercase">404</h2>
@@ -32,7 +32,7 @@ const ProjectDetails = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
       <Helmet>
-        <title>{project.title} - appliance nerds Case Studies</title>
+        <title>{project.title} - Appliance Nerds Case Studies</title>
         <meta name="description" content={project.description} />
         <link rel="canonical" href={`https://www.appliancenerds.shop/project/${project.id}`} />
       </Helmet>
@@ -58,7 +58,7 @@ const ProjectDetails = () => {
 
           {/* Content Side */}
           <div className="w-full lg:w-8/12">
-            <h2 className="text-3xl font-black text-primary mb-10 uppercase tracking-tighter">Technical Narrative</h2>
+            <h2 className="text-3xl font-black text-primary mb-10 uppercase tracking-tighter">Specialized Narrative</h2>
             <div className="prose prose-2xl text-slate-500 font-medium mb-16 max-w-none">
               <p className="text-2xl text-primary font-black mb-10 leading-tight">
                 {project.description}
@@ -85,7 +85,7 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          {/* Technical Specs Sidebar */}
+          {/* Specialized Specs Sidebar */}
           <div className="w-full lg:w-4/12 sticky top-32">
             <div className="bg-primary rounded-[48px] p-10 md:p-14 text-white relative overflow-hidden shadow-2xl">
               {/* Decorative Element */}
@@ -113,7 +113,7 @@ const ProjectDetails = () => {
               </div>
 
               <div className="mt-16 pt-12 border-t border-white/10">
-                <p className="text-slate-400 text-sm font-medium mb-8">Requiring similar technical restoration?</p>
+                <p className="text-slate-400 text-sm font-medium mb-8">Requiring similar Specialized restoration?</p>
                 <Link
                   to="/contact"
                   className="flex items-center justify-center gap-4 w-full bg-secondary text-white py-6 rounded-2xl font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-white hover:text-primary transition-all active:scale-95"
