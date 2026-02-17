@@ -157,10 +157,6 @@ const Header = () => {
               </div>
               <div className="hidden md:flex items-center gap-4">
                 <Link to="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:text-secondary hover:bg-white hover:shadow-sm transition-all border border-slate-100 group"><FaUserCheck size={16} /></Link>
-                <a href="tel:+15305544817" className="flex flex-col items-end">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Call us now</span>
-                  <span className="text-sm font-black text-primary">+1 530 554 4817</span>
-                </a>
               </div>
               <button onClick={() => openBookingModal()} className="group relative hidden md:flex px-7 py-3.5 bg-secondary text-white text-[11px] font-black uppercase tracking-[2px] rounded-2xl overflow-hidden shadow-xl active:scale-95 transition-all duration-300">
                 <span className="relative z-10 flex items-center gap-3">Book a Fix <FaWrench /></span>
@@ -195,13 +191,6 @@ const Header = () => {
               </div>
             </div>
             <div className="p-8 border-t border-slate-50 bg-slate-50/50">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary"><FaPhoneAlt /></div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase">Call us today</p>
-                  <p className="text-lg font-black text-primary">+1 530 554 4817</p>
-                </div>
-              </div>
               <button onClick={() => { openBookingModal(); setIsMenuOpen(false); }} className="w-full py-5 bg-primary text-white rounded-[20px] font-black uppercase tracking-[3px] text-xs shadow-2xl">Book a Visit</button>
             </div>
           </div>

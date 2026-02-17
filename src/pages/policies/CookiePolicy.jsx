@@ -129,8 +129,7 @@ const CookiePolicy = () => {
               Caldwell Blvd<br />
               Nampa, ID 83651<br />
               United States<br />
-              Email: <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a><br />
-              Phone: +1 (530) 554-4817
+              Email: <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>
             </address>
           </section>
         </div>

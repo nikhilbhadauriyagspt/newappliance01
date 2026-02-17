@@ -77,13 +77,6 @@ const Contact = () => {
             <div className="space-y-6">
               {[
                 {
-                  icon: <FaPhoneAlt />,
-                  label: 'Help Line',
-                  val: '+1 (530) 554-4817',
-                  color: 'bg-slate-50',
-                  textColor: 'text-primary'
-                },
-                {
                   icon: <FaEnvelope />,
                   label: 'Email Us',
                   val: 'info@appliancenerds.shop',

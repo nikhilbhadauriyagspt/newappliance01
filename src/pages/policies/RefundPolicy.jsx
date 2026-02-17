@@ -79,7 +79,6 @@ const RefundPolicy = () => {
               If you have any questions concerning our return policy, please contact us at:
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4">
-              <p className="font-bold text-xl mb-2">+1 (530) 554-4817</p>
               <a href="mailto:info@appliancenerds.shop" className="text-secondary font-bold text-lg hover:underline">info@appliancenerds.shop</a>
             </div>
           </section>

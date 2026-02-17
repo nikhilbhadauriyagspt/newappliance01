@@ -152,10 +152,6 @@ const Footer = () => {
                 <span className="text-slate-400 text-sm font-medium leading-relaxed">Caldwell Blvd Nampa, ID 83651, USA</span>
               </li>
               <li className="flex items-center gap-4">
-                <FaPhoneAlt className="text-secondary" />
-                <span className="text-slate-400 text-sm font-black">+1 (530) 554-4817</span>
-              </li>
-              <li className="flex items-center gap-4">
                 <FaEnvelope className="text-secondary" />
                 <span className="text-slate-400 text-sm font-medium">info@appliancenerds.shop</span>
               </li>

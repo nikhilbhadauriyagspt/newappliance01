@@ -51,7 +51,6 @@ const Contact = () => {
 
               <div className="space-y-4">
                 {[
-                  { icon: <FaPhoneAlt />, label: 'Call us', val: '+1 (530) 554-4817', sub: 'Available 24/7' },
                   { icon: <FaEnvelope />, label: 'Email us', val: 'info@appliancenerds.shop', sub: 'We reply fast' },
                   { icon: <FaClock />, label: 'Open Hours', val: 'Mon - Sat: 8AM - 9PM', sub: 'Sunday Emergency Only' }
                 ].map((item, i) => (

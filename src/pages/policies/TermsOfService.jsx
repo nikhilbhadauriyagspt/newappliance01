@@ -38,7 +38,7 @@ const TermsOfService = () => {
               effective servicing.
             </p>
             <p>
-              You can contact us by phone at +1 (530) 554-4817, email at <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>, or by
+              You can contact us by email at <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>, or by
               mail to Caldwell Blvd, Nampa, ID 83651, United States.
             </p>            <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
@@ -278,7 +278,6 @@ const TermsOfService = () => {
               Caldwell Blvd<br />
               Nampa, ID 83651<br />
               United States<br />
-              Phone: +1 (530) 554-4817<br />
               <a href="mailto:info@appliancenerds.shop" className="text-primary">info@appliancenerds.shop</a>
             </address>
           </section>

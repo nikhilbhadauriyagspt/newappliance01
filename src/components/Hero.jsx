@@ -126,13 +126,6 @@ const Hero = () => {
                           <span className="relative z-10 flex items-center gap-3">{slide.cta} <FaArrowRight size={10} /></span>
                           <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                         </button>
-                        <a href="tel:+15305544817" className="flex items-center gap-4 text-white hover:text-secondary transition-all">
-                           <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shadow-lg"><FaPhoneAlt size={16} /></div>
-                           <div className="text-left leading-none">
-                              <span className="block text-[9px] font-black text-white/40 uppercase tracking-[1px] mb-1.5">Direct Line</span>
-                              <span className="block text-xl font-black tracking-tight">+1 (530) 554-4817</span>
-                           </div>
-                        </a>
                       </div>
                     </div>
                   </div>
