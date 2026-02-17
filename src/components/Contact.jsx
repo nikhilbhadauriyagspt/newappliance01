@@ -4,10 +4,27 @@ import { FaPaperPlane, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaHeadset, FaCloc
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -76,21 +93,22 @@ const Contact = () => {
                     <button onClick={() => setSubmitted(false)} className="text-secondary font-black uppercase tracking-widest text-[10px] border-b border-secondary pb-1">Send Another Message</button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" name="contact-home" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact-home" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Full Name</label>
-                        <input required type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: John Smith" />
+                        <input required name="name" type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: John Smith" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Email Address</label>
-                        <input required type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: john@appliancenerds.shop" />
+                        <input required name="email" type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: john@appliancenerds.shop" />
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Appliance Type / Subject</label>
-                      <select className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white font-medium appearance-none">
+                      <select name="appliance" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white font-medium appearance-none">
                         <option className="bg-primary text-white">Select Appliance</option>
                         <option className="bg-primary text-white">Washing Machine</option>
                         <option className="bg-primary text-white">Refrigerator</option>
@@ -101,7 +119,7 @@ const Contact = () => {
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Detail of the issue</label>
-                      <textarea required rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium resize-none" placeholder="Briefly describe the malfunction..."></textarea>
+                      <textarea required name="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium resize-none" placeholder="Briefly describe the malfunction..."></textarea>
                     </div>
 
                     <button type="submit" className="w-full bg-secondary text-white py-5 rounded-2xl font-black uppercase tracking-[4px] text-xs shadow-2xl hover:bg-white hover:text-secondary transition-all active:scale-95 flex items-center justify-center gap-4">

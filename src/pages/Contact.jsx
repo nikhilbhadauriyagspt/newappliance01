@@ -10,15 +10,31 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
 
-    setTimeout(() => {
+      if (response.ok) {
+        setIsLoading(false);
+        setIsSubmitted(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        setIsLoading(false);
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
       setIsLoading(false);
-      setIsSubmitted(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1500);
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -109,21 +125,22 @@ const Contact = () => {
                   <button onClick={() => setIsSubmitted(false)} className="text-secondary font-black uppercase tracking-[3px] text-[10px] border-b-2 border-secondary pb-1">Submit Another Inquiry</button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
+                <form onSubmit={handleSubmit} className="relative z-10 space-y-8" name="contact-page" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact-page" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Name</label>
-                      <input required type="text" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary" placeholder="Enter name..." />
+                      <input required name="name" type="text" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary" placeholder="Enter name..." />
                     </div>
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Email</label>
-                      <input required type="email" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary" placeholder="Enter email..." />
+                      <input required name="email" type="email" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary" placeholder="Enter email..." />
                     </div>
                   </div>
                   <div className="space-y-3">
                     <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Appliance Category</label>
                     <div className="relative">
-                      <select required className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all text-primary font-black appearance-none cursor-pointer">
+                      <select required name="category" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all text-primary font-black appearance-none cursor-pointer">
                         <option value="">Choose Classification</option>
                         <option>Washing Machines</option>
                         <option>Refrigeration Systems</option>
@@ -136,7 +153,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-3">
                     <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Technical Description</label>
-                    <textarea required rows="5" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary resize-none" placeholder="Provide details of the malfunction..."></textarea>
+                    <textarea required name="message" rows="5" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 focus:outline-none focus:border-secondary transition-all font-medium text-primary resize-none" placeholder="Provide details of the malfunction..."></textarea>
                   </div>
                   <button disabled={isLoading} type="submit" className="w-full bg-primary text-white font-black uppercase tracking-[4px] py-6 rounded-2xl shadow-2xl hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-4 text-xs">
                     {isLoading ? <><FaSpinner className="animate-spin" /> Transmission In Progress...</> : <>Submit Technical Request <FaArrowRight /></>}

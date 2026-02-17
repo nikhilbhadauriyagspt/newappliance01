@@ -78,6 +78,31 @@
   <div id="root">
     <h1 style="display: none;">appliance nerds - Professional Home Appliance Repair Services</h1>
   </div>
+
+  <!-- Hidden forms for Netlify -->
+  <form name="booking" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <input type="text" name="appliance" />
+    <textarea name="location"></textarea>
+  </form>
+  <form name="contact-home" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="appliance" />
+    <textarea name="message"></textarea>
+  </form>
+  <form name="contact-page" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="category" />
+    <textarea name="message"></textarea>
+  </form>
+  <form name="newsletter" data-netlify="true" hidden>
+    <input type="email" name="email" />
+  </form>
+
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

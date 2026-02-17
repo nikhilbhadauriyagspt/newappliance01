@@ -5,10 +5,25 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    setSubscribed(true);
-    setTimeout(() => setSubscribed(false), 5000);
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        setSubscribed(true);
+        e.target.reset();
+        setTimeout(() => setSubscribed(false), 5000);
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+    }
   };
 
   return (
@@ -35,9 +50,11 @@ const Footer = () => {
 
           <div className="flex-1 max-w-md w-full">
             <h4 className="text-lg font-black mb-6 text-center lg:text-left">Subscribe to Our Updates</h4>
-            <form onSubmit={handleSubscribe} className="relative group">
+            <form onSubmit={handleSubscribe} className="relative group" name="newsletter" data-netlify="true">
+              <input type="hidden" name="form-name" value="newsletter" />
               <input
                 required
+                name="email"
                 type="email"
                 placeholder="Enter your email"
                 className="w-full bg-white/5 border border-white/10 rounded-[20px] py-5 pl-8 pr-32 outline-none focus:bg-white/10 focus:border-secondary transition-all font-medium text-sm"

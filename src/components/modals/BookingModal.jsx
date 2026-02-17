@@ -8,13 +8,30 @@ const BookingModal = () => {
 
   if (!isModalOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      closeBookingModal();
-    }, 4000);
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          closeBookingModal();
+        }, 4000);
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -60,27 +77,29 @@ const BookingModal = () => {
               <p className="text-slate-400 text-xs font-bold uppercase tracking-[2px]">Guaranteed technical excellence at your doorstep</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" name="booking" data-netlify="true">
+              <input type="hidden" name="form-name" value="booking" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Your Name</label>
-                  <input required type="text" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Full Name" />
+                  <input required name="name" type="text" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Full Name" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Contact Number</label>
-                  <input required type="tel" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Phone" />
+                  <input required name="phone" type="tel" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Phone" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Email</label>
-                  <input required type="email" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Email" />
+                  <input required name="email" type="email" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary" placeholder="Email" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Appliance</label>
                   <div className="relative">
                     <select
+                      name="appliance"
                       className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary appearance-none cursor-pointer"
                       defaultValue={selectedService}
                     >
@@ -101,7 +120,7 @@ const BookingModal = () => {
 
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-400 ml-2">Service Location</label>
-                <textarea required rows="2" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary resize-none" placeholder="Enter your full address..."></textarea>
+                <textarea required name="location" rows="2" className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:border-secondary focus:bg-white transition-all font-medium text-primary resize-none" placeholder="Enter your full address..."></textarea>
               </div>
 
               <button
