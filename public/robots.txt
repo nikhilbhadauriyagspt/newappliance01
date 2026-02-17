@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
-Sitemap: https://www.appliancevista.shop/sitemap.xml
+Sitemap: https://www.appliancenerds.shop/sitemap.xml
 

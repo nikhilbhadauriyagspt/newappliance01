@@ -16,9 +16,9 @@ const Contact = () => {
       <div className="absolute top-0 left-0 w-full h-1/2 bg-slate-50/50 -skew-y-3 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        
+
         <div className="flex flex-col lg:flex-row gap-20">
-          
+
           {/* Left Side: Information */}
           <div className="w-full lg:w-5/12">
             <div className="sticky top-32">
@@ -35,7 +35,7 @@ const Contact = () => {
               <div className="space-y-4">
                 {[
                   { icon: <FaPhoneAlt />, label: 'Direct Line', val: '+1 (530) 554-4817', sub: 'Available 24/7' },
-                  { icon: <FaEnvelope />, label: 'Official Email', val: 'appliancevista@outlook.com', sub: 'Response within 12h' },
+                  { icon: <FaEnvelope />, label: 'Official Email', val: 'appliancenerds@outlook.com', sub: 'Response within 12h' },
                   { icon: <FaClock />, label: 'Working Hours', val: 'Mon - Sat: 8AM - 9PM', sub: 'Sunday Emergency Only' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-6 p-6 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-premium transition-all group">
@@ -84,10 +84,10 @@ const Contact = () => {
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Email Address</label>
-                        <input required type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: john@vista.com" />
+                        <input required type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white placeholder:text-slate-600 font-medium" placeholder="Ex: john@appliancenerds.shop" />
                       </div>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-[3px] text-slate-500 ml-2">Appliance Type / Subject</label>
                       <select className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 outline-none focus:border-secondary focus:bg-white/10 transition-all text-white font-medium appearance-none">
@@ -117,24 +117,24 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="mt-32 rounded-[48px] overflow-hidden h-[500px] shadow-premium relative group">
-           <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
-           <iframe 
-             width="100%" 
-             height="100%" 
-             style={{border:0, filter: 'grayscale(100%) contrast(1.2) invert(90%)'}} 
-             loading="lazy" 
-             allowFullScreen 
-             src="https://maps.google.com/maps?q=Grandview%20Glendale,%20CA%2091201,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed">
-           </iframe>
-           
-           {/* Address Overlay Card */}
-           <div className="absolute bottom-10 left-10 z-20 bg-white p-8 rounded-[32px] shadow-2xl max-w-xs border border-slate-100 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <h5 className="text-[10px] font-black uppercase tracking-[3px] text-secondary mb-3">Service Headquarters</h5>
-              <p className="text-primary font-black text-lg leading-tight mb-4">Grandview Glendale, California 91201, USA</p>
-              <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-                <FaMapMarkerAlt className="text-secondary" /> Open for walk-ins
-              </div>
-           </div>
+          <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
+          <iframe
+            width="100%"
+            height="100%"
+            style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) invert(90%)' }}
+            loading="lazy"
+            allowFullScreen
+            src="https://maps.google.com/maps?q=Grandview%20Glendale,%20CA%2091201,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+
+          {/* Address Overlay Card */}
+          <div className="absolute bottom-10 left-10 z-20 bg-white p-8 rounded-[32px] shadow-2xl max-w-xs border border-slate-100 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h5 className="text-[10px] font-black uppercase tracking-[3px] text-secondary mb-3">Service Headquarters</h5>
+            <p className="text-primary font-black text-lg leading-tight mb-4">Grandview Glendale, California 91201, USA</p>
+            <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+              <FaMapMarkerAlt className="text-secondary" /> Open for walk-ins
+            </div>
+          </div>
         </div>
       </div>
     </section>

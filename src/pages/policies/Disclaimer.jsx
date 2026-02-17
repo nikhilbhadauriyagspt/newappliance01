@@ -9,17 +9,17 @@ const Disclaimer = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Disclaimer - Appliance Vista</title>
-        <meta name="description" content="Disclaimer for Appliance Vista." />
-        <link rel="canonical" href="https://www.appliancevista.shop/disclaimer" />
+        <title>Disclaimer - appliance nerds</title>
+        <meta name="description" content="Disclaimer for appliance nerds." />
+        <link rel="canonical" href="https://www.appliancenerds.shop/disclaimer" />
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Disclaimer</h1>
         <div className="prose prose-lg text-gray-600">
           <p>Last updated: February 2026</p>
-          
+
           <h3>General Disclaimer</h3>
-          <p>The information provided by Appliance Vista ("we," "us," or "our") on https://www.appliancevista.shop (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
+          <p>The information provided by appliance nerds ("we," "us," or "our") on https://www.appliancenerds.shop (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
 
           <h3>Professional Disclaimer</h3>
           <p>The Site cannot and does not contain legal or medical advice. The information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.</p>

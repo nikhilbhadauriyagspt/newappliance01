@@ -32,8 +32,7 @@ const Services = () => {
       <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
         {/* Decorative background number */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] select-none pointer-events-none">
-           <span className="text-[30vw] font-black text-white leading-none">VISTA</span>
-        </div>
+                       <span className="text-[30vw] font-black text-white leading-none">NERDS</span>        </div>
         
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full mb-8 border border-white/10">

@@ -9,59 +9,59 @@ const TermsOfService = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Terms of Service - Appliance Vista</title>
-        <meta name="description" content="Official Terms of Service for Appliance Vista. Agreement to our legal terms and conditions." />
-        <link rel="canonical" href="https://www.appliancevista.shop/terms-of-service" />
+        <title>Terms of Service - appliance nerds</title>
+        <meta name="description" content="Official Terms of Service for appliance nerds. Agreement to our legal terms and conditions." />
+        <link rel="canonical" href="https://www.appliancenerds.shop/terms-of-service" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 max-w-5xl">
         <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Terms of Service</h1>
         <p className="text-gray-500 mb-12 italic">Last updated February 06, 2026</p>
-        
+
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
-          
+
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">AGREEMENT TO OUR LEGAL TERMS</h2>
             <p>
-              We are Appliance Vista ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in California, 
+              We are appliance nerds ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in California,
               United States at Grandview, Glendale, CA 91201.
             </p>
             <p>
-              We operate the website <a href="http://appliancevista.shop/" className="text-primary hover:text-secondary">http://appliancevista.shop/</a> (the "<strong>Site</strong>"), as well as any other related 
-              products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively, 
+              We operate the website <a href="http://appliancenerds.shop/" className="text-primary hover:text-secondary">http://appliancenerds.shop/</a> (the "<strong>Site</strong>"), as well as any other related
+              products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively,
               the "<strong>Services</strong>").
             </p>
             <p>
-              Appliance Vista was founded on the principle that household repairs should be handled with 
-              the same level of precision as industrial maintenance. We recognize that modern appliances 
-              are complex electronic systems that require specialized knowledge and calibrated tools for 
+              appliance nerds was founded on the principle that household repairs should be handled with
+              the same level of precision as industrial maintenance. We recognize that modern appliances
+              are complex electronic systems that require specialized knowledge and calibrated tools for
               effective servicing.
             </p>
             <p>
-              You can contact us by phone at +1 (530) 554-4817, email at <a href="mailto:appliancevista@outlook.com" className="text-primary">appliancevista@outlook.com</a>, or by 
+              You can contact us by phone at +1 (530) 554-4817, email at <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>, or by
               mail to Grandview, Glendale, CA 91201, United States.
             </p>
             <p>
-              These Legal Terms constitute a legally binding agreement made between you, whether 
-              personally or on behalf of an entity ("<strong>you</strong>"), and Appliance Vista, concerning your access to 
-              and use of the Services. You agree that by accessing the Services, you have read, 
-              understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE 
-              WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE 
-              SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
+              These Legal Terms constitute a legally binding agreement made between you, whether
+              personally or on behalf of an entity ("<strong>you</strong>"), and appliance nerds, concerning your access to
+              and use of the Services. You agree that by accessing the Services, you have read,
+              understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE
+                WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
+                SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
             </p>
             <p>
-              Supplemental terms and conditions or documents that may be posted on the Services from 
-              time to time are hereby expressly incorporated herein by reference. We reserve the right, in 
-              our sole discretion, to make changes or modifications to these Legal Terms at any time and 
-              for any reason. We will alert you about any changes by updating the "Last updated" date of 
-              these Legal Terms, and you waive any right to receive specific notice of each such change. It 
-              is your responsibility to periodically review these Legal Terms to stay informed of updates. 
-              You will be subject to, and will be deemed to have been made aware of and to have 
-              accepted, the changes in any revised Legal Terms by your continued use of the Services after 
+              Supplemental terms and conditions or documents that may be posted on the Services from
+              time to time are hereby expressly incorporated herein by reference. We reserve the right, in
+              our sole discretion, to make changes or modifications to these Legal Terms at any time and
+              for any reason. We will alert you about any changes by updating the "Last updated" date of
+              these Legal Terms, and you waive any right to receive specific notice of each such change. It
+              is your responsibility to periodically review these Legal Terms to stay informed of updates.
+              You will be subject to, and will be deemed to have been made aware of and to have
+              accepted, the changes in any revised Legal Terms by your continued use of the Services after
               the date such revised Legal Terms are posted.
             </p>
             <p>
-              The Services are intended for users who are at least 18 years old. Persons under the age of 
+              The Services are intended for users who are at least 18 years old. Persons under the age of
               18 are not permitted to use or register for the Services.
             </p>
             <p>We recommend that you print a copy of these Legal Terms for your records.</p>
@@ -102,12 +102,12 @@ const TermsOfService = () => {
 
           <section id="intellectual">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">2. INTELLECTUAL PROPERTY RIGHTS</h3>
-            
+
             <p className="font-bold mt-4">Our intellectual property</p>
             <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks").</p>
             <p>Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States and around the world.</p>
             <p>The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.</p>
-            
+
             <p className="font-bold mt-4">Your use of our Services</p>
             <p>Subject to your compliance with these Legal Terms, including the "PROHIBITED ACTIVITIES" section below, we grant you a non-exclusive, non-transferable, revocable license to:</p>
             <ul className="list-disc pl-10 space-y-1">
@@ -116,10 +116,10 @@ const TermsOfService = () => {
             </ul>
             <p>solely for your personal, non-commercial use or internal business purpose.</p>
             <p>Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
-            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:appliancevista@outlook.com" className="text-primary">appliancevista@outlook.com</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
             <p>We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.</p>
             <p>Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</p>
-            
+
             <p className="font-bold mt-4">Your submissions</p>
             <p>Please review this section and the "PROHIBITED ACTIVITIES" section carefully prior to using our Services to understand the (a) rights you give us and (b) obligations you have when you post or upload any content through the Services.</p>
             <p><strong>Submissions:</strong> By directly sending us any question, comment, suggestion, idea, feedback, or other information about the Services ("Submissions"), you agree to assign to us all intellectual property rights in such Submission. You agree that we shall own this Submission and be entitled to its unrestricted use and dissemination for any lawful purpose, commercial or otherwise, without acknowledgment or compensation to you.</p>
@@ -206,7 +206,7 @@ const TermsOfService = () => {
 
           <section id="privacy">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">8. PRIVACY POLICY</h3>
-            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="http://appliancevista.shop/privacy-policy" className="text-primary hover:underline">http://appliancevista.shop/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="http://appliancenerds.shop/privacy-policy" className="text-primary hover:underline">http://appliancenerds.shop/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
           </section>
 
           <section id="termination">
@@ -275,12 +275,12 @@ const TermsOfService = () => {
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">21. CONTACT US</h3>
             <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
-              Appliance Vista<br />
+              appliance nerds<br />
               Grandview<br />
               Glendale, CA 91201<br />
               United States<br />
               Phone: +1 (530) 554-4817<br />
-              <a href="mailto:appliancevista@outlook.com" className="text-primary">appliancevista@outlook.com</a>
+              <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a>
             </address>
           </section>
         </div>

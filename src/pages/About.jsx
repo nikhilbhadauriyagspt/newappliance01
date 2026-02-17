@@ -26,9 +26,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>About Appliance Vista | Professional Repair Standards</title>
-        <meta name="description" content="Discover Appliance Vista's commitment to professional appliance repair standards, technical expertise, and transparent service delivery." />
-        <link rel="canonical" href="https://www.appliancevista.shop/about" />
+        <title>About appliance nerds | Professional Repair Standards</title>
+        <meta name="description" content="Discover appliance nerds's commitment to professional appliance repair standards, technical expertise, and transparent service delivery." />
+        <link rel="canonical" href="https://www.appliancenerds.shop/about" />
       </Helmet>
 
       <section className="relative pt-44 pb-32 bg-primary overflow-hidden">
@@ -50,53 +50,53 @@ const About = () => {
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-24">
             <div className="w-full lg:w-1/2 relative">
-               <div className="absolute -inset-6 border-2 border-slate-50 rounded-[4rem] pointer-events-none"></div>
-               <div className="relative rounded-[3rem] overflow-hidden shadow-premium group">
-                  <img src="/banner/about.jpg" className="w-full h-[500px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110" alt="Technical Service Division" />
-                  <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-white shadow-2xl">
-                     <div className="flex items-center gap-6">
-                        <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-secondary text-2xl">
-                           <FaQuoteLeft />
-                        </div>
-                        <p className="text-primary font-black text-sm italic leading-relaxed">
-                          "Our objective is to maintain high technical standards across all service operations."
-                        </p>
-                     </div>
+              <div className="absolute -inset-6 border-2 border-slate-50 rounded-[4rem] pointer-events-none"></div>
+              <div className="relative rounded-[3rem] overflow-hidden shadow-premium group">
+                <img src="/banner/about.jpg" className="w-full h-[500px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110" alt="Technical Service Division" />
+                <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-white shadow-2xl">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-secondary text-2xl">
+                      <FaQuoteLeft />
+                    </div>
+                    <p className="text-primary font-black text-sm italic leading-relaxed">
+                      "Our objective is to maintain high technical standards across all service operations."
+                    </p>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
 
             <div className="w-full lg:w-1/2">
-               <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
-                  <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Organization Standards</span>
-               </div>
-               <h2 className="text-4xl md:text-6xl font-black text-primary mb-10 leading-[1.1] tracking-tighter uppercase">
-                  Systematic Approach to <span className="text-secondary">Technical Care</span>
-               </h2>
-               <div className="space-y-8 text-slate-500 text-lg font-medium leading-relaxed mb-12">
-                  <p>
-                    Appliance Vista provides residential repair services focused on technical accuracy. We recognize that modern appliances are complex systems that benefit from specialized diagnostic knowledge.
-                  </p>
-                  <p>
-                    Our focus is on restoring equipment functionality using verified diagnostic procedures and manufacturer-grade components. We aim to identify and address technical issues with professional precision.
-                  </p>
-               </div>
-               
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    'Verified Service Parts',
-                    'Advanced Diagnostic Tools',
-                    'Digital Service Documentation',
-                    'Safety Compliance Protocols'
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-4 bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white text-[10px]">
-                        <FaCheckCircle />
-                      </div>
-                      <span className="font-black text-primary text-[11px] uppercase tracking-wider">{item}</span>
+              <div className="inline-flex items-center gap-3 bg-secondary/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-secondary text-[10px] font-black uppercase tracking-[3px]">Organization Standards</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-primary mb-10 leading-[1.1] tracking-tighter uppercase">
+                Systematic Approach to <span className="text-secondary">Technical Care</span>
+              </h2>
+              <div className="space-y-8 text-slate-500 text-lg font-medium leading-relaxed mb-12">
+                <p>
+                  appliance nerds provides residential repair services focused on technical accuracy. We recognize that modern appliances are complex systems that benefit from specialized diagnostic knowledge.
+                </p>
+                <p>
+                  Our focus is on restoring equipment functionality using verified diagnostic procedures and manufacturer-grade components. We aim to identify and address technical issues with professional precision.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'Verified Service Parts',
+                  'Advanced Diagnostic Tools',
+                  'Digital Service Documentation',
+                  'Safety Compliance Protocols'
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-4 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                    <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white text-[10px]">
+                      <FaCheckCircle />
                     </div>
-                  ))}
-               </div>
+                    <span className="font-black text-primary text-[11px] uppercase tracking-wider">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ const About = () => {
             We operate with a focus on clear communication. Our service includes detailed assessments of technical faults and a breakdown of parts and labor before work begins. We prioritize honesty and professional accountability in every client interaction.
           </p>
           <div className="inline-block px-12 py-1 border-t-2 border-b-2 border-secondary/20">
-             <p className="font-black text-primary tracking-[8px] text-xs uppercase py-4">Appliance Vista / Service Division</p>
+            <p className="font-black text-primary tracking-[8px] text-xs uppercase py-4">appliance nerds / Service Division</p>
           </div>
         </div>
       </section>

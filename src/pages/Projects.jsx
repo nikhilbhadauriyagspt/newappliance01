@@ -12,9 +12,9 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Portfolio of Excellence - Appliance Vista</title>
+        <title>Portfolio of Excellence - appliance nerds</title>
         <meta name="description" content="View our portfolio of successful appliance repairs and maintenance projects." />
-        <link rel="canonical" href="https://www.appliancevista.shop/projects" />
+        <link rel="canonical" href="https://www.appliancenerds.shop/projects" />
       </Helmet>
 
       {/* Premium Page Header */}
@@ -36,41 +36,41 @@ const Projects = () => {
       <div className="container mx-auto px-4 md:px-8 py-32 bg-slate-50 relative -mt-16 rounded-t-[60px] z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projectsData.map((project, index) => (
-            <Link 
-              key={project.id} 
+            <Link
+              key={project.id}
               to={`/project/${project.id}`}
               className="group relative h-[500px] rounded-[48px] overflow-hidden shadow-sm hover:shadow-premium transition-all duration-700 border border-white"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
-              <img 
-                src={project.img} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-80 group-hover:opacity-100 transition-all duration-500"></div>
-              
+
               <div className="absolute inset-0 p-12 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <div className="flex items-center gap-3 mb-6">
-                   <div className="w-10 h-10 rounded-2xl bg-secondary/20 backdrop-blur-md flex items-center justify-center text-secondary">
-                      <FaProjectDiagram size={16} />
-                   </div>
-                   <span className="text-[10px] font-black text-white uppercase tracking-[4px]">
-                      {project.category}
-                   </span>
+                  <div className="w-10 h-10 rounded-2xl bg-secondary/20 backdrop-blur-md flex items-center justify-center text-secondary">
+                    <FaProjectDiagram size={16} />
+                  </div>
+                  <span className="text-[10px] font-black text-white uppercase tracking-[4px]">
+                    {project.category}
+                  </span>
                 </div>
-                
+
                 <h3 className="text-3xl font-black text-white mb-6 leading-tight tracking-tighter uppercase">{project.title}</h3>
-                
+
                 <div className="flex items-center gap-4 text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                   <span className="text-[10px] font-black uppercase tracking-[3px]">Examine Results</span>
-                   <FaArrowRight size={12} />
+                  <span className="text-[10px] font-black uppercase tracking-[3px]">Examine Results</span>
+                  <FaArrowRight size={12} />
                 </div>
               </div>
 
               {/* Top info badge */}
               <div className="absolute top-8 right-8 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl">
-                 <span className="text-[10px] font-black text-white uppercase tracking-widest">Completed</span>
+                <span className="text-[10px] font-black text-white uppercase tracking-widest">Completed</span>
               </div>
             </Link>
           ))}

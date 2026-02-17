@@ -41,8 +41,7 @@ const Comparison = () => {
               <div className="absolute top-0 right-0 w-48 h-48 bg-white/[0.03] rounded-bl-full pointer-events-none"></div>
               
               <div className="flex items-center justify-between mb-10">
-                 <h4 className="text-2xl font-black text-white tracking-tighter uppercase">The VISTA Standard</h4>
-                 <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shadow-xl">
+                                   <h4 className="text-2xl font-black text-white tracking-tighter uppercase">The APPLIANCE NERDS Standard</h4>                 <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shadow-xl">
                     <FaShieldAlt />
                  </div>
               </div>

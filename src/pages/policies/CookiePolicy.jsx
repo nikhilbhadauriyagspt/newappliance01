@@ -10,21 +10,21 @@ const CookiePolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Cookie Policy - Appliance Vista</title>
-        <meta name="description" content="Cookie Policy for Appliance Vista. Understand how we use cookies and tracking technologies." />
-        <link rel="canonical" href="https://www.appliancevista.shop/cookie-policy" />
+        <title>Cookie Policy - appliance nerds</title>
+        <meta name="description" content="Cookie Policy for appliance nerds. Understand how we use cookies and tracking technologies." />
+        <link rel="canonical" href="https://www.appliancenerds.shop/cookie-policy" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for Appliance Vista</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for appliance nerds</h1>
         <p className="text-gray-500 mb-12 italic">Last Updated: February 06, 2026</p>
-        
+
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Cookie Policy explains how Appliance Vista (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses 
-              cookies and similar tracking technologies when you visit our website 
-              <a href="http://appliancevista.shop/" className="text-primary hover:text-secondary"> http://appliancevista.shop/</a> (the “<strong>Website</strong>”). This policy should be read together with our 
+              This Cookie Policy explains how appliance nerds (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
+              cookies and similar tracking technologies when you visit our website
+              <a href="http://appliancenerds.shop/" className="text-primary hover:text-secondary"> http://appliancenerds.shop/</a> (the “<strong>Website</strong>”). This policy should be read together with our
               <Link to="/privacy-policy" className="text-primary hover:underline font-bold"> PRIVACY POLICY</Link> and <Link to="/terms-of-service" className="text-primary hover:underline font-bold">TERMS OF SERVICE</Link>.
             </p>
           </section>
@@ -32,9 +32,9 @@ const CookiePolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">1. What Are Cookies?</h2>
             <p>
-              Cookies are small text files that are placed on your device (computer, smartphone, tablet) 
-              when you visit a website. Cookies help websites function efficiently, enhance user 
-              experience, and provide information to website owners about how visitors interact with the 
+              Cookies are small text files that are placed on your device (computer, smartphone, tablet)
+              when you visit a website. Cookies help websites function efficiently, enhance user
+              experience, and provide information to website owners about how visitors interact with the
               site.
             </p>
             <p>Cookies do not give us access to your device or personal files.</p>
@@ -42,7 +42,7 @@ const CookiePolicy = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">2. How We Use Cookies</h2>
-            <p>Appliance Vista uses cookies and similar technologies to:</p>
+            <p>appliance nerds uses cookies and similar technologies to:</p>
             <ul className="list-disc pl-10 space-y-2">
               <li>Ensure the Website functions properly</li>
               <li>Maintain security and prevent fraudulent activity</li>
@@ -51,20 +51,20 @@ const CookiePolicy = () => {
               <li>Improve our services and user experience</li>
             </ul>
             <p>
-              Cookies may collect technical information such as IP address, browser type, device 
+              Cookies may collect technical information such as IP address, browser type, device
               information, and browsing behavior, as described in our <Link to="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</Link>.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">3. Types of Cookies We Use</h2>
-            
+
             <div className="space-y-6">
               <div>
                 <p className="font-bold">a) Essential Cookies</p>
                 <p>These cookies are strictly necessary for the Website to operate correctly. They enable core functionality such as security, page navigation, and access to essential features. Without these cookies, the Website may not function properly.</p>
               </div>
-              
+
               <div>
                 <p className="font-bold">b) Performance and Analytics Cookies</p>
                 <p>These cookies help us understand how visitors interact with our Website by collecting aggregated and anonymized information. This allows us to measure performance, identify errors, and improve Website functionality.</p>
@@ -78,9 +78,9 @@ const CookiePolicy = () => {
               <div>
                 <p className="font-bold">d) Advertising and Third-Party Cookies</p>
                 <p>
-                  We may allow trusted third-party service providers to place cookies on our Website for 
-                  analytics or advertising purposes. These cookies may be used to deliver relevant 
-                  advertisements and measure campaign effectiveness, subject to applicable laws and user 
+                  We may allow trusted third-party service providers to place cookies on our Website for
+                  analytics or advertising purposes. These cookies may be used to deliver relevant
+                  advertisements and measure campaign effectiveness, subject to applicable laws and user
                   consent where required <Link to="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</Link>.
                 </p>
               </div>
@@ -90,12 +90,12 @@ const CookiePolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">4. Third-Party Tracking Technologies</h2>
             <p>
-              We may use third-party services such as Google Analytics to analyze Website usage and 
-              traffic patterns. These third parties may use cookies or similar technologies to collect 
+              We may use third-party services such as Google Analytics to analyze Website usage and
+              traffic patterns. These third parties may use cookies or similar technologies to collect
               information about your online activities across different websites.
             </p>
             <p>
-              You can learn more about Google’s data practices by visiting Google’s Privacy & Terms page 
+              You can learn more about Google’s data practices by visiting Google’s Privacy & Terms page
               or opt out using Google’s opt-out tools, as referenced in our <Link to="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</Link>.
             </p>
           </section>
@@ -110,8 +110,8 @@ const CookiePolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">6. Do Not Track Signals</h2>
             <p>
-              Some browsers offer a “Do Not Track” (DNT) feature. At this time, there is no uniform 
-              industry standard for recognizing DNT signals, and Appliance Vista does not currently 
+              Some browsers offer a “Do Not Track” (DNT) feature. At this time, there is no uniform
+              industry standard for recognizing DNT signals, and appliance nerds does not currently
               respond to such signals <Link to="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</Link>.
             </p>
           </section>
@@ -125,11 +125,11 @@ const CookiePolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">8. Contact Us</h2>
             <p>If you have questions or concerns about this Cookie Policy or our use of cookies, you may contact us at:</p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
-              Appliance Vista<br />
+              appliance nerds<br />
               Grandview<br />
               Glendale, CA 91201<br />
               United States<br />
-              Email: <a href="mailto:appliancevista@outlook.com" className="text-primary">appliancevista@outlook.com</a><br />
+              Email: <a href="mailto:appliancenerds@outlook.com" className="text-primary">appliancenerds@outlook.com</a><br />
               Phone: +1 (530) 554-4817
             </address>
           </section>

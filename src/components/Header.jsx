@@ -86,9 +86,9 @@ const Header = () => {
             </span>
           </div>
           <div className="flex items-center gap-4">
-             <a href="https://wa.me/15305544817" className="flex items-center gap-2 hover:text-secondary transition-colors">
-               <FaWhatsapp size={14} className="text-green-400" /> Technical Support
-             </a>
+            <a href="https://wa.me/15305544817" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <FaWhatsapp size={14} className="text-green-400" /> Technical Support
+            </a>
           </div>
         </div>
       </div>
@@ -96,13 +96,9 @@ const Header = () => {
       <header className={`w-full transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-premium py-3' : 'bg-white py-5 border-b border-slate-100'}`}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between gap-8">
-            <Link to="/" className="flex items-center gap-3 shrink-0">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-50 rounded-2xl flex items-center justify-center p-2 shadow-inner border border-slate-100">
-                <img src="/logo/logo.png" alt="Appliance Vista" className="w-full h-full object-contain" />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-black text-primary tracking-tighter leading-none uppercase">Appliance<span className="text-secondary">Vista</span></h1>
-                <p className="text-[9px] font-black text-slate-400 uppercase tracking-[3px] mt-1">Professional Repair Services</p>
+            <Link to="/" className="flex items-center shrink-0">
+              <div className="h-12 md:h-16 flex items-center justify-center">
+                <img src="/logo/logo.png" alt="appliance nerds" className="h-full w-auto object-contain" />
               </div>
             </Link>
 
@@ -128,15 +124,15 @@ const Header = () => {
                       ))}
                     </div>
                     <div className="w-64 bg-slate-50 rounded-3xl p-6 flex flex-col">
-                       <div className="flex-1">
-                          <h4 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Service Standards</h4>
-                          <ul className="space-y-3">
-                            <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Skilled Technical Team</li>
-                            <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Standard Service Warranty</li>
-                            <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified Spare Parts</li>
-                          </ul>
-                       </div>
-                       <button onClick={() => openBookingModal()} className="mt-6 w-full py-3 bg-primary text-white rounded-xl text-xs font-bold hover:bg-secondary transition-colors shadow-lg uppercase tracking-widest">Request Quote</button>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Service Standards</h4>
+                        <ul className="space-y-3">
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Skilled Technical Team</li>
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Standard Service Warranty</li>
+                          <li className="flex items-center gap-2 text-xs font-medium text-slate-500"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified Spare Parts</li>
+                        </ul>
+                      </div>
+                      <button onClick={() => openBookingModal()} className="mt-6 w-full py-3 bg-primary text-white rounded-xl text-xs font-bold hover:bg-secondary transition-colors shadow-lg uppercase tracking-widest">Request Quote</button>
                     </div>
                   </div>
                 </div>
@@ -159,11 +155,11 @@ const Header = () => {
                 )}
               </div>
               <div className="hidden md:flex items-center gap-4">
-                 <Link to="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:text-secondary hover:bg-white hover:shadow-sm transition-all border border-slate-100 group"><FaUserCheck size={16} /></Link>
-                 <a href="tel:+15305544817" className="flex flex-col items-end">
-                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Contact Line</span>
-                    <span className="text-sm font-black text-primary">+1 530 554 4817</span>
-                 </a>
+                <Link to="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 hover:text-secondary hover:bg-white hover:shadow-sm transition-all border border-slate-100 group"><FaUserCheck size={16} /></Link>
+                <a href="tel:+15305544817" className="flex flex-col items-end">
+                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Contact Line</span>
+                  <span className="text-sm font-black text-primary">+1 530 554 4817</span>
+                </a>
               </div>
               <button onClick={() => openBookingModal()} className="group relative hidden md:flex px-7 py-3.5 bg-secondary text-white text-[11px] font-black uppercase tracking-[2px] rounded-2xl overflow-hidden shadow-xl active:scale-95 transition-all duration-300">
                 <span className="relative z-10 flex items-center gap-3">Book Service <FaWrench /></span>
@@ -184,11 +180,11 @@ const Header = () => {
         <div className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-500 ease-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
           <div className="flex flex-col h-full">
             <div className="p-8 flex justify-between items-center border-b border-slate-50">
-               <div>
-                 <h2 className="text-2xl font-black text-primary tracking-tighter uppercase">Menu</h2>
-                 <p className="text-[10px] font-black text-secondary uppercase tracking-[3px]">Service Navigation</p>
-               </div>
-               <button onClick={() => setIsMenuOpen(false)} className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100"><FaTimes size={20} /></button>
+              <div>
+                <h2 className="text-2xl font-black text-primary tracking-tighter uppercase">Menu</h2>
+                <p className="text-[10px] font-black text-secondary uppercase tracking-[3px]">Service Navigation</p>
+              </div>
+              <button onClick={() => setIsMenuOpen(false)} className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100"><FaTimes size={20} /></button>
             </div>
             <div className="flex-1 overflow-y-auto px-8 py-10">
               <div className="flex flex-col gap-6">
@@ -198,14 +194,14 @@ const Header = () => {
               </div>
             </div>
             <div className="p-8 border-t border-slate-50 bg-slate-50/50">
-               <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary"><FaPhoneAlt /></div>
-                  <div>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase">Support Line</p>
-                    <p className="text-lg font-black text-primary">+1 530 554 4817</p>
-                  </div>
-               </div>
-               <button onClick={() => { openBookingModal(); setIsMenuOpen(false); }} className="w-full py-5 bg-primary text-white rounded-[20px] font-black uppercase tracking-[3px] text-xs shadow-2xl">Book Appointment</button>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary"><FaPhoneAlt /></div>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Support Line</p>
+                  <p className="text-lg font-black text-primary">+1 530 554 4817</p>
+                </div>
+              </div>
+              <button onClick={() => { openBookingModal(); setIsMenuOpen(false); }} className="w-full py-5 bg-primary text-white rounded-[20px] font-black uppercase tracking-[3px] text-xs shadow-2xl">Book Appointment</button>
             </div>
           </div>
         </div>
